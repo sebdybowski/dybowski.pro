@@ -21,7 +21,7 @@ const Navbar = () => (
     </Link>
     <div className={styles.Line} />
     <ul className={styles.Links}>
-      <li>home</li>
+      <li className={styles.active}>home</li>
       <li>skills</li>
       <li>contact</li>
     </ul>
