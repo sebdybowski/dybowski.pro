@@ -1,0 +1,24 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.Navbar > .Line {
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-color);
+  margin: 2.5rem 0;
+}
+
+.Navbar > .Links,
+.Navbar > .Logo {
+  padding: 1rem 3rem;
+}
+
+.Navbar > .Icon {
+  margin: 1rem 3rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  pad: 1rem;
+}
