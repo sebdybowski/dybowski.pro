@@ -13,12 +13,25 @@
 
 .Navbar > .Links,
 .Navbar > .Logo {
-  padding: 1rem 3rem;
+  align-self: center;
+  padding: 0 3rem;
+  display: inline-flex;
 }
 
-.Navbar > .Icon {
-  margin: 1rem 3rem;
+.Navbar > .Logo > .IconWrapper {
+  align-self: center;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   border: 2px solid var(--text-color);
   border-radius: 0.5rem;
-  pad: 1rem;
+  font-size: 0.75rem;
+  margin-right: 1rem;;
+}
+
+.Navbar > .Logo .Surname {
+  color: var(--primary-color);
 }
