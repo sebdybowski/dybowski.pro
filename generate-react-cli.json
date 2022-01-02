@@ -9,6 +9,13 @@
       "withTest": true,
       "withStory": false,
       "withLazy": false
+    },
+    "page": {
+      "path": "pages",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false
     }
   },
   "testLibrary": "Testing Library"

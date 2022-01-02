@@ -7,7 +7,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "gen:cm": "npx generate-react-cli component",
+    "gen:pg": "npx generate-react-cli component --type=page"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
