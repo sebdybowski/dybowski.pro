@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './Navbar.module.css';
 
 const Navbar = () => (
-  <div className={styles.Navbar} data-testid="Navbar">
+  <nav className={styles.Navbar} data-testid="Navbar">
+    <div className={styles.SideLine} />
     <div className={styles.Line} />
     <Link href="/">
       <a className={styles.Logo}>
@@ -26,7 +28,35 @@ const Navbar = () => (
       <li>contact</li>
     </ul>
     <div className={styles.Line} />
-  </div>
+    <div className={styles.ExternalLinks}>
+      <div className={styles.Line} />
+      <ul className={styles.Items}>
+        <li>
+          <Link href='https://github.com/sebdybowski'>
+            <a target='_blank' rel="noopener noreferrer">
+              <FontAwesomeIcon
+                icon={faGithub}
+                size='1x'
+                className={styles.Icon}
+              />
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href='https://www.linkedin.com/in/sebastian-dybowski/'>
+            <a target='_blank' rel="noopener noreferrer">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size='1x'
+                className={styles.Icon}
+              />
+            </a>
+          </Link>
+        </li>
+      </ul>
+      <div className={styles.Line} />
+    </div>
+  </nav>
 );
 
 export default Navbar;
