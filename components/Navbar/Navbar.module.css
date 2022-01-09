@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;
+  position: fixed;
+  width: 100%;
+  padding: 4rem 6.5rem;
 }
 
 .Navbar > .Line {
@@ -16,6 +19,34 @@
   align-self: center;
   padding: 0 3rem;
   display: inline-flex;
+}
+
+.Navbar > .Links {
+  list-style: none;
+}
+
+.Navbar > .Links > li {
+  padding-left: 3rem;
+}
+
+.Navbar > .Links > li:nth-child(1) {
+  padding-left: 0;
+  position: relative;
+}
+
+.Navbar > .Links > li.active::after {
+  content: "";
+  width: 2rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -1rem;
+  left: 1rem;
+}
+
+.Navbar > .Links > li.active {
+  color: var(--primary-color);
 }
 
 .Navbar > .Logo > .IconWrapper {
@@ -34,4 +65,54 @@
 
 .Navbar > .Logo .Surname {
   color: var(--primary-color);
+}
+
+.Navbar > .ExternalLinks {
+  position: fixed;
+  display: flex;
+  top: 6.5rem;
+  right: 5.8rem;
+  flex-direction: column;
+  height: calc(100% - 6.5rem);
+  align-items: center;
+}
+
+.Navbar > .ExternalLinks > .Line {
+  width: 2px;
+  height: 37rem;
+  background-color: var(--text-color);
+}
+
+.Navbar > .ExternalLinks > .Line:nth-child(1) {
+  height: 29.5rem;
+}
+
+.Navbar > .ExternalLinks > .Items {
+  padding-left: 0;
+  list-style: none;
+}
+
+.Navbar > .ExternalLinks > .Items > li {
+  padding-top: 1rem;
+}
+
+.Navbar > .ExternalLinks > .Items > li,
+.Navbar > .ExternalLinks > .Items > li:hover {
+  transition: color 0.15s ease-in-out;
+}
+
+.Navbar > .ExternalLinks > .Items > li:hover {
+  color: var(--primary-color);
+}
+
+.Navbar > .ExternalLinks > .Items > li:nth-child(1) {
+  padding-top: 0;
+}
+
+.Navbar > .SideLine {
+  position: fixed;
+  top: 6.5rem;
+  width: 2px;
+  height: calc(100vh - 6.5rem);
+  background-color: var(--text-color);
 }
