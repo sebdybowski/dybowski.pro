@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./../public/pexels-dids-2911519.jpg');
+  background-image: url('/pexels-dids-2911519.jpg');
   background-size: cover;
 }
 

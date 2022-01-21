@@ -1,7 +1,7 @@
 .Footer {
   height: 20rem;
   display: flex;
-  background-image: url('../../public/footer-background.svg');
+  background-image: url('/footer-background.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
