@@ -7,7 +7,6 @@ import styles from './Navbar.module.css';
 
 const Navbar = () => (
   <nav className={styles.Navbar} data-testid="Navbar">
-    <div className={styles.SideLine} />
     <div className={styles.Line} />
     <Link href="/">
       <a className={styles.Logo}>
@@ -29,7 +28,6 @@ const Navbar = () => (
     </ul>
     <div className={styles.Line} />
     <div className={styles.ExternalLinks}>
-      <div className={styles.Line} />
       <ul className={styles.Items}>
         <li>
           <Link href='https://github.com/sebdybowski'>
@@ -54,7 +52,6 @@ const Navbar = () => (
           </Link>
         </li>
       </ul>
-      <div className={styles.Line} />
     </div>
   </nav>
 );

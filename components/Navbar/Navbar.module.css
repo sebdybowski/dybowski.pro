@@ -4,7 +4,8 @@
   font-size: 1.5rem;
   position: fixed;
   width: 100%;
-  padding: 4rem 6.5rem;
+  padding: 1rem 6.5rem;
+  backdrop-filter: blur(0.5rem);
 }
 
 .Navbar > .Line {
@@ -71,7 +72,7 @@
   position: fixed;
   display: flex;
   top: 6.5rem;
-  right: 5.8rem;
+  right: 6.6rem;
   flex-direction: column;
   height: calc(100% - 6.5rem);
   align-items: center;
@@ -107,12 +108,4 @@
 
 .Navbar > .ExternalLinks > .Items > li:nth-child(1) {
   padding-top: 0;
-}
-
-.Navbar > .SideLine {
-  position: fixed;
-  top: 6.5rem;
-  width: 2px;
-  height: calc(100vh - 6.5rem);
-  background-color: var(--text-color);
 }
