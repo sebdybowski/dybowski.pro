@@ -6,8 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./../public/pexels-dids-2911519.jpg');
-  background-size: cover;
 }
 
 .footer {
@@ -107,6 +105,15 @@
   color: var(--text-color);
 }
 
+.HeroBg {
+  position: relative;
+  z-index: 0;
+}
+
+.Content {
+  position: relative;
+  z-index: 1;
+}
 
 @media (max-width: 600px) {
   .grid {

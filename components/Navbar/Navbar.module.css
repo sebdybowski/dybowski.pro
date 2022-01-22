@@ -6,6 +6,7 @@
   width: 100%;
   padding: 1rem 6.5rem;
   backdrop-filter: blur(0.5rem);
+  z-index: 2;
 }
 
 .Navbar > .Line {
@@ -72,10 +73,10 @@
   position: fixed;
   display: flex;
   top: 6.5rem;
-  right: 6.6rem;
+  right: 6.5rem;
   flex-direction: column;
-  height: calc(100% - 6.5rem);
-  align-items: center;
+  height: calc(100vh - 2*6.5rem);
+  justify-content: center;
 }
 
 .Navbar > .ExternalLinks > .Line {
