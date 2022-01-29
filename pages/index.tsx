@@ -5,7 +5,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import clsx from 'clsx'
-import styles from '../styles/Home.module.css'
+import styles from './Index.module.css'
 import Container from '@/components/Container/Container'
 import { Fragment } from 'react'
 
@@ -20,9 +20,9 @@ const Home: NextPage = () => (
     <Container className={styles.Hero}>
       <div className={clsx(styles.Column, styles['Column--vcentered'])}>
         <div>
-          <Heading level={3}>{`Hi, I'm Seb`}</Heading>
+          <Heading level={2}>{`Hi, I'm Seb`}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
-          <Heading level={3}>Nice to meet you!</Heading>
+          <Heading level={2}>Nice to meet you!</Heading>
         </div>
       </div>
       <div className={styles.Column}>
@@ -36,8 +36,12 @@ const Home: NextPage = () => (
         />
       </div>
     </Container>
-    <Container>Section 2</Container>
-    <Container>Section 3</Container>
+    <Container className={styles.Skills}>
+      <Heading level={2} section serif>Skills</Heading>
+    </Container>
+    <Container className={styles.Contact}>
+      <Heading level={2} section serif>Contact</Heading>
+    </Container>
     <Footer />
   </Fragment>
 )
