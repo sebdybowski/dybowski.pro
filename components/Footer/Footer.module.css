@@ -15,5 +15,5 @@
   flex-direction: column;
   background-color: var(--background-color);
   padding: 2rem 0;
-  align-items: center
-};
+  align-items: center;
+}

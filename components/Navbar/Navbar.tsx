@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import styles from '../../styles/Navbar.module.css';
+import styles from './Navbar.module.css';
 
 const Navbar = () => (
   <nav className={styles.Navbar} data-testid="Navbar">

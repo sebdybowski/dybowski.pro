@@ -9,34 +9,34 @@
   z-index: 2;
 }
 
-.Navbar > .Line {
+.Line {
   height: 2px;
   width: 100%;
   background-color: var(--text-color);
   margin: 2.5rem 0;
 }
 
-.Navbar > .Links,
-.Navbar > .Logo {
+.Links,
+.Logo {
   align-self: center;
   padding: 0 3rem;
   display: inline-flex;
 }
 
-.Navbar > .Links {
+.Links {
   list-style: none;
 }
 
-.Navbar > .Links > li {
+.Links > li {
   padding-left: 3rem;
 }
 
-.Navbar > .Links > li:nth-child(1) {
+.Links > li:nth-child(1) {
   padding-left: 0;
   position: relative;
 }
 
-.Navbar > .Links > li.active::after {
+.Links > li.active::after {
   content: "";
   width: 2rem;
   height: 0.5rem;
@@ -47,11 +47,11 @@
   left: 1rem;
 }
 
-.Navbar > .Links > li.active {
+.Links > li.active {
   color: var(--primary-color);
 }
 
-.Navbar > .Logo > .IconWrapper {
+.Logo > .IconWrapper {
   align-self: center;
   flex: none;
   display: inline-flex;
@@ -65,11 +65,11 @@
   margin-right: 1rem;;
 }
 
-.Navbar > .Logo .Surname {
+.Logo .Surname {
   color: var(--primary-color);
 }
 
-.Navbar > .ExternalLinks {
+.ExternalLinks {
   position: fixed;
   display: flex;
   top: 6.5rem;
@@ -79,34 +79,34 @@
   justify-content: center;
 }
 
-.Navbar > .ExternalLinks > .Line {
+.ExternalLinks > .Line {
   width: 2px;
   height: 37rem;
   background-color: var(--text-color);
 }
 
-.Navbar > .ExternalLinks > .Line:nth-child(1) {
+.ExternalLinks > .Line:nth-child(1) {
   height: 29.5rem;
 }
 
-.Navbar > .ExternalLinks > .Items {
+.ExternalLinks > .Items {
   padding-left: 0;
   list-style: none;
 }
 
-.Navbar > .ExternalLinks > .Items > li {
+.ExternalLinks > .Items > li {
   padding-top: 1rem;
 }
 
-.Navbar > .ExternalLinks > .Items > li,
-.Navbar > .ExternalLinks > .Items > li:hover {
+.ExternalLinks > .Items > li,
+.ExternalLinks > .Items > li:hover {
   transition: color 0.15s ease-in-out;
 }
 
-.Navbar > .ExternalLinks > .Items > li:hover {
+.ExternalLinks > .Items > li:hover {
   color: var(--primary-color);
 }
 
-.Navbar > .ExternalLinks > .Items > li:nth-child(1) {
+.ExternalLinks > .Items > li:nth-child(1) {
   padding-top: 0;
 }
