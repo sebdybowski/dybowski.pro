@@ -33,7 +33,9 @@ const Home: NextPage = () => (
         />
       </div>
     </Container>
-    {/* <Footer /> */}
+    <Container>Section 2</Container>
+    <Container>Section 3</Container>
+    <Footer />
   </Fragment>
 )
 
