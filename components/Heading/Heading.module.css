@@ -1,5 +1,6 @@
 .Heading {
     margin: 0.5rem 0;
+    position: relative;
 }
 
 h1.Heading {
@@ -7,11 +8,11 @@ h1.Heading {
 }
 
 h2.Heading {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h3.Heading {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .Heading--serif {
@@ -20,4 +21,15 @@ h3.Heading {
 
 .Heading--brand {
     color: var(--primary-color);
+}
+
+.Heading--section::after {
+   content: '';
+   width: 2rem;
+   height: 0.75rem;
+   background-color: var(--text-color);
+   position: absolute;
+   border-radius: 0.5rem;
+   bottom: -2rem;
+   left: calc(50% - 1rem);
 }

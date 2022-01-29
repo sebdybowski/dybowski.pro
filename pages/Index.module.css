@@ -1,9 +1,20 @@
-.Home {}
-
 .Hero {
   background-image: linear-gradient(var(--background-color), black);
   display: flex;
   flex-direction: row;
+}
+
+.Skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Contact {
+  background-image: linear-gradient(black, var(--background-color));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Column {
