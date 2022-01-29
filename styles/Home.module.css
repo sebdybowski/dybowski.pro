@@ -10,3 +10,9 @@
   width: 50%;
   flex-shrink: 1;
 }
+
+.Column--vcentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
