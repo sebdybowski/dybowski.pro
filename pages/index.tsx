@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar/Navbar'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import clsx from 'clsx'
 import styles from '../styles/Home.module.css'
 import Container from '@/components/Container/Container'
 import { Fragment } from 'react'
@@ -17,14 +18,16 @@ const Home: NextPage = () => (
     </Head>
     <Navbar />
     <Container className={styles.Hero}>
-      <div className={styles.Column}>
-        <Heading level={3}>{`Hi, I'm Seb`}</Heading>
-        <Heading level={1}>Software Engineer & UI/UX Designer</Heading>
-        <Heading level={3}>Nice to meet you!</Heading>
+      <div className={clsx(styles.Column, styles['Column--vcentered'])}>
+        <div>
+          <Heading level={3}>{`Hi, I'm Seb`}</Heading>
+          <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
+          <Heading level={3}>Nice to meet you!</Heading>
+        </div>
       </div>
       <div className={styles.Column}>
         <Image
-          src='/seb.png'
+          src='/seb2.png'
           alt='Hero background'
           layout='responsive'
           width={100}
