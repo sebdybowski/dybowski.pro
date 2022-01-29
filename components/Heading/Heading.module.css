@@ -1,1 +1,13 @@
-.Heading { color: pink }
+.Heading {}
+
+h1.Heading {
+    font-size: 6rem;
+}
+
+h2.Heading {
+    font-size: 5rem;
+}
+
+h3.Heading {
+    font-size: 4rem;
+}
