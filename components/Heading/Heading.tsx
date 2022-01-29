@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import styles from './Heading.module.css';
 
-const Heading = () => (
+type HeadingProps = { children: ReactNode };
+
+const Heading = ({ children }: HeadingProps) => (
   <div className={styles.Heading} data-testid="Heading">
-    Heading Component
+    {children}
   </div>
 );
 

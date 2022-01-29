@@ -1,5 +1,6 @@
-import Footer from 'components/Footer/Footer'
-import Navbar from 'components/Navbar/Navbar'
+import Heading from '../components/Heading/Heading'
+import Footer from '../components/Footer/Footer'
+import Navbar from '../components/Navbar/Navbar'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -14,8 +15,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-
       <main className={styles.main}>
         <Image
           src='/pexels-dids-2911519.jpg'
@@ -27,6 +26,11 @@ const Home: NextPage = () => {
         />
 
         <div className={styles.Content}>
+        <Navbar />
+
+
+          <Heading>Test</Heading>
+
           <h1 className={styles.title}>
             Welcome to <a href="https://nextjs.org">Next.js!</a>
           </h1>
