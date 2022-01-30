@@ -1,1 +1,31 @@
-.Button {}
+.Button {
+    padding: 1rem 1.5rem;
+    margin: 2rem 2rem 0 0;
+    background-color: transparent;
+    color: var(--text-color);
+    text-transform: uppercase;
+    border: none;
+    font-size: 2rem;
+    font-family: var(--font-familly);
+    line-height: 2rem;
+    transition: transform .2s;
+}
+
+.Button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Button--outlined {
+    border-radius: 4rem;
+    border: 0.25rem solid var(--text-color);
+}
+
+.Button--outlined:hover {
+    color: black;
+    background-color: var(--text-color);
+}
+
+.Button__Icon {
+    margin-right: 1rem;
+}

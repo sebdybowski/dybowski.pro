@@ -1,5 +1,6 @@
 .Hero {
-  background-image: linear-gradient(var(--background-color), black);
+  
+  background-image: linear-gradient(#333 0%, black 100%);
   display: flex;
   flex-direction: row;
 }
@@ -22,8 +23,23 @@
   flex-shrink: 1;
 }
 
+.Column--narrow {
+  z-index: 1;
+}
+
+.Column--wide {
+  width: 60%;
+  top: 4rem;
+  z-index: 0;
+}
+
 .Column--vcentered {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.Portrait {
+  min-height: 90vh !important;
+  margin: auto auto 0 !important;
 }
