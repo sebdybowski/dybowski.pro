@@ -316,6 +316,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/comfortaa@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/comfortaa/-/comfortaa-4.5.2.tgz#4b17110962ce5621600a0507b1236bd69e9481d4"
+  integrity sha512-gklpfUiysskI4uUv3ahoWNcv8iebyLab2gYFBxwg8xOIBcBBZojNEEnYOsAFa69pN1YqP2J1MnpJS4V/vOb63w==
+
 "@fortawesome/fontawesome-common-types@^0.2.36":
   version "0.2.36"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"

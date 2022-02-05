@@ -1,6 +1,6 @@
 .Heading {
-    margin: 0.5rem 0;
     position: relative;
+    margin: 2rem 0;
 }
 
 h1.Heading {
@@ -8,10 +8,6 @@ h1.Heading {
 }
 
 h2.Heading {
-    font-size: 4rem;
-}
-
-h3.Heading {
     font-size: 3rem;
 }
 

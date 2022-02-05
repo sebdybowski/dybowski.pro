@@ -8,6 +8,8 @@ import clsx from 'clsx'
 import styles from './Index.module.css'
 import Container from '@/components/Container/Container'
 import { Fragment } from 'react'
+import Button from '@/components/Button/Button'
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Home: NextPage = () => (
   <Fragment>
@@ -17,29 +19,38 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Navbar />
-    <Container className={styles.Hero}>
-      <div className={clsx(styles.Column, styles['Column--vcentered'])}>
+    <Container className={styles.Hero} id='home'>
+      <div className={clsx(
+        styles.Column,
+        styles['Column--vcentered'],
+        styles['Column--narrow']
+      )}>
         <div>
           <Heading level={2}>{`Hi, I'm Seb`}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
           <Heading level={2}>Nice to meet you!</Heading>
+          <Button icon={faArrowAltCircleDown} outline>download my cv</Button>
+          <Button>contact</Button>
         </div>
       </div>
-      <div className={styles.Column}>
+      <div className={clsx(
+        styles.Column,
+        styles['Column--wide']
+      )}>
         <Image
           src='/seb2.png'
           alt='Hero background'
-          layout='responsive'
-          width={100}
-          height={100}
+          layout='fill'
           objectFit='contain'
+          objectPosition="90% bottom"
+          className={styles.Portrait}
         />
       </div>
     </Container>
-    <Container className={styles.Skills}>
+    <Container className={styles.Skills} id='skills'>
       <Heading level={2} section serif>Skills</Heading>
     </Container>
-    <Container className={styles.Contact}>
+    <Container className={styles.Contact} id='contact'>
       <Heading level={2} section serif>Contact</Heading>
     </Container>
     <Footer />

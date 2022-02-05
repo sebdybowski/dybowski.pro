@@ -4,13 +4,14 @@ import styles from './Container.module.css';
 
 interface ContainerProps {
   children: ReactNode,
-  className?: string
+  className?: string,
+  id?: string,
 }
 
-const Container: FC<ContainerProps> = ({ children, className }) => (
-  <div className={clsx(styles.Container, className)} data-testid="Container">
+const Container: FC<ContainerProps> = ({ children, className, id }) => (
+  <section id={id} className={clsx(styles.Container, className && className)} data-testid="Container">
     {children}
-  </div>
+  </section>
 );
 
 export default Container;
