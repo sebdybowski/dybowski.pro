@@ -46,19 +46,12 @@
   position: relative;
 }
 
-.Links > li.active::after {
-  content: "";
-  width: 2rem;
-  height: 0.5rem;
-  border-radius: 0.25rem;
-  background-color: var(--primary-color);
-  position: absolute;
-  bottom: -1rem;
-  left: 1rem;
-}
-
 .Links > li.active {
   color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-line: line-through;
+  font-weight: 900;
+  transition: color 0.2s ease-in-out;
 }
 
 .Logo > .IconWrapper {
