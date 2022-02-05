@@ -11,6 +11,7 @@
 
 .Navbar--scroll {
   backdrop-filter: blur(0.5rem);
+  transition: backdrop-filter 0.2s ease-in-out;
 }
 
 .Line {
@@ -85,7 +86,7 @@
   top: 6.5rem;
   right: 6.5rem;
   flex-direction: column;
-  height: calc(100vh - 2*6.5rem);
+  height: calc(100vh - 2 * 6.5rem);
   justify-content: center;
 }
 
@@ -110,7 +111,8 @@
 
 .ExternalLinks > .Items > li,
 .ExternalLinks > .Items > li:hover {
-  transition: color, transform .2s ease-in-out;
+  transition: color, transform 0.2s ease-in-out;
+  text-align: center;
 }
 
 .ExternalLinks > .Items > li:hover {
