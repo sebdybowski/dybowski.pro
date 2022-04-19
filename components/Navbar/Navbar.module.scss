@@ -2,17 +2,22 @@
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 2;
   line-height: 2rem;
+  background-color: transparent;
+  // top: -4rem;
+  transition: top 0.2s ease-in-out;
 }
 
 .Navbar--scroll {
   background-color: #21D4FD;
   background-image: linear-gradient(20deg, #21D4FD 0%, #B721FF 100%);
   border-bottom: 1px solid var(--text-color);
-  transition: backdrop-filter 0.2s ease-in-out;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  position: fixed;
 }
 
 .Line {
