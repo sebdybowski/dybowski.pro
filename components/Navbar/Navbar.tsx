@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import Scrollspy from 'react-scrollspy';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -13,45 +14,23 @@ const SECTIONS = {
 };
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState<string>('#home');
   const [isNavbarBlurred, setNavbarBlur] = useState<boolean>(false);
 
   useEffect(() => {
-    const { hash } = document.location;
-
-    if (hash) setActiveLink(hash);
-
     const onScroll = () => {
       const scroll = document.getElementsByTagName('html')[0].scrollTop;
       const sectionHeight = document.getElementById('skills')?.scrollHeight;
 
       if (sectionHeight) {
-        const offset = sectionHeight * 0.3;
-        let newHash;
-
-        if (scroll >= (sectionHeight * 2 - offset)) {
-          const { link } = SECTIONS.CONTACT;
-          newHash = link;
-        } else if (scroll >= (sectionHeight - offset)) {
-          const { link } = SECTIONS.SKILLS;
-          newHash = link;
-        } else {
-          const { link } = SECTIONS.HOME;
-          newHash = link;
-        }
-
         if (scroll > 0 && !isNavbarBlurred) setNavbarBlur(true);
         if (scroll === 0 && isNavbarBlurred) setNavbarBlur(false);
-
-        setActiveLink(newHash);
-        document.location.hash = newHash;
       }
     };
 
     document.addEventListener('scroll', onScroll);
 
     return () => document.removeEventListener('scroll', onScroll);
-  }, [setActiveLink, setNavbarBlur, isNavbarBlurred]);
+  }, [setNavbarBlur, isNavbarBlurred]);
 
   return (
     <nav className={clsx(styles.Navbar, isNavbarBlurred && styles['Navbar--scroll'])} data-testid="Navbar">
@@ -69,18 +48,23 @@ const Navbar = () => {
         </a>
       </Link>
       <div className={styles.Line} />
-      <ul className={styles.Links}>
+      <Scrollspy
+        items={Object.values(SECTIONS).map(({ title }) => title)}
+        currentClassName={styles.active}
+        className={styles.Links}
+        offset={-200}
+        onUpdate={value => console.log(value)}
+      >
         {
           Object.values(SECTIONS).map(({ title, link }) => (
             <li
-              className={clsx(link === activeLink && styles.active)}
               key={title}
             >
               <a href={link}>{title}</a>
             </li>
           ))
         }
-      </ul>
+      </Scrollspy>
       <div className={clsx(styles.Line, styles['Line--side'])} />
       <div className={styles.ExternalLinks}>
         <ul className={styles.Items}>
