@@ -109,8 +109,12 @@
   text-align: center;
 }
 
-.ExternalLinks>.Items>li:hover {
+.ExternalLinks>.Items>li a:hover {
   color: var(--primary-color);
+
+}
+
+.ExternalLinks>.Items>li:hover {
   transform: scale(1.5);
 }
 
