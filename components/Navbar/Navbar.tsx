@@ -22,8 +22,8 @@ const Navbar = () => {
       const sectionHeight = document.getElementById('skills')?.scrollHeight;
 
       if (sectionHeight) {
-        if (scroll > 0 && !isNavbarBlurred) setNavbarBlur(true);
-        if (scroll === 0 && isNavbarBlurred) setNavbarBlur(false);
+        if (scroll >= sectionHeight && !isNavbarBlurred) setNavbarBlur(true);
+        if (scroll < sectionHeight && isNavbarBlurred) setNavbarBlur(false);
       }
     };
 

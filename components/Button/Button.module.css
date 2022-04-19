@@ -6,14 +6,14 @@
     text-transform: uppercase;
     border: none;
     font-size: 2rem;
-    font-family: var(--font-familly);
+    font-family: var(--font-family);
     line-height: 2rem;
     transition: transform .2s;
 }
 
 .Button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .Button--outlined {
@@ -22,7 +22,7 @@
 }
 
 .Button--outlined:hover {
-    color: black;
+    color: var(--primary-color);
     background-color: var(--text-color);
 }
 

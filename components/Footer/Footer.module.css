@@ -1,7 +1,10 @@
 .Footer {
-  height: 10rem;
+  height: 16rem;
   display: flex;
-  background-color: var(--background-color);
+  background-color: #21D4FD;
+  background-image: linear-gradient(200deg, #21D4FD 0%, #B721FF 100%);
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Footer>.Content {
@@ -10,4 +13,23 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-family);
+}
+
+.Footer>.Content>.Year {
+  font-size: 2rem;
+}
+
+.Footer>.Content>.Year>.Year__End {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.Footer>.Content>.Caption {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.Footer>.Content>.Caption a {
+  text-decoration: underline;
 }
