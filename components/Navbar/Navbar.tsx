@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './Navbar.module.css';
-import clsx from 'clsx';
 
 const SECTIONS = {
   HOME: { title: 'home', link: '#home' },
