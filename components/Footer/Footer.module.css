@@ -1,8 +1,8 @@
 .Footer {
-  height: 14rem;
+  height: 16rem;
   display: flex;
   background-color: #21D4FD;
-  background-image: linear-gradient(199deg, #21D4FD 0%, #B721FF 100%);
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   flex-direction: column;
   justify-content: center;
 }
@@ -13,14 +13,23 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-family);
 }
 
 .Footer>.Content>.Year {
-  font-family: Volkhov, serif;
+  font-size: 2rem;
+}
+
+.Footer>.Content>.Year>.Year__End {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .Footer>.Content>.Caption {
-  font-size: 1.5rem;
-  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.Footer>.Content>.Caption a {
+  text-decoration: underline;
 }

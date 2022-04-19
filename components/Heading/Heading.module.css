@@ -23,8 +23,8 @@ h2.Heading {
 .Heading--section::after {
   content: '';
   width: 2rem;
-  height: 0.75rem;
-  background-color: var(--text-color);
+  height: 0.5rem;
+  background-color: var(--primary-color);
   position: absolute;
   border-radius: 0.5rem;
   bottom: -2rem;

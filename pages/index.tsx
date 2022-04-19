@@ -11,6 +11,7 @@ import { Fragment } from 'react'
 import Button from '@/components/Button/Button'
 import { faArrowAltCircleDown, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import Paragraph from '@/components/Paragraph/Paragraph'
+import Link from 'next/link'
 
 const Home: NextPage = () => (
   <Fragment>
@@ -30,7 +31,12 @@ const Home: NextPage = () => (
           <Heading level={2}>{`Hi, I'm Seb`}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
           <Heading level={2}>Nice to meet you!</Heading>
-          <Button icon={faFileArrowDown} outline>cv download</Button>
+          <a href="https://1drv.ms/b/s!AgQMbumBDryUivY5ti4mGyaOZfq5uw" target="_blank">
+            <Button
+              icon={faFileArrowDown}
+              outline
+            >cv download</Button>
+          </a>
           <a href="#contact">
             <Button>contact</Button>
           </a>

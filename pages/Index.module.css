@@ -18,9 +18,12 @@
   flex-direction: column;
 }
 
-.Hero,
 .Skills,
-.Contact {}
+.Contact {
+  padding-top: 5rem !important;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
 
 .Column {
   width: 50%;
@@ -45,6 +48,6 @@
 
 .Portrait {
   min-height: 90vh !important;
-  margin: auto auto 0 !important;
-  opacity: 0.8;
+  margin: auto 3rem 0 auto !important;
+  opacity: 0.75;
 }

@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: var(--font-family);
   font-weight: 400;
-  background-color: var(--background-color);
+  background-color: #B721FF;
   color: var(--text-color);
   font-size: 12px;
   scroll-behavior: smooth;
