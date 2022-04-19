@@ -5,7 +5,7 @@ import Scrollspy from 'react-scrollspy';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import styles from './Navbar.module.css';
+import styles from './Navbar.module.scss';
 
 const SECTIONS = {
   HOME: { title: 'home', link: '#home' },
@@ -53,13 +53,10 @@ const Navbar = () => {
         currentClassName={styles.active}
         className={styles.Links}
         offset={-200}
-        onUpdate={value => console.log(value)}
       >
         {
           Object.values(SECTIONS).map(({ title, link }) => (
-            <li
-              key={title}
-            >
+            <li key={title}>
               <a href={link}>{title}</a>
             </li>
           ))
