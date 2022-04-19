@@ -86,8 +86,9 @@
   top: 6.5rem;
   right: 11rem;
   flex-direction: column;
-  height: calc(100vh - 2 * 6.5rem);
+  height: calc(90vh - 2 * 6.5rem);
   justify-content: center;
+  color: var(--primary-color);
 }
 
 .ExternalLinks>.Line {
@@ -111,7 +112,7 @@
 
 .ExternalLinks>.Items>li,
 .ExternalLinks>.Items>li:hover {
-  transition: color, transform 0.1s ease-in-out;
+  transition: color, transform 0.15s ease-in-out;
   text-align: center;
 }
 

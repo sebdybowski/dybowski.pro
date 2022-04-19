@@ -59,10 +59,20 @@ const Home: NextPage = () => (
     <Container className={styles.Skills} id='skills'>
       <Heading level={2} section serif>Skills</Heading>
       <Paragraph>Discover what my key strenghts are.</Paragraph>
+      <ul>
+        <li>Front-end</li>
+        <li>Back-end</li>
+        <li>UX/UI</li>
+      </ul>
     </Container>
     <Container className={styles.Contact} id='contact'>
       <Heading level={2} section serif>Contact</Heading>
       <Paragraph>I am thrilled to get in touch!</Paragraph>
+      <label>email</label>
+      <input />
+      <br />
+      <label>message</label>
+      <textarea />
     </Container>
     <Footer />
   </Fragment>
