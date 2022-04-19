@@ -20,7 +20,7 @@
 .Hero,
 .Skills,
 .Contact {
-  position: relative;
+  top: 200px;
 }
 
 .Column {
