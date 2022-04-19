@@ -15,9 +15,9 @@
   "dependencies": {
     "@fontsource/comfortaa": "^4.5.2",
     "@fontsource/playfair-display": "^4.5.3",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "clsx": "^1.1.1",
     "formik": "^2.2.9",

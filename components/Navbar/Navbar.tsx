@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './Navbar.module.css';
-import { useRouter } from 'next/router';
-import debounce from 'lodash.debounce';
 
 const SECTIONS = {
   HOME: { title: 'home', link: '#home' },
@@ -17,7 +15,6 @@ const SECTIONS = {
 
 const Navbar = () => {
   const [isNavbarBlurred, setNavbarBlur] = useState<boolean>(false);
-  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => {
@@ -34,11 +31,6 @@ const Navbar = () => {
 
     return () => document.removeEventListener('scroll', onScroll);
   }, [setNavbarBlur, isNavbarBlurred]);
-
-  const urlUpdateDebounced = debounce((section: HTMLElement) => {
-    const id = section.getAttribute('id');
-    router.push(`/#${id}`);
-  }, 500);
 
   return (
     <nav className={clsx(styles.Navbar, isNavbarBlurred && styles['Navbar--scroll'])} data-testid="Navbar">
@@ -61,7 +53,7 @@ const Navbar = () => {
         currentClassName={styles.active}
         className={styles.Links}
         offset={-200}
-        onUpdate={urlUpdateDebounced}>
+      >
         {
           Object.values(SECTIONS).map(({ title, link }) => (
             <li key={title}>
