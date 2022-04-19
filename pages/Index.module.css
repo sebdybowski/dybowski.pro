@@ -19,9 +19,7 @@
 
 .Hero,
 .Skills,
-.Contact {
-  top: 200px;
-}
+.Contact {}
 
 .Column {
   width: 50%;
