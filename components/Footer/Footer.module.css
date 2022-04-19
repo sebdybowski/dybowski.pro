@@ -1,13 +1,13 @@
 .Footer {
   height: 10rem;
   display: flex;
+  background-color: var(--background-color);
 }
 
-.Footer > .Content {
+.Footer>.Content {
   z-index: 1024;
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color:black;
   align-items: center;
 }

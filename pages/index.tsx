@@ -10,7 +10,6 @@ import Container from '@/components/Container/Container'
 import { Fragment } from 'react'
 import Button from '@/components/Button/Button'
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
 import Paragraph from '@/components/Paragraph/Paragraph'
 
 const Home: NextPage = () => (
@@ -31,7 +30,7 @@ const Home: NextPage = () => (
           <Heading level={2}>{`Hi, I'm Seb`}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
           <Heading level={2}>Nice to meet you!</Heading>
-          <Button icon={faArrowAltCircleDown} outline>download my cv</Button>
+          <Button icon={faArrowAltCircleDown} outline>cv download</Button>
           <a href="#contact">
             <Button>contact</Button>
           </a>

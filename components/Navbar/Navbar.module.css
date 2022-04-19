@@ -37,16 +37,16 @@
   position: relative;
 }
 
-.Links > li {
+.Links li {
   padding-left: 3rem;
 }
 
-.Links > li:nth-child(1) {
+.Links li:nth-child(1) {
   padding-left: 0;
   position: relative;
 }
 
-.Links > li.active {
+.Links li.active {
   color: var(--primary-color);
   text-decoration: underline;
   text-decoration-line: line-through;
@@ -54,7 +54,7 @@
   transition: color 0.2s ease-in-out;
 }
 
-.Logo > .IconWrapper {
+.Logo>.IconWrapper {
   align-self: center;
   flex: none;
   display: inline-flex;
@@ -65,7 +65,8 @@
   border: 2px solid var(--text-color);
   border-radius: 0.5rem;
   font-size: 0.75rem;
-  margin-right: 1rem;;
+  margin-right: 1rem;
+  ;
 }
 
 .Logo .Surname {
@@ -83,36 +84,36 @@
   justify-content: center;
 }
 
-.ExternalLinks > .Line {
+.ExternalLinks>.Line {
   width: 2px;
   height: 37rem;
   background-color: var(--text-color);
 }
 
-.ExternalLinks > .Line:nth-child(1) {
+.ExternalLinks>.Line:nth-child(1) {
   height: 29.5rem;
 }
 
-.ExternalLinks > .Items {
+.ExternalLinks>.Items {
   padding-left: 0;
   list-style: none;
 }
 
-.ExternalLinks > .Items > li {
+.ExternalLinks>.Items>li {
   padding-top: 1.5rem;
 }
 
-.ExternalLinks > .Items > li,
-.ExternalLinks > .Items > li:hover {
+.ExternalLinks>.Items>li,
+.ExternalLinks>.Items>li:hover {
   transition: color, transform 0.2s ease-in-out;
   text-align: center;
 }
 
-.ExternalLinks > .Items > li:hover {
+.ExternalLinks>.Items>li:hover {
   color: var(--primary-color);
   transform: scale(1.5);
 }
 
-.ExternalLinks > .Items > li:nth-child(1) {
+.ExternalLinks>.Items>li:nth-child(1) {
   padding-top: 0;
 }
