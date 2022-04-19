@@ -1,31 +1,32 @@
 .Heading {
-    position: relative;
-    margin: 2rem 0;
+  position: relative;
+  margin: 2rem 0;
 }
 
 h1.Heading {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
 h2.Heading {
-    font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .Heading--serif {
-    font-family: 'Times New Roman', Times, serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: Volkhov, serif;
 }
 
 .Heading--brand {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .Heading--section::after {
-   content: '';
-   width: 2rem;
-   height: 0.75rem;
-   background-color: var(--text-color);
-   position: absolute;
-   border-radius: 0.5rem;
-   bottom: -2rem;
-   left: calc(50% - 1rem);
+  content: '';
+  width: 2rem;
+  height: 0.75rem;
+  background-color: var(--text-color);
+  position: absolute;
+  border-radius: 0.5rem;
+  bottom: -2rem;
+  left: calc(50% - 1rem);
 }

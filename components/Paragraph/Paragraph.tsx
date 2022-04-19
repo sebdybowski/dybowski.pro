@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import styles from './Paragraph.module.css';
 
-interface ParagraphProps {}
+type ParagraphProps = { children: string }
 
-const Paragraph: FC<ParagraphProps> = () => (
-  <div className={styles.Paragraph} data-testid="Paragraph">
-    Paragraph Component
-  </div>
+const Paragraph: FC<ParagraphProps> = ({ children }) => (
+  <p className={styles.Paragraph} data-testid="Paragraph">
+    {children}
+  </p>
 );
 
 export default Paragraph;

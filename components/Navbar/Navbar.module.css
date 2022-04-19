@@ -11,6 +11,7 @@
 
 .Navbar--scroll {
   backdrop-filter: blur(0.5rem);
+  transition: backdrop-filter 0.2s ease-in-out;
 }
 
 .Line {
@@ -45,19 +46,12 @@
   position: relative;
 }
 
-.Links > li.active::after {
-  content: "";
-  width: 2rem;
-  height: 0.5rem;
-  border-radius: 0.25rem;
-  background-color: var(--primary-color);
-  position: absolute;
-  bottom: -1rem;
-  left: 1rem;
-}
-
 .Links > li.active {
   color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-line: line-through;
+  font-weight: 900;
+  transition: color 0.2s ease-in-out;
 }
 
 .Logo > .IconWrapper {
@@ -85,7 +79,7 @@
   top: 6.5rem;
   right: 6.5rem;
   flex-direction: column;
-  height: calc(100vh - 2*6.5rem);
+  height: calc(100vh - 2 * 6.5rem);
   justify-content: center;
 }
 
@@ -110,7 +104,8 @@
 
 .ExternalLinks > .Items > li,
 .ExternalLinks > .Items > li:hover {
-  transition: color, transform .2s ease-in-out;
+  transition: color, transform 0.2s ease-in-out;
+  text-align: center;
 }
 
 .ExternalLinks > .Items > li:hover {
