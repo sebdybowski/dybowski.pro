@@ -9,7 +9,7 @@ import styles from './Index.module.css'
 import Container from '@/components/Container/Container'
 import { Fragment } from 'react'
 import Button from '@/components/Button/Button'
-import { faArrowAltCircleDown, faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Paragraph from '@/components/Paragraph/Paragraph'
 import Link from 'next/link'
 
@@ -31,11 +31,11 @@ const Home: NextPage = () => (
           <Heading level={2}>{`Hi, I'm Seb`}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
           <Heading level={2}>Nice to meet you!</Heading>
-          <a href="https://1drv.ms/b/s!AgQMbumBDryUivY5ti4mGyaOZfq5uw" target="_blank">
+          <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank">
             <Button
-              icon={faFileArrowDown}
+              icon={faArrowUpRightFromSquare}
               outline
-            >cv download</Button>
+            >my experience</Button>
           </a>
           <a href="#contact">
             <Button>contact</Button>
