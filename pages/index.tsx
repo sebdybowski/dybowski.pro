@@ -68,10 +68,11 @@ const Home: NextPage = () => (
     <Container className={styles.Contact} id='contact'>
       <Heading level={2} section serif>Contact</Heading>
       <Paragraph>I am thrilled to get in touch!</Paragraph>
-      <Button primary>Linkedin</Button>
-      <a href='mailto:dybowski.seb@gmail.com'>
-        <Button primary>Mail</Button>
-      </a>
+      <label>email</label>
+      <input />
+      <br />
+      <label>message</label>
+      <textarea />
     </Container>
     <Footer />
   </Fragment>

@@ -9,6 +9,8 @@
   --primary-color: #16076d;
   --font-family: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-family-display: 'Volkhov', serif;
+
 }
 
 html,
@@ -31,6 +33,11 @@ body::-webkit-scrollbar {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 * {
