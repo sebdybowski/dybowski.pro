@@ -13,11 +13,9 @@
     "gen:cm": "npx generate-react-cli component",
     "gen:pg": "npx generate-react-cli component --type=page"
   },
-  "pre-commit": [
-    "test",
-    "test:ci",
-    "lint"
-  ],
+  "git": {
+    "pre-commit": ["lint", "test"]
+  },
   "dependencies": {
     "@fontsource/comfortaa": "^4.5.2",
     "@fontsource/playfair-display": "^4.5.3",
@@ -49,7 +47,6 @@
     "eslint-config-next": "12.0.7",
     "eslint-plugin-testing-library": "5.0.1",
     "jest": "^27.4.5",
-    "pre-commit": "^1.2.2",
     "sass": "^1.50.1",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0",
