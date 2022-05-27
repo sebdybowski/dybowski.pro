@@ -1,4 +1,4 @@
-import React, { ReactNode, createElement } from 'react';
+import { ReactNode, createElement } from 'react';
 import clsx from 'clsx';
 import styles from './Heading.module.css';
 
@@ -15,7 +15,7 @@ const Heading = ({
   children,
   serif = false,
   brand = false,
-  section = false
+  section = false,
 }: HeadingProps) => createElement(
   `h${level}`,
   {
@@ -25,9 +25,9 @@ const Heading = ({
       brand && styles['Heading--brand'],
       section && styles['Heading--section'],
     ),
-    ['data-testid']: 'Heading'
+    ['data-testid']: 'Heading',
   },
-  children
+  children,
 );
 
 export default Heading;

@@ -10,7 +10,7 @@ import styles from './Navbar.module.scss';
 const SECTIONS = {
   HOME: { title: 'home', link: '#home' },
   SKILLS: { title: 'skills', link: '#skills' },
-  CONTACT: { title: 'contact', link: '#contact' }
+  CONTACT: { title: 'contact', link: '#contact' },
 };
 
 const Navbar = () => {
@@ -90,7 +90,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-  )
+  );
 };
 
 export default Navbar;
