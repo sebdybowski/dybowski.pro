@@ -47,7 +47,7 @@
 }
 
 .Portrait {
-  min-height: 90vh !important;
-  margin: auto 4rem 0 auto !important;
+  min-height: 90% !important;
+  margin: auto 7rem 0 auto !important;
   opacity: 0.75;
 }

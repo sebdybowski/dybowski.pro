@@ -11,6 +11,7 @@ import { Fragment } from 'react';
 import Button from '@/components/Button/Button';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Paragraph from '@/components/Paragraph/Paragraph';
+import Skill from '@/components/Skill/Skill';
 
 const Home: NextPage = () => (
   <Fragment>
@@ -58,11 +59,11 @@ const Home: NextPage = () => (
     <Container className={styles.Skills} id='skills'>
       <Heading level={2} section serif>Skills</Heading>
       <Paragraph>Discover what my key strenghts are.</Paragraph>
-      <ul>
-        <li>Front-end</li>
-        <li>Back-end</li>
-        <li>UX/UI</li>
-      </ul>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <Skill label='Front-end' percent={90} />
+        <Skill label='Back-end' percent={50} />
+        <Skill label='UI/UX' percent={75} />
+      </div>
     </Container>
     <Container className={styles.Contact} id='contact'>
       <Heading level={2} section serif>Contact</Heading>
