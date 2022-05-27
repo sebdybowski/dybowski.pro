@@ -13,7 +13,7 @@
     "gen:cm": "npx generate-react-cli component",
     "gen:pg": "npx generate-react-cli component --type=page"
   },
-  "pre-commit" : [
+  "pre-commit": [
     "test",
     "test:ci",
     "lint"
