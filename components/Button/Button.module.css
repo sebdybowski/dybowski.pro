@@ -26,6 +26,10 @@
     background-color: var(--text-color);
 }
 
+.Button--primary {
+    color: var(--primary-color);
+}
+
 .Button__Icon {
     margin-right: 1rem;
 }

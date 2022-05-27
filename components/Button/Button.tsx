@@ -8,15 +8,17 @@ type ButtonProps = {
   children: ReactNode,
   icon?: IconProp,
   outline?: boolean
+  primary?: boolean
 };
 
 const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  children, icon, type = 'button', outline = false,
+  children, icon, type = 'button', outline = false, primary = false
 }) => (
   <button
     className={clsx(
       styles.Button,
       outline && styles['Button--outlined'],
+      primary && styles['Button--primary']
     )}
     type={type}
     data-testid="Button"
