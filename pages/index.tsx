@@ -13,7 +13,6 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Paragraph from '@/components/Paragraph/Paragraph';
 import Skill from '@/components/Skill/Skill';
 
-
 const Home: NextPage = () => (
   <Fragment>
     <Head>
