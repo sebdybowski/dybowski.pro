@@ -8,15 +8,15 @@ type ButtonProps = {
   children: ReactNode,
   icon?: IconProp,
   outline?: boolean
-}
+};
 
 const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  children, icon, type = 'button', outline = false
+  children, icon, type = 'button', outline = false,
 }) => (
   <button
     className={clsx(
       styles.Button,
-      outline && styles['Button--outlined']
+      outline && styles['Button--outlined'],
     )}
     type={type}
     data-testid="Button"
@@ -27,11 +27,11 @@ const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
         <FontAwesomeIcon
           icon={icon}
           size='1x'
-          className={styles['Button__Icon']}
+          className={styles.Button__Icon}
         />
         {children}
       </Fragment> :
-      children
+        children
     }
   </button>
 );

@@ -8,7 +8,7 @@ const Footer = () => (
         20<span className={styles.Year__End}>22</span>
       </span>
       <span className={styles.Caption}>
-        Built with <a href='https://nextjs.org/' target="_blank">Next.js</a>
+        Built with <a href='https://nextjs.org/' target="_blank" rel="noreferrer">Next.js</a>
       </span>
     </div>
   </footer>
