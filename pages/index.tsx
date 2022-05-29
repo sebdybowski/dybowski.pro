@@ -31,15 +31,17 @@ const Home: NextPage = () => (
           <Heading level={2}>{'Hi, I\'m Seb'}</Heading>
           <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
           <Heading level={2}>Nice to meet you!</Heading>
-          <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank" rel="noreferrer">
-            <Button
-              icon={faArrowUpRightFromSquare}
-              outline
-            >my experience</Button>
-          </a>
-          <a href="#contact">
-            <Button>contact</Button>
-          </a>
+          <div className={styles.Button__Group}>
+            <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank" rel="noreferrer">
+              <Button
+                icon={faArrowUpRightFromSquare}
+                outline
+              >my experience</Button>
+            </a>
+            <a href="#contact">
+              <Button>contact</Button>
+            </a>
+          </div>
         </div>
       </div>
       <div className={clsx(

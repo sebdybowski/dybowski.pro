@@ -8,7 +8,7 @@
   .Container {
     padding: 0 2rem;
     height: auto;
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
   }
 }
