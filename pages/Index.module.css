@@ -73,4 +73,22 @@
   .Column--wide {
     display: none;
   }
+
+  .Hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-image: url("/seb2.png");
+    height: 90vh;
+    width: 100vw;
+    background-blend-mode: multiply;
+    background-position: -2rem 6rem;
+    opacity: 0.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .Hero {
+    text-align: center;
+  }
 }

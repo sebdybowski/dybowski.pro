@@ -131,4 +131,8 @@
   .ExternalLinks {
     right: 2rem;
   }
+
+  .Line:not(.Line--side) {
+    display: none;
+  }
 }
