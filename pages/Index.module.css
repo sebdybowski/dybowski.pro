@@ -69,4 +69,8 @@
   .Skills > .List {
     flex-direction: column;
   }
+
+  .Column--wide {
+    display: none;
+  }
 }

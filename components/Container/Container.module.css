@@ -7,5 +7,8 @@
 @media screen and (max-width: 1023px) {
   .Container {
     padding: 0 2rem;
+    height: auto;
+    min-height: 90vw;
+    position: relative;
   }
 }
