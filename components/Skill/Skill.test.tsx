@@ -5,7 +5,7 @@ import Skill from './Skill';
 
 describe('<Skill />', () => {
   test('it should mount', () => {
-    render(<Skill />);
+    render(<Skill label='moonwalk' percent={100} />);
     
     const skill = screen.getByTestId('Skill');
 

@@ -122,3 +122,17 @@
 .ExternalLinks>.Items>li:nth-child(1) {
   padding-top: 0;
 }
+
+@media screen and (max-width: 1023px) {
+  .Links {
+    display: none;
+  }
+
+  .ExternalLinks {
+    right: 2rem;
+  }
+
+  .Line:not(.Line--side) {
+    display: none;
+  }
+}

@@ -29,3 +29,13 @@ h2.Heading {
   bottom: -1.8rem;
   left: calc(50% - 0.25rem);
 }
+
+@media screen and (max-width: 1023px) {
+  h1.Heading {
+    font-size: 4rem;
+  }
+  
+  h2.Heading {
+    font-size: 2rem;
+  }
+}

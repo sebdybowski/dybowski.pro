@@ -27,7 +27,7 @@
     transform: scale(1.15);
     transition: transform 0.15s ease-in-out;
     background-image: linear-gradient(200deg, #21D4FD 0%, #B721FF 100%);
-    /* color: var(--text-color); */
+    color: var(--text-color);
 }
 
 .pie:before {
@@ -79,9 +79,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 15vw;
-    width: 15vw;
-    border-radius: 15vw;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 20rem;
     margin: 4rem 2rem;
     font-family: var(--font-family);
 }

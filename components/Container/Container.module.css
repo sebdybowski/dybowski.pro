@@ -3,3 +3,12 @@
   width: 100vw;
   padding: 0 11rem;
 }
+
+@media screen and (max-width: 1023px) {
+  .Container {
+    padding: 0 2rem;
+    height: auto;
+    min-height: 90vh;
+    position: relative;
+  }
+}

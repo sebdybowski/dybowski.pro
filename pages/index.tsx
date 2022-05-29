@@ -59,7 +59,7 @@ const Home: NextPage = () => (
     <Container className={styles.Skills} id='skills'>
       <Heading level={2} section serif>Skills</Heading>
       <Paragraph>Discover what my key strenghts are.</Paragraph>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div className={styles.List}>
         <Skill label='Front-end' percent={90} />
         <Skill label='Back-end' percent={50} />
         <Skill label='UI/UX' percent={75} />

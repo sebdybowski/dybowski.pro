@@ -51,3 +51,44 @@
   margin: auto 7rem 0 auto !important;
   opacity: 0.75;
 }
+
+.Skills > .List {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1023px) {
+  .Links {
+    display: none;
+  }
+
+  .Column {
+    width: 100%;
+  }
+
+  .Skills > .List {
+    flex-direction: column;
+  }
+
+  .Column--wide {
+    display: none;
+  }
+
+  .Hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-image: url("/seb2.png");
+    height: 90vh;
+    width: 100vw;
+    background-blend-mode: multiply;
+    background-position: -2rem 6rem;
+    opacity: 0.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .Hero {
+    text-align: center;
+  }
+}
