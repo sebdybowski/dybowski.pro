@@ -38,4 +38,8 @@ h2.Heading {
   h2.Heading {
     font-size: 2rem;
   }
+
+  .Heading {
+    margin: 1.5rem 0;
+  }
 }

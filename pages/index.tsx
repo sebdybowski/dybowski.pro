@@ -27,10 +27,10 @@ const Home: NextPage = () => (
         styles['Column--vcentered'],
         styles['Column--narrow'],
       )}>
-        <div>
-          <Heading level={2}>{'Hi, I\'m Seb'}</Heading>
-          <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
-          <Heading level={2}>Nice to meet you!</Heading>
+        <Heading level={2}>{'Hi, I\'m Seb'}</Heading>
+        <Heading level={1} serif brand>Software Engineer & UI/UX Designer</Heading>
+        <Heading level={2}>Nice to meet you!</Heading>
+        <div className={styles.Button__Group}>
           <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank" rel="noreferrer">
             <Button
               icon={faArrowUpRightFromSquare}
