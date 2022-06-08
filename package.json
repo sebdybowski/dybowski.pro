@@ -39,7 +39,7 @@
     "@types/react": "^18.0.12",
     "@types/react-scrollspy": "^3.3.5",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.26.0",
+    "@typescript-eslint/parser": "^5.27.1",
     "babel-jest": "^28.1.0",
     "eslint": "^8.17.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
