@@ -16,7 +16,7 @@
     "gen:pg": "npx generate-react-cli component --type=page"
   },
   "dependencies": {
-    "@fontsource/comfortaa": "^4.5.2",
+    "@fontsource/comfortaa": "^4.5.8",
     "@fontsource/playfair-display": "^4.5.10",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
