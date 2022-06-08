@@ -5,6 +5,7 @@ import Scrollspy from 'react-scrollspy';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 import styles from './Navbar.module.scss';
 
 const SECTIONS = {

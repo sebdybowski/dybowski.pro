@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Skill /> it should mount 1`] = `
+<DocumentFragment>
+  <button>
+    <div
+      class="Skill pie"
+      data-testid="Skill"
+      style="--p: 100;"
+    >
+      <span
+        class="Label"
+      >
+        moonwalk
+      </span>
+      <span
+        class="Percentage"
+      >
+        100%
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> it should mount 1`] = `
+<DocumentFragment>
+  <h1
+    class="Heading"
+    data-testid="Heading"
+  >
+    Heading!
+  </h1>
+</DocumentFragment>
+`;

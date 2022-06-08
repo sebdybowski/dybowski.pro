@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import styles from './Paragraph.module.css';
 
 type ParagraphProps = { children: string };
