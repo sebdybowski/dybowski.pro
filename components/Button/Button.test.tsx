@@ -1,14 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+
 import '@testing-library/jest-dom/extend-expect';
 import Button from './Button';
 
 describe('<Button />', () => {
-  test('it should mount', () => {
-    render(<Button />);
+  test('it should render', () => {
+    const { asFragment } = render(<Button>Button Label</Button>);
     
-    const button = screen.getByTestId('Button');
-
-    expect(button).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

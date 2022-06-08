@@ -1,5 +1,6 @@
 import { ReactNode, createElement } from 'react';
 import clsx from 'clsx';
+
 import styles from './Heading.module.css';
 
 type HeadingProps = {

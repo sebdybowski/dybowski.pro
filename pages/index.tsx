@@ -1,17 +1,15 @@
-import Heading from '../components/Heading/Heading';
-import Footer from '../components/Footer/Footer';
-import Navbar from '../components/Navbar/Navbar';
-import type { NextPage } from 'next';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import clsx from 'clsx';
-import styles from './Index.module.css';
-import Container from '@/components/Container/Container';
 import { Fragment } from 'react';
-import Button from '@/components/Button/Button';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import Paragraph from '@/components/Paragraph/Paragraph';
-import Skill from '@/components/Skill/Skill';
+
+import { Skill, Button, Navbar, Container, Heading, Paragraph, Footer } from '../components';
+
+import styles from './Index.module.css';
+
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => (
   <Fragment>

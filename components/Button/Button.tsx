@@ -1,8 +1,10 @@
 import React, { ButtonHTMLAttributes, FC, Fragment, ReactNode } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import styles from './Button.module.css';
 import clsx from 'clsx';
+
+import styles from './Button.module.css';
+
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type ButtonProps = {
   children: ReactNode,

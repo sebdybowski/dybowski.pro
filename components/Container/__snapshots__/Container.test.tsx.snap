@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> it should mount 1`] = `
+<DocumentFragment>
+  <section
+    class="Container"
+    data-testid="Container"
+  >
+    Content
+  </section>
+</DocumentFragment>
+`;

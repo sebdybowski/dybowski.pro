@@ -8,7 +8,8 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "test": "jest --coverage",
+    "test:wc": "jest --watch",
     "test:ci": "jest --ci",
     "gen:cm": "npx generate-react-cli component",
     "gen:pg": "npx generate-react-cli component --type=page"
@@ -26,7 +27,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scrollspy": "^3.4.3",
-    "sharp": "^0.29.3",
+    "sharp": "^0.30.6",
     "yup": "^0.32.11"
   },
   "devDependencies": {
@@ -42,9 +43,11 @@
     "eslint": "^8.6.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^12.1.6",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-testing-library": "^5.0.1",
     "ignore-loader": "^0.1.2",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.1",
     "sass": "^1.50.1",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^25.0.0",
