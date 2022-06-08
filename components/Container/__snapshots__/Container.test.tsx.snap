@@ -3,8 +3,9 @@
 exports[`<Container /> it should mount 1`] = `
 <DocumentFragment>
   <section
-    class="Container"
+    class="Container className"
     data-testid="Container"
+    id="id"
   >
     Content
   </section>

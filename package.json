@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --coverage",
+    "test:rp": "jest --coverage && http-server -p 4040 ./coverage/lcov-report",
     "test:wc": "jest --watch",
     "test:ci": "jest --ci",
     "gen:cm": "npx generate-react-cli component",

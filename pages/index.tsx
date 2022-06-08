@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { Fragment } from 'react';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { Skill, Button, Navbar, Container, Heading, Paragraph, Footer } from '../components';
@@ -12,7 +11,7 @@ import styles from './Index.module.css';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => (
-  <Fragment>
+  <div data-testid="Home">
     <Head>
       <title>{'Seb Dybowski\'s portfolio'}</title>
       <meta name="description" content="Seb Dybowski's portfolio" />
@@ -58,9 +57,9 @@ const Home: NextPage = () => (
       <Heading level={2} section serif>Skills</Heading>
       <Paragraph>Discover what my key strenghts are.</Paragraph>
       <div className={styles.List}>
-        <Skill label='Front-end' percent={90} />
-        <Skill label='Back-end' percent={50} />
-        <Skill label='UI/UX' percent={75} />
+        <Skill label='Front-end' percent={90} onClick={() => {}}/>
+        <Skill label='Back-end' percent={50} onClick={() => {}}/>
+        <Skill label='UI/UX' percent={75} onClick={() => {}}/>
       </div>
     </Container>
     <Container className={styles.Contact} id='contact'>
@@ -73,7 +72,7 @@ const Home: NextPage = () => (
       <textarea />
     </Container>
     <Footer />
-  </Fragment>
+  </div>
 );
 
 export default Home;
