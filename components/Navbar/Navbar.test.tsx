@@ -1,7 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import '@testing-library/jest-dom/extend-expect';
+
+import Home from '@/pages/index';
+
 import Navbar from './Navbar';
 
 describe('<Navbar />', () => {
@@ -9,5 +12,14 @@ describe('<Navbar />', () => {
     const { asFragment } = render(<Navbar />);
     
     expect(asFragment()).toMatchSnapshot();
+  });
+  test('it should trigger useEffect on scroll', () => {
+    render(<Home />);
+
+    const Homepage = screen.getByTestId('Home');
+
+    fireEvent.scroll(Homepage);
+
+    expect(screen.getByTestId('Navbar')).toBeInTheDocument();
   });
 });

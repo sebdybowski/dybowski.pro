@@ -10,3 +10,14 @@ exports[`<Heading /> it should mount 1`] = `
   </h1>
 </DocumentFragment>
 `;
+
+exports[`<Heading /> it should mount with optional props 1`] = `
+<DocumentFragment>
+  <h1
+    class="Heading Heading--serif Heading--brand Heading--section"
+    data-testid="Heading"
+  >
+    Heading!
+  </h1>
+</DocumentFragment>
+`;

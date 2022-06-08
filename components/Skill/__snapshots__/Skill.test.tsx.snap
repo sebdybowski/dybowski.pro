@@ -2,10 +2,11 @@
 
 exports[`<Skill /> it should mount 1`] = `
 <DocumentFragment>
-  <button>
+  <button
+    data-testid="Skill"
+  >
     <div
       class="Skill pie"
-      data-testid="Skill"
       style="--p: 100;"
     >
       <span
