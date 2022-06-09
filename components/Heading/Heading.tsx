@@ -1,7 +1,7 @@
 import { ReactNode, createElement } from 'react';
 import clsx from 'clsx';
 
-import styles from './Heading.module.css';
+import styles from './Heading.module.scss';
 
 type HeadingProps = {
   children: ReactNode,

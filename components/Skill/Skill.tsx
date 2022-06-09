@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { FC, MouseEventHandler } from 'react';
 
-import styles from './Skill.module.css';
+import styles from './Skill.module.scss';
 
 interface SkillProps {
   label: string,
