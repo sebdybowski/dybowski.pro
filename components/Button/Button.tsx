@@ -11,16 +11,18 @@ type ButtonProps = {
   icon?: IconProp,
   outline?: boolean,
   primary?: boolean
+  inverted?: boolean
 };
 
 const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  children, icon, type = 'button', outline = false, primary = false,
+  children, icon, type = 'button', outline = false, primary = false, inverted = false,
 }) => (
   <button
     className={clsx(
       styles.Button,
       outline && styles['Button--outlined'],
       primary && styles['Button--primary'],
+      inverted && styles['Button--inverted'],
     )}
     type={type}
     data-testid="Button"

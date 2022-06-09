@@ -1,45 +1,38 @@
+@use 'styles/variables.scss' as *;
+
 .Heading {
   position: relative;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 h1.Heading {
-  font-size: 5rem;
-}
-
-h2.Heading {
   font-size: 3rem;
 }
 
+h2.Heading {
+  font-size: 2rem;
+}
+
 .Heading--serif {
-  font-family: var(--font-family-display);
+  font-family: $display-font;
 }
 
 .Heading--brand {
-  color: var(--primary-color);
+  color: $text-color-dark;
+
+  @media screen and (max-width: ($breakpoint-md - 1)) {
+    background-color: $text-color-light;
+    padding: 0.25rem 0.5rem;
+  }
 }
 
 .Heading--section::after {
   content: '';
   width: 0.5rem;
   height: 0.5rem;
-  background-color: var(--primary-color);
+  background-color: $text-color-dark;
   position: absolute;
   border-radius: 0.5rem;
   bottom: -1.8rem;
   left: calc(50% - 0.25rem);
-}
-
-@media screen and (max-width: 1023px) {
-  h1.Heading {
-    font-size: 4rem;
-  }
-  
-  h2.Heading {
-    font-size: 2rem;
-  }
-
-  .Heading {
-    margin: 1.5rem 0;
-  }
 }
