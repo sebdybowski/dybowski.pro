@@ -13,6 +13,7 @@
     "test:wc": "jest --watch",
     "test:ci": "jest --ci",
     "gen:cm": "npx generate-react-cli component",
+    "gen:md": "npx generate-react-cli component --type=module",
     "gen:pg": "npx generate-react-cli component --type=page"
   },
   "dependencies": {
