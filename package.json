@@ -1,7 +1,7 @@
 {
   "name": "dybowski.pro",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +13,7 @@
     "test:wc": "jest --watch",
     "test:ci": "jest --ci",
     "gen:cm": "npx generate-react-cli component",
+    "gen:md": "npx generate-react-cli component --type=module",
     "gen:pg": "npx generate-react-cli component --type=page"
   },
   "dependencies": {
