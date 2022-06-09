@@ -6,7 +6,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { Skill, Button, Navbar, Container, Heading, Paragraph, Footer } from '../components';
 
-import styles from './Index.module.css';
+import styles from './Index.module.scss';
 
 import type { NextPage } from 'next';
 
