@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import styles from './Paragraph.module.css';
+import styles from './Paragraph.module.scss';
 
 type ParagraphProps = { children: string };
 

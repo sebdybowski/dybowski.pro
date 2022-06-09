@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Skills /> it should mount 1`] = `
+<DocumentFragment>
+  <div
+    class="Hero"
+    data-testid="Skills"
+  >
+    Skills Component
+  </div>
+</DocumentFragment>
+`;
