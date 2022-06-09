@@ -6,7 +6,53 @@ exports[`<Skills /> it should mount 1`] = `
     class="Hero"
     data-testid="Skills"
   >
-    Skills Component
+    <section
+      class="Container Container--section"
+      data-testid="Container"
+      id=""
+    >
+      <div
+        class="Column Column--vCenter"
+        data-testid="Column"
+      >
+        <section
+          class="Container Container--fluid"
+          data-testid="Container"
+          id=""
+        >
+          <div
+            class="Column Column--hCenter"
+            data-testid="Column"
+          >
+            Skills
+          </div>
+        </section>
+        <section
+          class="Container Container--fluid"
+          data-testid="Container"
+          id=""
+        >
+          <div
+            class="Column Column--hCenter"
+            data-testid="Column"
+          >
+            Skill 1
+          </div>
+          <div
+            class="Column Column--hCenter"
+            data-testid="Column"
+          >
+            Skill 2
+          </div>
+          <div
+            class="Column Column--hCenter"
+            data-testid="Column"
+          >
+            Skill 3
+          </div>
+        </section>
+      </div>
+    </section>
   </div>
 </DocumentFragment>
 `;

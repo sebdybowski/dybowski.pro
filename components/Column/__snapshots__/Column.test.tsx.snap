@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Column /> it should mount 1`] = `
+<DocumentFragment>
+  <div
+    class="Column"
+    data-testid="Column"
+  />
+</DocumentFragment>
+`;

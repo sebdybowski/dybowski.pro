@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Navbar from './Navbar';
+import Column from './Column';
 
-describe('<Navbar />', () => {
+describe('<Column />', () => {
   test('it should mount', () => {
-    const { asFragment } = render(<Navbar />);
+    const { asFragment } = render(<Column />);
     
     expect(asFragment()).toMatchSnapshot();
   });

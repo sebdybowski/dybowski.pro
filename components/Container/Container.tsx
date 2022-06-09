@@ -7,10 +7,20 @@ interface ContainerProps {
   children: ReactNode,
   className?: string,
   id?: string,
+  fluid?: boolean,
+  section?: boolean
 }
 
-const Container: FC<ContainerProps> = ({ children, className, id }) => (
-  <section id={id} className={clsx(styles.Container, className && className)} data-testid="Container">
+const Container: FC<ContainerProps> = ({
+  children, className, id = '', fluid = false,
+  section = false,
+}) => (
+  <section id={id} className={clsx(
+    styles.Container,
+    className && className,
+    fluid && styles['Container--fluid'],
+    section && styles['Container--section'],
+  )} data-testid="Container">
     {children}
   </section>
 );
