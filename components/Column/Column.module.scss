@@ -12,7 +12,7 @@
     }
 
     &--half {
-        flex: 0.5;
+        flex: 0.75;
         @media screen and (max-width: ($breakpoint-md - 1)) {
           flex: 1;
         }

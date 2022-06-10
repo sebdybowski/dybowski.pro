@@ -1,5 +1,7 @@
 @use 'styles/variables.scss' as *;
 
+$inner-width-xl: 65%;
+$inner-width-lg: 70%;
 $inner-width: 80%;
 $inner-width-sm: 90%;
 $fluid-width: 100%;
@@ -13,7 +15,7 @@ $height: 90vh;
 
   &--fluid {
     margin: 0;
-    width: $fluid-width;
+    width: $fluid-width !important;
   }
 
   &--section {
@@ -27,5 +29,17 @@ $height: 90vh;
     height: auto;
     min-height: 100vh;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .Container {
+    width: $inner-width-lg;
+  }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  .Container {
+    width: $inner-width-xl;
   }
 }
