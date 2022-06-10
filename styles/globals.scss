@@ -20,4 +20,8 @@ body {
   @media screen and (min-width: $breakpoint-lg) {
     font-size: $lg-font-size;
   }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    font-size: $xl-font-size;
+  }
 }
