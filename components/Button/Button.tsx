@@ -6,13 +6,13 @@ import styles from './Button.module.scss';
 
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-type ButtonProps = {
+interface ButtonProps {
   children: ReactNode,
   icon?: IconProp,
   outline?: boolean,
   primary?: boolean
   inverted?: boolean
-};
+}
 
 const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children, icon, type = 'button', outline = false, primary = false, inverted = false,
