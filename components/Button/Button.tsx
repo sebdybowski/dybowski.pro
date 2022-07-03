@@ -7,7 +7,7 @@ import styles from './Button.module.scss';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface ButtonProps {
-  children: ReactNode,
+  children: string,
   icon?: IconProp,
   outline?: boolean,
   primary?: boolean
@@ -35,7 +35,7 @@ const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
           size='1x'
           className={styles.Button__Icon}
         />
-        {children}
+        <span className={styles.Button__Text}>{children}</span>
       </Fragment> :
         children
     }

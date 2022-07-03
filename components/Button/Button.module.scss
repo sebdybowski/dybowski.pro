@@ -12,6 +12,10 @@
     font-weight: bold;
     line-height: 1.5rem;
     transition: transform .2s;
+
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        margin: 1rem 1rem;
+    }
 }
 
 .Button:hover {
@@ -22,6 +26,14 @@
 .Button--outlined {
     border-radius: 4rem;
     border: 0.25rem solid $text-color-light;
+
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        padding: 0;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        font-size: 2rem;
+    }
 }
 
 .Button--outlined:hover {
@@ -40,10 +52,14 @@
 
 .Button__Icon {
     margin-right: 1rem;
+
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        margin-right: 0;
+    }
 }
 
-@media screen and (max-width: ($breakpoint-md - 1)) {
-    .Button {
-        margin: 1rem 1rem;
+.Button__Text {
+    @media screen and (max-width: ($breakpoint-md - 1)) {
+        display: none;
     }
 }

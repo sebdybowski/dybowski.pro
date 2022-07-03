@@ -12,7 +12,7 @@ const Hero: FC<HeroProps> = () => (
     <Container section>
       <Column vCenter half className={styles.Hero__Column}>
         <Heading level={2}>{'Hi, I\'m Seb'}</Heading>
-        <Heading level={1} serif brand>Software&nbsp;Engineer &<br/>UI/UX&nbsp;Designer</Heading>
+        <Heading level={1} serif brand>Software&nbsp;Engineer & UI/UX&nbsp;Designer</Heading>
         <Heading level={2}>Nice to meet you!</Heading>
         <div className={styles.Button__Group}>
           <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank" rel="noreferrer">
