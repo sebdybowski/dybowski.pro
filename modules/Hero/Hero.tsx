@@ -22,7 +22,7 @@ const Hero: FC<HeroProps> = () => (
               inverted
             >my experience</Button>
           </a>
-          <a href="">
+          <a href="https://github.com/sebdybowski">
             <Button
               icon={faGithub}
               outline
