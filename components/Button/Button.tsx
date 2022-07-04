@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, FC, Fragment, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, FC, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
