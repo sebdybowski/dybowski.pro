@@ -5,13 +5,11 @@ import { Button, Column, Container, Heading } from '../../components';
 
 import styles from './Hero.module.scss';
 
-interface HeroProps {}
-
-const Hero: FC<HeroProps> = () => (
+const Hero: FC = () => (
   <div className={styles.Hero} data-testid="Hero">
     <Container section>
       <Column vCenter half className={styles.Hero__Column}>
-        <Heading level={2}>Hi, I'm <strong>Seb</strong>.</Heading>
+        <Heading level={2}>Hi, I&apos;m <strong>Seb</strong>.</Heading>
         <Heading level={1} serif brand>Software&nbsp;Engineer & UI/UX&nbsp;Designer</Heading>
         <Heading level={2}>Nice to meet you!</Heading>
         <div className={styles.Button__Group}>
