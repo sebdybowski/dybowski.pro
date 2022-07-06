@@ -27,8 +27,11 @@ $height: 90vh;
   .Container {
     width: $inner-width-sm;
     height: auto;
-    min-height: 93vh;
     flex-direction: column;
+
+    &--section {
+      min-height: 93vh;
+    }
   }
 }
 
