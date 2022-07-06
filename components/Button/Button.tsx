@@ -26,6 +26,7 @@ const Button: FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
     )}
     type={type}
     data-testid="Button"
+    aria-label={children}
   >
     {
       icon ?

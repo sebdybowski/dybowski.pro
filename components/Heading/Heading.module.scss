@@ -7,10 +7,15 @@
 
 h1.Heading {
   font-size: 3rem;
+
+  @media screen and (max-width: ($breakpoint-md - 1)) {
+    font-size: 2.5rem;
+  }
 }
 
 h2.Heading {
   font-size: 2rem;
+  font-weight: normal;
 }
 
 .Heading--serif {
@@ -22,7 +27,8 @@ h2.Heading {
 
   @media screen and (max-width: ($breakpoint-md - 1)) {
     background-color: $text-color-light;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
   }
 }
 
