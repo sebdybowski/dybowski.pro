@@ -14,15 +14,15 @@
         background-size: contain;
         background-repeat: no-repeat;
         mix-blend-mode: hard-light;
-        background-position: 20vw 10vh;
+        background-position: 30vw 10vh;
 
         @media screen and (max-width: ($breakpoint-md - 1)) {
             background-size: cover;
-            background-position: 55% 10vh;
+            background-position: 55% 5vh;
         }
 
         @media screen and (min-width: $breakpoint-lg) {
-            background-position: 35vw 10vh;
+            background-position: 40vw 10vh;
         }
 
     }
