@@ -10,7 +10,7 @@
         height: 100%;
         position: absolute;
         opacity: 0.75;
-        background-image: url('/seb.webp');
+        background-image: url('/seb-md.webp');
         background-size: contain;
         background-repeat: no-repeat;
         mix-blend-mode: hard-light;
@@ -19,12 +19,13 @@
         @media screen and (max-width: ($breakpoint-md - 1)) {
             background-size: cover;
             background-position: 55% 5vh;
+            background-image: url('/seb-sm.webp');
         }
 
         @media screen and (min-width: $breakpoint-lg) {
             background-position: 40vw 10vh;
+            background-image: url('/seb-lg.webp');
         }
-
     }
 }
 
