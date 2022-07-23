@@ -76,7 +76,7 @@ const Skills: FC<SkillsProps> = () => (
                   size='2x'
                   icon={faNode}
                 />
-                <span>HTML5</span>
+                <span>Node.js</span>
               </Column>
               <Column hCenter>
                 <FontAwesomeIcon
