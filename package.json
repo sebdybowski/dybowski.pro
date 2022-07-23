@@ -1,7 +1,7 @@
 {
   "name": "dybowski.pro",
   "private": true,
-  "version": "0.5.1",
+  "version": "0.5.2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,14 +23,13 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@picocss/pico": "^1.5.3",
     "clsx": "^1.1.1",
     "formik": "^2.2.9",
     "next": "^12.2.0",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scrollspy": "^3.4.3",
-    "sharp": "^0.30.6",
-    "yup": "^0.32.11"
+    "sharp": "^0.30.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",

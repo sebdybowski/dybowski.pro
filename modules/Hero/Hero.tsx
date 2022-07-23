@@ -1,4 +1,5 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import clsx from 'clsx';
 import React, { FC } from 'react';
 
 import { Button, Column, Container, Heading } from '../../components';
@@ -12,7 +13,7 @@ const Hero: FC = () => (
         <Heading level={2}>Hi, I&apos;m <strong>Seb</strong>.</Heading>
         <Heading level={1} serif brand>Software&nbsp;Engineer & UI/UX&nbsp;Designer</Heading>
         <Heading level={2}>Nice to meet you!</Heading>
-        <div className={styles.Button__Group}>
+        <div className={clsx(styles.Button__Group, 'grid')}>
           <a href="https://www.linkedin.com/in/sebastian-dybowski/" target="_blank" rel="noreferrer">
             <Button
               icon={faLinkedin}

@@ -1,8 +1,13 @@
 @use './variables.scss' as *;
 
+@import '@picocss/pico/scss/pico.scss';
 @import url('@fortawesome/fontawesome-svg-core/styles.css');
 @import url('@fontsource/comfortaa');
 @import url('@fontsource/volkhov');
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
