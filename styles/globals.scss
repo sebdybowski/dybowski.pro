@@ -5,8 +5,8 @@
 @import url('@fontsource/comfortaa');
 @import url('@fontsource/volkhov');
 
-:root:not([data-theme=light]) {
-  --progress-color: #B721FF;
+* {
+  box-sizing: border-box;
 }
 
 html,

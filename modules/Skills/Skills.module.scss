@@ -1,1 +1,28 @@
-.Skills {}
+@use 'styles/variables.scss' as *;
+
+.Skills {
+    text-align: center;
+    border-radius: 5px;
+
+    & article {
+        border: 2px solid rgb(24, 35, 44);
+
+        &:nth-child(2) {
+            border: 2px solid;
+            border-image-source: $brand-bg;
+            border-image-slice: 1;
+        
+            @media screen and (min-width: $breakpoint-md) {
+                transform: scale(1.1);
+            }
+        }
+
+        & ul {
+            text-align: left;
+
+            & strong {
+                float: right;
+            }
+        }
+    }
+}
