@@ -5,12 +5,12 @@
     border-radius: 5px;
 
     & article {
-        border: 2px solid rgb(24, 35, 44);
-
         &:nth-child(2) {
             border: 2px solid;
             border-image-source: $brand-bg;
             border-image-slice: 1;
+            position: relative;
+            z-index: 100;
         
             @media screen and (min-width: $breakpoint-md) {
                 transform: scale(1.1);
