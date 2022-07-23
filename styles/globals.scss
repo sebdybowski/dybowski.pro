@@ -5,8 +5,8 @@
 @import url('@fontsource/comfortaa');
 @import url('@fontsource/volkhov');
 
-:root {
-  --progress-background-color: $brand-color-secondary;
+:root:not([data-theme=light]) {
+  --progress-color: #B721FF;
 }
 
 html,
