@@ -1,8 +1,13 @@
 @use './variables.scss' as *;
 
+@import '@picocss/pico/scss/pico.scss';
 @import url('@fortawesome/fontawesome-svg-core/styles.css');
 @import url('@fontsource/comfortaa');
 @import url('@fontsource/volkhov');
+
+:root {
+  --progress-background-color: $brand-color-secondary;
+}
 
 html,
 body {
