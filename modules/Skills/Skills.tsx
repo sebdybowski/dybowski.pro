@@ -1,9 +1,6 @@
-import { faAngular, faAws, faCss3Alt, faFigma, faHtml5, faJava, faJs, faNode, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { faCompassDrafting, faObjectGroup } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FC } from 'react';
 
-import { Column, Container, Heading } from '../../components/';
+import { Heading, Skill } from '../../components/';
 
 import styles from './Skills.module.scss';
 
@@ -13,43 +10,39 @@ const Skills: FC<SkillsProps> = () => (
   <div className={styles.Skills} data-testid="Skills">
     <div className='container'>
       <br />
-        <h2># Skills</h2>
+        <Heading level={1} section># Skills</Heading>
         <p>
           Check my skillset!
         </p>
       <div className='grid'>
-        <article>
-          <header>Back-end</header>
-          <ul>
-            <li>Java</li>
-          </ul>
-        </article>
-        <article>
-          <header>Front-end</header>
-          <ul>
-            <li>
-              JavaScript <strong>90%</strong>
-              <progress value="90" max="100"></progress>
-            </li>            <li>
-              React <strong>100%</strong>
-              <progress value="100" max="100"></progress>
-            </li>
-            <li>
-              Vue <strong>50%</strong>
-              <progress value="50" max="100"></progress>
-            </li>
-          </ul>
-        </article>
-        <article>
-          <header>UI/UX</header>
-          <ul>
-            <li>Figma</li>
-            <li>A/B testing</li>
-            <li>Prototyping</li>
-          </ul>
-        </article>
+        <Skill
+          header='Backend'
+          skills={[
+            { label: 'Java', percent: 30 },
+            { label: 'SQL', percent: 50 },
+            { label: 'Node.js', percent: 60 },
+          ]}
+        />
+        <Skill
+          header='Frontend'
+          skills={[
+            { label: 'JavaScript', percent: 90 },
+            { label: 'React.js', percent: 100 },
+            { label: 'Vue.js', percent: 50 },
+          ]}
+        />
+        <Skill
+          header='UI/UX'
+          skills={[
+            { label: 'Figma', percent: 70 },
+            { label: 'A/B Testing', percent: 100 },
+            { label: 'Prototyping', percent: 80 },
+          ]}
+        />
       </div>
     </div>
+    <br/>
+    <br/>
   </div>
 );
 
