@@ -1,13 +1,13 @@
-import React, { FC, MouseEventHandler } from 'react';
+import React, { FC } from 'react';
 
-interface Skill {
+interface Item {
   label: string,
   percent: number
 }
 
 interface SkillProps {
   header: string,
-  skills: Skill[]
+  skills: Item[]
 }
 
 const Skill: FC<SkillProps> = ({ header, skills }) => (
@@ -15,7 +15,7 @@ const Skill: FC<SkillProps> = ({ header, skills }) => (
     <header>{header}</header>
     <ul>
       {skills.map(({ label, percent }) => (
-        <li>
+        <li key={label}>
           {label} <strong>{`${percent}%`}</strong>
           <progress value={percent} max="100"></progress>
         </li>
