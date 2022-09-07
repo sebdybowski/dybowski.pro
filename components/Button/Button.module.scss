@@ -12,10 +12,7 @@
     font-weight: bold;
     transition: all .2s ease-in-out;
     white-space: nowrap;
-
-    @media screen and (max-width: ($breakpoint-md - 1)) {
-        margin: 1rem 1rem;
-    }
+    text-transform: capitalize;
 }
 
 .Button:hover {
