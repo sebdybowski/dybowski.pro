@@ -1,9 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@picocss/pico': ^1.5.4
   astro: ^1.2.2
 
 dependencies:
+  '@picocss/pico': 1.5.4
   astro: 1.2.2
 
 packages:
@@ -428,6 +430,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: false
+
+  /@picocss/pico/1.5.4:
+    resolution: {integrity: sha512-uplAuZj4WIbMWZUJVgLrEuSypHBJizr+v72bE5j2VXR4fP8gs/6m4rKql+FX0S+3qhlC+dJRm5NyRPpl7gmHxA==}
     dev: false
 
   /@pkgr/utils/2.3.1:
