@@ -1,0 +1,46 @@
+---
+import { SWITCHER_ID } from "./theme";
+---
+
+<script>
+  import { THEME, SWITCHER_ID, DATA_ATTRIBUTE } from "./theme";
+
+  const button: HTMLElement | null = document.getElementById(SWITCHER_ID);
+  const html: HTMLElement = document.getElementsByTagName("html")[0];
+
+  if (button) {
+    button.onclick = (): void => {
+      const theme = html.getAttribute(DATA_ATTRIBUTE);
+
+      if (theme === THEME.LIGHT) html.setAttribute(DATA_ATTRIBUTE, THEME.DARK);
+      if (theme === THEME.DARK) html.setAttribute(DATA_ATTRIBUTE, THEME.LIGHT);
+    };
+
+    button.addEventListener("click", (): void => {
+      const theme = html.getAttribute(DATA_ATTRIBUTE);
+
+      if (theme) button.setAttribute("class", theme);
+    });
+  }
+</script>
+
+<button id={SWITCHER_ID} role="button">
+  Switch theme to: 
+  <span class="dark">dark</span>
+  <span class="light">light</span>
+</button>
+
+<style>
+  html span.dark,
+  html span.light {
+    display: none;
+  }
+
+  html[data-theme="dark"] .light {
+    display: inline;
+  }
+
+  html[data-theme="light"] .dark {
+    display: inline;
+  }
+</style>

@@ -1,5 +1,7 @@
 ---
 import "@picocss/pico/css/pico.min.css";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import { THEME } from "../components/theme";
 
 export interface Props {
   title: string;
@@ -9,37 +11,18 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme={THEME.DARK}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script>
-      const THEME = {
-        LIGHT: "light",
-        DARK: "dark",
-        ATTRIBUTE: "data-theme",
-        BUTTON: "change-theme",
-      };
-
-      const button = document.getElementById(THEME.BUTTON);
-      const html = document.getElementsByTagName("html")[0];
-
-      if (button)
-        button.onclick = function () {
-          const theme = html.getAttribute(THEME.ATTRIBUTE);
-
-          if (theme === THEME.LIGHT)
-            html.setAttribute(THEME.ATTRIBUTE, THEME.DARK);
-          if (theme === THEME.DARK)
-            html.setAttribute(THEME.ATTRIBUTE, THEME.LIGHT);
-        };
-    </script>
   </head>
   <body>
-    <button id="change-theme">switch theme</button>
+    <nav class="container">
+      <ThemeSwitcher />
+    </nav>
     <slot />
   </body>
 </html>
