@@ -21,13 +21,29 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav class="container">
-      <ThemeSwitcher />
-    </nav>
+      <nav class="container">
+        <ul>
+          <li>
+            <ThemeSwitcher />
+          </li>
+        </ul>
+        <ul>
+          <li>Frontend</li>
+          <li>Backend</li>
+          <li>User experience</li>
+          <li>Teamwork</li>
+        </ul>
+      </nav>
+    
     <slot />
   </body>
 </html>
 
 <style is:global>
-  @import "@picocss/pico/css/pico.min.css";
+  @import "@picocss/pico/css/pico.css";
+
+  .top-bar {
+    /* position: fixed; */
+    border-bottom: var(--border-width) solid #fff;
+  }
 </style>

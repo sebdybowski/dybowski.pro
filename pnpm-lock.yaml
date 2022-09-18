@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@picocss/pico': ^1.5.4
+  '@picocss/pico': ^1.5.5
   astro: ^1.2.6
 
 dependencies:
-  '@picocss/pico': 1.5.4
+  '@picocss/pico': 1.5.5
   astro: 1.2.6
 
 packages:
@@ -441,8 +441,8 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@picocss/pico/1.5.4:
-    resolution: {integrity: sha512-uplAuZj4WIbMWZUJVgLrEuSypHBJizr+v72bE5j2VXR4fP8gs/6m4rKql+FX0S+3qhlC+dJRm5NyRPpl7gmHxA==}
+  /@picocss/pico/1.5.5:
+    resolution: {integrity: sha512-AQSMeeZrk+gAF3JLe0jaQRESGWD+kH2bGMPyuoTniOjxt2MlFnLW4q6Eog9QMelKTDGO6WR0tuTSk92SK9+Ctg==}
     dev: false
 
   /@pkgr/utils/2.3.1:
