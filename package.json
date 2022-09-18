@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@picocss/pico": "^1.5.4",
-    "astro": "^1.2.2"
+    "astro": "^1.2.6"
   }
 }

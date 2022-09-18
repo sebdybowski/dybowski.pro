@@ -1,0 +1,40 @@
+<header>
+  <hgroup>
+    <h1>Hi, I'm <mark class="gradient-mark">Seb</mark></h1>
+    <h2>Nice to meet you!</h2>
+  </hgroup>
+  <p>
+    I am creating <i>spectacular</i>
+    <mark>user experiences</mark>
+    and <i>reliable</i>
+    <mark>code</mark> for the web.
+  </p>
+</header>
+
+<style>
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+  
+  .gradient-mark {
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    animation: pulse 4s ease-in-out infinite;
+  }
+</style>
+
+<style is:global>
+  mark:not(.gradient-mark) {
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.25rem;
+  }
+</style>

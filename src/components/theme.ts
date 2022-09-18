@@ -1,6 +1,6 @@
 const THEME = {
     LIGHT: "light",
-    DARK: "dark",
+    DARK: "dark"
 };
 
 const SWITCHER_ID = "theme-switcher";

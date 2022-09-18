@@ -1,5 +1,5 @@
 ---
-import { SWITCHER_ID } from "./theme";
+import { SWITCHER_ID, THEME } from "./theme";
 ---
 
 <script>
@@ -24,23 +24,24 @@ import { SWITCHER_ID } from "./theme";
   }
 </script>
 
-<button id={SWITCHER_ID} role="button">
-  Switch theme to: 
-  <span class="dark">dark</span>
-  <span class="light">light</span>
-</button>
+<label for={SWITCHER_ID} title="Theme switcher">
+  <span>Theme:</span><br/>
+  <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
+  <strong class={`theme--indicator ${THEME.LIGHT}`}>{THEME.LIGHT} 🌞</strong>
+  <strong class={`theme--indicator ${THEME.DARK}`}>{THEME.DARK} 🌙</strong>
+</label>
 
 <style>
-  html span.dark,
-  html span.light {
+  html .theme--indicator.dark,
+  html .theme--indicator.light {
     display: none;
   }
 
-  html[data-theme="dark"] .light {
+  html[data-theme="dark"] .dark {
     display: inline;
   }
 
-  html[data-theme="light"] .dark {
+  html[data-theme="light"] .light {
     display: inline;
   }
 </style>
