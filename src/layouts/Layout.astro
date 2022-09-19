@@ -1,7 +1,7 @@
 ---
-// import "@picocss/pico/css/pico.min.css";
-import ThemeSwitcher from "../components/ThemeSwitcher.astro";
-import { THEME } from "../components/theme";
+import '../global.css';
+import ThemeSwitcher from '../components/ThemeSwitcher/ThemeSwitcher.astro';
+import { THEME } from '../components/ThemeSwitcher/ThemeSwitcher';
 
 export interface Props {
   title: string;
@@ -16,34 +16,31 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description}>
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
   <body>
-      <nav class="container">
-        <ul>
-          <li>
-            <ThemeSwitcher />
-          </li>
-        </ul>
-        <ul>
-          <li>Frontend</li>
-          <li>Backend</li>
-          <li>User experience</li>
-          <li>Teamwork</li>
-        </ul>
-      </nav>
-    
+    <nav class="container top-bar">
+      <ul>
+        <li>
+          <ThemeSwitcher />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#frontend"># Frontend</a>
+        </li>
+        <li>Backend</li>
+        <li>User experience</li>
+        <li>Teamwork</li>
+      </ul>
+    </nav>
     <slot />
+    <style>
+      .top-bar {
+        border-bottom: var(--border-width) solid var(--muted-border-color);
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  @import "@picocss/pico/css/pico.css";
-
-  .top-bar {
-    /* position: fixed; */
-    border-bottom: var(--border-width) solid #fff;
-  }
-</style>

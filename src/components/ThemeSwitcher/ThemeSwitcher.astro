@@ -1,0 +1,31 @@
+---
+import { SWITCHER_ID, THEME } from './ThemeSwitcher';
+---
+
+<script>
+  import { initThemeSwitcher } from './ThemeSwitcher';
+
+  initThemeSwitcher();
+</script>
+
+<label for={SWITCHER_ID} title="Theme switcher">
+  <span>Theme:</span><br/>
+  <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
+  <strong class={`theme--indicator ${THEME.LIGHT}`}>{THEME.LIGHT} 🌞</strong>
+  <strong class={`theme--indicator ${THEME.DARK}`}>{THEME.DARK} 🌙</strong>
+</label>
+
+<style>
+  html .theme--indicator.dark,
+  html .theme--indicator.light {
+    display: none;
+  }
+
+  html[data-theme="dark"] .dark {
+    display: inline;
+  }
+
+  html[data-theme="light"] .light {
+    display: inline;
+  }
+</style>
