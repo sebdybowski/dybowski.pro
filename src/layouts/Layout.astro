@@ -20,14 +20,17 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
-    <nav class="container top-bar">
+  <body id="home">
+    <nav class="container top-bar sticky" id="navbar">
       <ul>
         <li>
           <ThemeSwitcher />
         </li>
       </ul>
       <ul>
+        <li>
+          <a href="#home"># Home</a>
+        </li>
         <li>
           <a href="#frontend"># Frontend</a>
         </li>
@@ -38,9 +41,35 @@ const { title, description } = Astro.props;
     </nav>
     <slot />
     <style>
+      body {
+        position: relative;
+      }
+
       .top-bar {
         border-bottom: var(--border-width) solid var(--muted-border-color);
+      }
+      
+      .sticky {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(0.25rem);
       }
     </style>
   </body>
 </html>
+
+<script>
+  document.addEventListener('scroll', () => {
+    const HTMLElement = document.getElementsByTagName('html')[0];
+    const NavbarHeight = document.getElementById('navbar').offsetHeight;
+    const HeroHeight = document.getElementById('hero').offsetHeight;
+
+    console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
+
+    if (HTMLElement.scrollTop > NavbarHeight + HeroHeight) { 
+      document.getElementById('navbar').classList.add('sticky');
+    } else {
+      document.getElementById('navbar').classList.remove('sticky');
+    }
+  });
+</script>
