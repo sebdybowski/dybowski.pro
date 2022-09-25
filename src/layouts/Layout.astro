@@ -66,7 +66,7 @@ const { title, description } = Astro.props;
 
     console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
 
-    if (HTMLElement.scrollTop > NavbarHeight + HeroHeight) { 
+    if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) { 
       document.getElementById('navbar').classList.add('sticky');
     } else {
       document.getElementById('navbar').classList.remove('sticky');
