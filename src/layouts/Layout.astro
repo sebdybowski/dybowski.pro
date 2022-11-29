@@ -5,6 +5,7 @@ import { THEME } from '../components/ThemeSwitcher/ThemeSwitcher';
 
 export interface Props {
   title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -39,6 +40,7 @@ const { title, description } = Astro.props;
         <li>Teamwork</li>
       </ul>
     </nav>
+
     <slot />
     <style>
       body {
@@ -58,7 +60,7 @@ const { title, description } = Astro.props;
   </body>
 </html>
 
-<script>
+<script lang="ts">
   document.addEventListener('scroll', () => {
     const HTMLElement = document.getElementsByTagName('html')[0];
     const NavbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
