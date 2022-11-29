@@ -61,15 +61,15 @@ const { title, description } = Astro.props;
 <script>
   document.addEventListener('scroll', () => {
     const HTMLElement = document.getElementsByTagName('html')[0];
-    const NavbarHeight = document.getElementById('navbar').offsetHeight;
-    const HeroHeight = document.getElementById('hero').offsetHeight;
+    const NavbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
+    const HeroHeight = document.getElementById('hero')?.offsetHeight || 0;
 
     console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
 
     if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) { 
-      document.getElementById('navbar').classList.add('sticky');
+      document.getElementById('navbar')?.classList.add('sticky');
     } else {
-      document.getElementById('navbar').classList.remove('sticky');
+      document.getElementById('navbar')?.classList.remove('sticky');
     }
   });
 </script>
