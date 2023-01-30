@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../sections/Hero.astro';
+import Footer from '../sections/Footer.astro';
+import Frontend from '../sections/Frontend.astro';
+import Backend from '../sections/Backend.astro';
+---
+
+<Layout
+  title="Seb Dybowski - Software Engineer & UI/UX Designer"
+  description="Seb Dybowski - Software Engineer & UI/UX Designer"
+>
+  <main class="container">
+    <Hero />
+    <Frontend />
+    <Backend />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+</style>

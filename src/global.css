@@ -1,0 +1,16 @@
+@import url('@picocss/pico/css/pico.css');
+
+:root,
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  /* pico.css */
+  --primary: hsl(281, 100%, 60%);
+  --tertiary: hsl(191, 100%, 60%);
+  --primary-hover: hsl(281, 100%, 40%);;
+  --switch-checked-background-color: var(--primary);
+  --border-radius: 0.5rem;
+
+  /* custom variables */
+  --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
+  --primary-gradient-inverse: linear-gradient(20deg, var(--tertiary), var(--primary));
+}

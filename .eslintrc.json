@@ -1,65 +1,51 @@
 {
-  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
-    "next/core-web-vitals",
-    "airbnb-typescript",
-    "plugin:import/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
-  "plugins": [
-    "testing-library",
-    "import"
+  "overrides": [
+    {
+      "files": [
+        "*.astro"
+      ],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [
+          ".astro"
+        ]
+      }
+    }
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "ecmaVersion": "latest"
   },
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
-    "import/order": [
+    "indent": [
       "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-          "object",
-          "type"
-        ],
-        "newlines-between": "always"
-      }
+      2
     ],
-    "eol-last": [
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
       "error",
       "always"
-    ],
-    "no-trailing-spaces": [
-      "error",
-      {
-        "skipBlankLines": true
-      }
-    ],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1,
-        "maxEOF": 1
-      }
     ]
-  },
-  "overrides": [
-    // Only uses Testing Library lint rules in test files
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": [
-        "plugin:testing-library/react"
-      ]
-    }
-  ]
+  }
 }

@@ -1,0 +1,77 @@
+---
+import '../global.css';
+import ThemeSwitcher from '../components/ThemeSwitcher/ThemeSwitcher.astro';
+import { THEME } from '../components/ThemeSwitcher/ThemeSwitcher';
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme={THEME.DARK}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body id="home">
+    <nav class="container top-bar sticky" id="navbar">
+      <ul>
+        <li>
+          <ThemeSwitcher />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#home"># Home</a>
+        </li>
+        <li>
+          <a href="#frontend"># Frontend</a>
+        </li>
+        <li>Backend</li>
+        <li>User experience</li>
+        <li>Teamwork</li>
+      </ul>
+    </nav>
+
+    <slot />
+    <style>
+      body {
+        position: relative;
+      }
+
+      .top-bar {
+        border-bottom: var(--border-width) solid var(--muted-border-color);
+      }
+      
+      .sticky {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(0.25rem);
+      }
+    </style>
+  </body>
+</html>
+
+<script lang="ts">
+  document.addEventListener('scroll', () => {
+    const HTMLElement = document.getElementsByTagName('html')[0];
+    const NavbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
+    const HeroHeight = document.getElementById('hero')?.offsetHeight || 0;
+
+    console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
+
+    if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) { 
+      document.getElementById('navbar')?.classList.add('sticky');
+    } else {
+      document.getElementById('navbar')?.classList.remove('sticky');
+    }
+  });
+</script>
