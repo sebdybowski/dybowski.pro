@@ -1,25 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../sections/Hero.astro';
-import Footer from '../sections/Footer.astro';
-import Frontend from '../sections/Frontend.astro';
-import Backend from '../sections/Backend.astro';
+import '../global.css';
 ---
 
-<Layout
-  title="Seb Dybowski - Software Engineer & UI/UX Designer"
-  description="Seb Dybowski - Software Engineer & UI/UX Designer"
->
-  <main class="container">
-    <Hero />
-    <Frontend />
-    <Backend />
-  </main>
-  <Footer />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Seb Dybowski - Software Engineer & UI/UX Designer" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Seb Dybowski - Software Engineer & UI/UX Designer</title>
+  </head>
+  <body>
+    <main>
+      <h1>The page is under construction ⚒️</h1>
+      <p>More content coming soon...</p>
+    </main>        
+  </body>
+</html>
 
 <style>
-  :root {
-    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  main {
+    text-align: center;
   }
 </style>
