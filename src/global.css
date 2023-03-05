@@ -14,3 +14,18 @@
   --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
   --primary-gradient-inverse: linear-gradient(20deg, var(--tertiary), var(--primary));
 }
+
+span:hover,
+strong:hover,
+em:hover,
+p:hover,
+i:hover,
+b:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  cursor: text;
+}

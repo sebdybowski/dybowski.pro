@@ -28,7 +28,10 @@ const { title, description } = Astro.props;
           <ThemeSwitcher />
         </li>
       </ul>
-      <ul>
+      <ul class="menu-btn">
+        <button type="button" aria-label="menu burger" class="outline">🍔</button>
+      </ul>
+      <ul class="links">
         <li>
           <a href="#home"># Home</a>
         </li>
@@ -56,11 +59,50 @@ const { title, description } = Astro.props;
         top: 0;
         backdrop-filter: blur(0.25rem);
       }
+
+      .menu-btn button {
+        margin: 0;
+      }
+
+      .links.visible {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .links.hidden {
+        display: none;
+      }
+
+      @media screen and (max-width: 991px) {
+        .links {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        .menu-btn {
+          display: none;
+        }
+      }
     </style>
   </body>
 </html>
 
 <script lang="ts">
+  let isVisible = false;
+
+  document.querySelectorAll('.menu-btn button')[0].addEventListener('click', () => {
+    console.log('click');
+
+    document.getElementsByClassName('links')[0].classList.add(
+      isVisible ? 'hidden' : 'visible');
+    document.getElementsByClassName('links')[0].classList.remove(
+      isVisible ? 'visible' : 'hidden');
+
+    isVisible = !isVisible;
+  });
+
+
   document.addEventListener('scroll', () => {
     const HTMLElement = document.getElementsByTagName('html')[0];
     const NavbarHeight = document.getElementById('navbar')?.offsetHeight || 0;

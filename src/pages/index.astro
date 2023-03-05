@@ -1,5 +1,8 @@
 ---
 import '../global.css';
+import { Github, Linkedin, Mail, HeartHandshake, MailCheck, ExternalLink } from 'lucide-preact';
+
+const year = new Date().getFullYear().toString();
 ---
 
 <!DOCTYPE html>
@@ -13,9 +16,43 @@ import '../global.css';
     <title>Seb Dybowski - Software Engineer & UI/UX Designer</title>
   </head>
   <body>
-    <main>
-      <h1>The page is under construction ⚒️</h1>
-      <p>More content coming soon...</p>
+    <main class="container">
+      <div class="grid">
+        <div>
+          <nav>
+            <ul>
+              <li><Github/></li>
+              <li><Linkedin/></li>
+              <li><Mail/></li>
+            </ul>
+          </nav>
+          <article>
+            <hgroup>
+              <h1>Hi, I'm <strong class="gradient-mark">Seb</strong></h1>
+              <h2>Nice to meet you!</h2>
+            </hgroup>
+            <ul>
+              <li>Full-stack software developer</li>
+              <li>UI/UX Designer</li>
+              <li>Technical Leader & Agile Coach</li>
+            </ul>
+            <div class="grid">
+              <a href="#" role="button"><HeartHandshake/> Hire me</a>
+              <a href="#" role="button"><MailCheck/> Get in touch</a>
+            </div>
+          </article>
+          <footer>
+            <strong>{year}</strong>
+            <hr/>
+            <p>Proudly crafted with <a href="#">
+              <ExternalLink size={16}/> astro</a> and <a href="#">
+                <ExternalLink size={16}/> picocss</a>.</p>
+          </footer>
+        </div>
+        <div>
+          <img src="/seb-lg.webp" />
+        </div>
+      </div>
     </main>        
   </body>
 </html>
@@ -23,5 +60,13 @@ import '../global.css';
 <style>
   main {
     text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  img {
+    display: flex;
   }
 </style>
