@@ -21,7 +21,7 @@ const year = new Date().getFullYear().toString();
         <div>
           <nav>
             <ul>
-              <li><Github/></li>
+              <li><a href="https://github.com/sebdybowski"><Github/></a></li>
               <li><Linkedin/></li>
               <li><Mail/></li>
             </ul>
@@ -46,27 +46,43 @@ const year = new Date().getFullYear().toString();
             <hr/>
             <p>Proudly crafted with <a href="#">
               <ExternalLink size={16}/> astro</a> and <a href="#">
-                <ExternalLink size={16}/> picocss</a>.</p>
+              <ExternalLink size={16}/> picocss</a>.</p>
           </footer>
         </div>
-        <div>
-          <img src="/seb-lg.webp" />
-        </div>
+        <div></div>
       </div>
     </main>        
   </body>
 </html>
 
 <style>
+  body {
+    background-image: url('/seb-lg.webp');
+    background-size: contain;
+    background-position: 80% 5rem;
+  }
+
   main {
     text-align: center;
+  }
+
+  body > main {
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
   }
 
   nav {
     justify-content: center;
   }
 
-  img {
-    display: flex;
+  a[role="button"] {
+    border-radius: 1rem;
+  }
+
+  a[role="button"]::after {
+    content: " ";
+    background-color: black;
   }
 </style>
