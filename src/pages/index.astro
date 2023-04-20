@@ -1,5 +1,15 @@
 ---
-import '../global.css';
+import "../global.css";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  HeartHandshake,
+  MailCheck,
+  ExternalLink,
+} from "lucide-preact";
+
+const year = new Date().getFullYear().toString();
 ---
 
 <!DOCTYPE html>
@@ -8,20 +18,116 @@ import '../global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Seb Dybowski - Software Engineer & UI/UX Designer" />
+    <meta
+      name="description"
+      content="Seb Dybowski - Software Engineer & UI/UX Designer"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Seb Dybowski - Software Engineer & UI/UX Designer</title>
   </head>
   <body>
-    <main>
-      <h1>The page is under construction ⚒️</h1>
-      <p>More content coming soon...</p>
-    </main>        
+    <main class="container">
+      <div class="grid">
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a href="https://github.com/sebdybowski">
+                  <Github />
+                </a>
+              </li>
+              <li>
+                <a href="https://pl.linkedin.com/in/sebastian-dybowski">
+                  <Linkedin />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:dybowski.seb@gmail.com">
+                  <Mail />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <article>
+            <hgroup>
+              <h1>Hi, I'm <strong class="gradient-mark">Seb</strong></h1>
+              <h2>Nice to meet you!</h2>
+            </hgroup>
+            <ul>
+              <li>Full-stack software developer</li>
+              <li>UI/UX Designer</li>
+              <li>Technical Leader & Agile Coach</li>
+            </ul>
+            <div class="grid">
+              <a
+                href="https://pl.linkedin.com/in/sebastian-dybowski"
+                role="button"><HeartHandshake /> Hire me</a
+              >
+              <a href="mailto:dybowski.seb@gmail.com" role="button"
+                ><MailCheck /> Get in touch</a
+              >
+            </div>
+          </article>
+          <footer>
+            <strong>{year}</strong>
+            <hr />
+            <p>
+              Proudly crafted with <a href="#">
+                <ExternalLink size={16} /> astro</a
+              > and <a href="#"> <ExternalLink size={16} /> picocss</a>.
+            </p>
+          </footer>
+        </div>
+        <div></div>
+      </div>
+    </main>
   </body>
 </html>
 
 <style>
+  body {
+    background-image: url("/seb-lg.webp");
+    background-size: contain;
+    background-position: 80% 5rem;
+  }
+
   main {
     text-align: center;
+  }
+
+  body > main {
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  a[role="button"] {
+    border-radius: 1rem;
+  }
+
+  a[role="button"]::after {
+    content: " ";
+    background-color: black;
+  }
+
+  @media screen and (max-width: 992px) {
+    article {
+      margin-top: 50vh;
+    }
+
+    a[role="button"] {
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    article {
+      margin-top: 30vh;
+    }
   }
 </style>
