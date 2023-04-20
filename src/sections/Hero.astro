@@ -42,6 +42,12 @@
     }
   }
 
+  #hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .gradient-mark {
     background-image: var(--primary-gradient);
     -webkit-background-clip: text;
@@ -51,8 +57,25 @@
     animation: pulse 2s ease-in-out infinite;
   }
 
+  .gradient {
+    background-image: var(--primary-gradient);
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    animation: pulse 2s ease-in-out infinite;
+    border-radius: 50%;
+    position: relative;
+  }
+
   svg {
     fill: var(--primary);
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  a[role="button"] {
+    border-radius: 1rem;
   }
 </style>
 
