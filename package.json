@@ -13,7 +13,7 @@
     "@astrojs/preact": "^2.0.3",
     "@picocss/pico": "^1.5.9",
     "astro": "^2.3.0",
-    "lucide-preact": "^0.122.0",
+    "lucide-preact": "^0.214.0",
     "preact": "^10.13.0"
   },
   "devDependencies": {
