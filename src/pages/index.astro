@@ -90,7 +90,7 @@ const year = new Date().getFullYear().toString();
   body {
     background-image: url("/seb-lg.webp");
     background-size: contain;
-    background-position: 80% 5rem;
+    background-position: 80% 5%;
   }
 
   main {
@@ -115,6 +115,12 @@ const year = new Date().getFullYear().toString();
   a[role="button"]::after {
     content: " ";
     background-color: black;
+  }
+
+  @media screen and (max-width: 1400px) {
+    body {
+      background-position: 100% 5%;
+    }
   }
 
   @media screen and (max-width: 992px) {
