@@ -2,9 +2,9 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro", // Enable .astro
-    "typescript", // Enable .ts
-    "typescriptreact" // Enable .tsx
+    "astro",
+    "typescript",
+    "typescriptreact"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
