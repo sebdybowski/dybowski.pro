@@ -15,39 +15,7 @@ const links = [
   <ul>
     <li>
       <ThemeSwitcher />
-    </li><script lang="ts">
-      let isVisible = false;
-
-      document
-        .querySelectorAll(".menu-btn button")[0]
-        .addEventListener("click", () => {
-          console.log("click");
-
-          document
-            .getElementsByClassName("links")[0]
-            .classList.add(isVisible ? "hidden" : "visible");
-          document
-            .getElementsByClassName("links")[0]
-            .classList.remove(isVisible ? "visible" : "hidden");
-
-          isVisible = !isVisible;
-        });
-
-      document.addEventListener("scroll", () => {
-        const HTMLElement = document.getElementsByTagName("html")[0];
-        const NavbarHeight =
-          document.getElementById("navbar")?.offsetHeight || 0;
-        const HeroHeight = document.getElementById("hero")?.offsetHeight || 0;
-
-        console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
-
-        if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) {
-          document.getElementById("navbar")?.classList.add("sticky");
-        } else {
-          document.getElementById("navbar")?.classList.remove("sticky");
-        }
-      });
-    </script>
+    </li>
   </ul>
   <ul class="menu-btn">
     <button type="button" aria-label="menu burger" class="outline">🍔</button>
