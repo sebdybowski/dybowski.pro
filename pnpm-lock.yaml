@@ -4,12 +4,21 @@ dependencies:
   '@astrojs/preact':
     specifier: ^2.1.0
     version: 2.1.0(preact@10.13.2)
+  '@fontsource/comfortaa':
+    specifier: ^4.5.11
+    version: 4.5.11
+  '@fontsource/volkhov':
+    specifier: ^4.5.9
+    version: 4.5.9
   '@picocss/pico':
     specifier: ^1.5.10
     version: 1.5.10
   astro:
     specifier: ^2.4.4
     version: 2.4.4
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   lucide-preact:
     specifier: ^0.215.0
     version: 0.215.0(preact@10.13.2)
@@ -615,6 +624,14 @@ packages:
     resolution: {integrity: sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/comfortaa@4.5.11:
+    resolution: {integrity: sha512-KKC2C6KbF9BD6m9+wMf5hK0wFjIi3p3J/6C4JZW6OF9G6K4qZJFp2dBZzsEBepKh4s9/Q5G1SWsUUZY3ZeZNDA==}
+    dev: false
+
+  /@fontsource/volkhov@4.5.9:
+    resolution: {integrity: sha512-JQ9wN7gBQ3elHFTgy8paNg/Q4jUDwRS/OEAf1jvc6bG88q5OCIcSblXMQrC0rsZNHpGp5jJKQ4dyDRUxFsiGZw==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -1379,6 +1396,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@1.9.3:

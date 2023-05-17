@@ -5,11 +5,11 @@ import Company from "../components/Company.astro";
 const size = "4rem";
 ---
 
-<section class="container-hybrid companies">
+<section class="container-hybrid companies" id="experience">
   <div class="companies__inner">
-    <h1>Experience</h1>
+    <h1># experience</h1>
     <p>Places I had a pleasure to work at.</p>
-    <div class="companies__list">
+    <div class="grid">
       <Company name="J-Labs" type="IT Services On-demand">
         <Code2 size={size} />
       </Company>
@@ -19,6 +19,8 @@ const size = "4rem";
       <Company name="UBS" type="Investment Bank">
         <Landmark size={size} />
       </Company>
+    </div>
+    <div class="grid">
       <Company name="Lumesse" type="Talent Acquisiton">
         <Sparkles size={size} />
       </Company>
@@ -34,7 +36,7 @@ const size = "4rem";
 
 <style>
   .companies {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     background: var(--card-background-color);
     box-shadow: inset var(--card-box-shadow);
   }
@@ -46,11 +48,5 @@ const size = "4rem";
 
   .companies__inner {
     padding: var(--block-spacing-vertical) 0;
-  }
-
-  .companies__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 </style>

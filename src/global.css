@@ -1,4 +1,6 @@
 @import url('@picocss/pico/css/pico.css');
+@import url(@fontsource/comfortaa);
+@import url(@fontsource/volkhov);
 
 :root,
 [data-theme="light"],
@@ -41,6 +43,27 @@ h5:hover,
 h6:hover
 {
   cursor: text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  font-family: "Volkhov";
+  font-family: "Comfortaa";
+}
+
+/* body
+{
+  font-family: "Comfortaa";
+} */
+
+article
+{
+  padding: var(--block-spacing-horizontal);
 }
 
 .container-hybrid
