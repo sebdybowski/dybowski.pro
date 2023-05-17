@@ -44,7 +44,7 @@ const year = new Date().getFullYear().toString();
               </li>
               <li>
                 <a href="mailto:dybowski.seb@gmail.com">
-                  <Mail />15d
+                  <Mail />
                 </a>
               </li>
             </ul>
@@ -52,8 +52,9 @@ const year = new Date().getFullYear().toString();
           <article>
             <hgroup>
               <h1>Hi, I'm <strong class="gradient-mark">Seb</strong></h1>
-              <h4>Implementing software since:</h4>
-              <Counter client:load />
+              <br />
+              <span>Implementing software since:</span>
+              <h4><Counter client:load /></h4>
             </hgroup>
             <ul>
               <li>Full-stack software developer</li>
@@ -88,9 +89,9 @@ const year = new Date().getFullYear().toString();
 
 <style>
   body {
-    background-image: url("/seb-lg.webp");
+    background-image: url("../assets/img/seb-lg.webp");
     background-size: contain;
-    background-position: 80% 5%;
+    background-position: bottom right 20%;
   }
 
   main {
@@ -117,13 +118,34 @@ const year = new Date().getFullYear().toString();
     background-color: black;
   }
 
+  article {
+    margin: 1rem 0;
+  }
+
+  footer {
+    backdrop-filter: blur(0.25rem);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: var(--border-radius);
+  }
+
   @media screen and (max-width: 1400px) {
     body {
-      background-position: 100% 5%;
+      background-position: bottom right;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    body {
+      background-position: bottom right -40%;
     }
   }
 
   @media screen and (max-width: 992px) {
+    body {
+      background-size: 80%;
+      background-position: top 10% center;
+    }
+
     article {
       margin-top: 50vh;
     }
