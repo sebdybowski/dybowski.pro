@@ -1,0 +1,32 @@
+---
+interface Props {
+  id: string;
+  svg: string;
+  svgAlt: string;
+  title: string;
+}
+
+const { id, svg, svgAlt, title } = Astro.props;
+---
+
+<section class="grid" id={id}>
+  <article>
+    <h2>{title}</h2>
+    <slot />
+  </article>
+  <img src={svg} alt={svgAlt} />
+</section>
+
+<style>
+  h2::before {
+    content: "# ";
+    font-style: italic;
+  }
+
+  .grid > img {
+    margin: var(--block-spacing-vertical) 0;
+    width: 100%;
+    min-width: 100%;
+    align-self: center;
+  }
+</style>

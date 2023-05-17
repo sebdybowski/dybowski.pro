@@ -1,0 +1,47 @@
+---
+export interface Props {
+  name: string;
+  type: string;
+}
+
+const { name, type } = Astro.props;
+---
+
+<div class="company">
+  <div class="company__icon">
+    <slot />
+  </div>
+  <div>
+    <strong class="company__name">{name}</strong>
+    <hr />
+    <span class="company__type">{type}</span>
+  </div>
+</div>
+
+<style>
+  .company {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .company:hover {
+    background-color: var(--primary);
+    border-radius: 1rem;
+  }
+
+  .company__icon {
+    margin-right: 1rem;
+  }
+
+  .company__name {
+    coloer: var(--color);
+    font-size: 1.25rem;
+  }
+
+  .company__type {
+    font-size: 0.75rem;
+  }
+</style>
