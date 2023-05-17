@@ -1,0 +1,55 @@
+---
+import { Binary, Code2, Landmark, PlugZap, Sparkles } from "lucide-preact";
+import Company from "../components/Company.astro";
+
+const size = "4rem";
+---
+
+<section class="container-hybrid companies">
+  <div class="companies__inner">
+    <h1>Experience</h1>
+    <p>Places I had a pleasure to work at.</p>
+    <div class="companies__list">
+      <Company name="J-Labs" type="IT Services On-demand">
+        <Code2 size={size} />
+      </Company>
+      <Company name="Shell Energy" type="Energy Supplier">
+        <PlugZap size={size} />
+      </Company>
+      <Company name="UBS" type="Investment Bank">
+        <Landmark size={size} />
+      </Company>
+      <Company name="Lumesse" type="Talent Acquisiton">
+        <Sparkles size={size} />
+      </Company>
+      <Company name="Intive" type="IT Services On-demand">
+        <Code2 size={size} />
+      </Company>
+      <Company name="Comarch" type="Software Development">
+        <Binary size={size} />
+      </Company>
+    </div>
+  </div>
+</section>
+
+<style>
+  .companies {
+    margin: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  .companies__inner {
+    padding: var(--block-spacing-vertical) 0;
+  }
+
+  .companies__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

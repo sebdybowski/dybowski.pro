@@ -2,11 +2,13 @@
 
 :root,
 [data-theme="light"],
-:root:not([data-theme="dark"]) {
+:root:not([data-theme="dark"])
+{
   /* pico.css */
   --primary: hsl(281, 100%, 60%);
   --tertiary: hsl(191, 100%, 60%);
-  --primary-hover: hsl(281, 100%, 40%);;
+  --primary-hover: hsl(281, 100%, 40%);
+  ;
   --switch-checked-background-color: var(--primary);
   --border-radius: 0.5rem;
 
@@ -26,6 +28,48 @@ h2:hover,
 h3:hover,
 h4:hover,
 h5:hover,
-h6:hover {
+h6:hover
+{
   cursor: text;
+}
+
+.container-hybrid
+{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing);
+  padding-left: var(--spacing);
+}
+
+@media (min-width: 576px)
+{
+  .container-hybrid
+  {
+    padding: 0 calc((100% - 510px) / 2);
+  }
+}
+
+@media (min-width: 768px)
+{
+  .container-hybrid
+  {
+    padding: 0 calc((100% - 700px) / 2);
+  }
+}
+
+@media (min-width: 992px)
+{
+  .container-hybrid
+  {
+    padding: 0 calc((100% - 920px) / 2);
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .container-hybrid
+  {
+    padding: 0 calc((100% - 1130px) / 2);
+  }
 }

@@ -1,7 +1,7 @@
 ---
-import '../global.css';
-import ThemeSwitcher from '../components/ThemeSwitcher/ThemeSwitcher.astro';
-import { THEME } from '../components/ThemeSwitcher/ThemeSwitcher';
+import "../global.css";
+import { THEME } from "../components/ThemeSwitcher/ThemeSwitcher";
+import Navbar from "../components/Navbar.astro";
 
 export interface Props {
   title: string;
@@ -22,99 +22,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body id="home">
-    <nav class="container top-bar sticky" id="navbar">
-      <ul>
-        <li>
-          <ThemeSwitcher />
-        </li>
-      </ul>
-      <ul class="menu-btn">
-        <button type="button" aria-label="menu burger" class="outline">🍔</button>
-      </ul>
-      <ul class="links">
-        <li>
-          <a href="#home"># Home</a>
-        </li>
-        <li>
-          <a href="#frontend"># Frontend</a>
-        </li>
-        <li>Backend</li>
-        <li>User experience</li>
-        <li>Teamwork</li>
-      </ul>
-    </nav>
-
+    <Navbar />
     <slot />
-    <style>
-      body {
-        position: relative;
-      }
-
-      .top-bar {
-        border-bottom: var(--border-width) solid var(--muted-border-color);
-        z-index: 1;
-      }
-      
-      .sticky {
-        position: sticky;
-        top: 0;
-        backdrop-filter: blur(0.25rem);
-      }
-
-      .menu-btn button {
-        margin: 0;
-      }
-
-      .links.visible {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .links.hidden {
-        display: none;
-      }
-
-      @media screen and (max-width: 991px) {
-        .links {
-          display: none;
-        }
-      }
-
-      @media screen and (min-width: 992px) {
-        .menu-btn {
-          display: none;
-        }
-      }
-    </style>
   </body>
 </html>
-
-<script lang="ts">
-  let isVisible = false;
-
-  document.querySelectorAll('.menu-btn button')[0].addEventListener('click', () => {
-    console.log('click');
-
-    document.getElementsByClassName('links')[0].classList.add(
-      isVisible ? 'hidden' : 'visible');
-    document.getElementsByClassName('links')[0].classList.remove(
-      isVisible ? 'visible' : 'hidden');
-
-    isVisible = !isVisible;
-  });
-
-
-  document.addEventListener('scroll', () => {
-    const HTMLElement = document.getElementsByTagName('html')[0];
-    const NavbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
-    const HeroHeight = document.getElementById('hero')?.offsetHeight || 0;
-
-    console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
-
-    if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) { 
-      document.getElementById('navbar')?.classList.add('sticky');
-    } else {
-      document.getElementById('navbar')?.classList.remove('sticky');
-    }
-  });
-</script>

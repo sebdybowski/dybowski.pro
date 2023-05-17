@@ -1,15 +1,23 @@
-<div class="grid">
-  <div>image</div>
-  <article>
-    <h2>UX</h2>
-    <p>
-      I strive to create digital experiences that are a pleasure to use. From user research to wireframes to visual design, I'm hands-on throughout the entire design process. I enjoy problem-solving and finding innovative solutions to make the user experience more intuitive and engaging. Armed with my design toolkit, which includes Sketch and Adobe Creative Suite, I'm ready to turn your vision into a polished and user-friendly reality.    </p>
-  </article>
-</div>
+---
+import Section from "../components/Section.astro";
+// import Svg from "../assets/svg/Designer_Monochromatic.svg";
+import Svg from "../assets/svg/Designer_Isometric.svg";
 
-<style>
-  h2::before {
-    content: "# ";
-    font-style: italic;
-  }
-</style>
+const sectionTitle = "design";
+---
+
+<Section
+  id={sectionTitle}
+  svg={Svg}
+  svgAlt="UI design illustration"
+  title={sectionTitle}
+>
+  <p>
+    I strive to create digital experiences that are a pleasure to use. From user
+    research to wireframes to visual design, I'm hands-on throughout the entire
+    design process. I enjoy problem-solving and finding innovative solutions to
+    make the user experience more intuitive and engaging. Armed with my design
+    toolkit, which includes Sketch and Adobe Creative Suite, I'm ready to turn
+    your vision into a polished and user-friendly reality.
+  </p>
+</Section>

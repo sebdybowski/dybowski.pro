@@ -1,23 +1,25 @@
 ---
-import {Code, Binary} from "lucide-preact";
+import Section from "../components/Section.astro";
+// import Svg from "../assets/svg/Web_Developer_Monochromatic.svg";
+import Svg from "../assets/svg/Web_Developer_Isometric.svg";
+
+const sectionTitle = "frontend";
 ---
 
-<div class="grid" id="frontend">
-  <article>
-    <h2>Frontend</h2>
-    <p>
-      As a front-end wizard, I create digital experiences that are so smooth, you'll swear your screen is gliding on butter. With my mad skills in HTML, CSS, and JavaScript, I can bring any design to life and make it responsive to all devices. My weapon of choice is React, but I'm also fluent in other front-end frameworks and libraries. From designing sleek and stylish interfaces to building complex web applications, I'm always up for a coding adventure. Let's make your website look so good, it'll make the internet jealous!
-    </p>
-  </article>
-  <div class="grid">
-    <Code size={64}/>
-    <Binary size={64}/>
-  </div>
-</div>
-
-<style>
-    h2::before {
-        content: "# ";
-        font-style: italic;
-    }
-</style>
+<Section
+  id={sectionTitle}
+  svg={Svg}
+  svgAlt="Web development illustration"
+  title={sectionTitle}
+>
+  <p>
+    As a front-end wizard, I create digital experiences that are so smooth,
+    you'll swear your screen is gliding on butter. With my mad skills in HTML,
+    CSS, and JavaScript, I can bring any design to life and make it responsive
+    to all devices. My weapon of choice is React, but I'm also fluent in other
+    front-end frameworks and libraries. From designing sleek and stylish
+    interfaces to building complex web applications, I'm always up for a coding
+    adventure. Let's make your website look so good, it'll make the internet
+    jealous!
+  </p>
+</Section>

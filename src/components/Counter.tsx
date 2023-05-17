@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useState } from "preact/hooks";
 
 const second = 1000;
 const minute = second * 60;
@@ -7,7 +7,10 @@ const day = hour * 24;
 const month = day * 30.237;
 const year = day * 365.25;
 
-const getDisplayValues = (diff: number) => {
+const parseTime = (time: number): string => (time.toString().length === 1 ? `0${time}` : time.toString());
+
+const getDisplayValues = (diff: number) =>
+{
   const years = Math.floor(diff / year);
   const months = Math.floor((diff % year) / month);
   const days = Math.floor((diff % year % month) / day);
@@ -18,15 +21,18 @@ const getDisplayValues = (diff: number) => {
   return [years, months, days, hours, minutes, seconds];
 };
 
-const useCounter = (startDate: string) => {
+const useCounter = (startDate: string) =>
+{
   const startDateTime = new Date(startDate).getTime();
 
   const [diff, setDiff] = useState(
     new Date().getTime() - startDateTime
   );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect(() =>
+  {
+    const interval = setInterval(() =>
+    {
       setDiff(new Date().getTime() - startDateTime);
     }, 1000);
 
@@ -36,14 +42,15 @@ const useCounter = (startDate: string) => {
   return getDisplayValues(diff);
 };
 
-export const Counter = () => {
+export const Counter = () =>
+{
   const [
     years, months, days, hours, minutes, seconds
-  ] = useCounter('1 June 2013');
-  
+  ] = useCounter("1 June 2013");
+
   return (
     <span>
-      {years}y {months}m {days}d {hours}h {minutes}m {seconds}s
+      {years}y {months}m {days}d, {parseTime(hours)}:{parseTime(minutes)}:<strong>{parseTime(seconds)}</strong>
     </span>
   );
 };
