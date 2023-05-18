@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@astrojs/preact": "^2.1.0",
-    "@fontsource/comfortaa": "^4.5.11",
-    "@fontsource/volkhov": "^4.5.9",
+    "@fontsource/dm-sans": "^4.5.9",
+    "@fontsource/dm-serif-display": "^4.5.10",
     "@picocss/pico": "^1.5.10",
     "astro": "^2.4.4",
     "clsx": "^1.2.1",
-    "lucide-preact": "^0.215.0",
+    "lucide-preact": "^0.219.0",
     "preact": "^10.13.2"
   },
   "devDependencies": {

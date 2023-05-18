@@ -4,12 +4,12 @@ dependencies:
   '@astrojs/preact':
     specifier: ^2.1.0
     version: 2.1.0(preact@10.13.2)
-  '@fontsource/comfortaa':
-    specifier: ^4.5.11
-    version: 4.5.11
-  '@fontsource/volkhov':
+  '@fontsource/dm-sans':
     specifier: ^4.5.9
     version: 4.5.9
+  '@fontsource/dm-serif-display':
+    specifier: ^4.5.10
+    version: 4.5.10
   '@picocss/pico':
     specifier: ^1.5.10
     version: 1.5.10
@@ -20,8 +20,8 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   lucide-preact:
-    specifier: ^0.215.0
-    version: 0.215.0(preact@10.13.2)
+    specifier: ^0.219.0
+    version: 0.219.0(preact@10.13.2)
   preact:
     specifier: ^10.13.2
     version: 10.13.2
@@ -625,12 +625,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/comfortaa@4.5.11:
-    resolution: {integrity: sha512-KKC2C6KbF9BD6m9+wMf5hK0wFjIi3p3J/6C4JZW6OF9G6K4qZJFp2dBZzsEBepKh4s9/Q5G1SWsUUZY3ZeZNDA==}
+  /@fontsource/dm-sans@4.5.9:
+    resolution: {integrity: sha512-qaFvSBJhoeley1A9myRUUuHbm9sz7ADyC2WodezBzdFSPs2VD/p5WPPwtpVE8b1SglQrOPAnxA7s3fH5zOtiMQ==}
     dev: false
 
-  /@fontsource/volkhov@4.5.9:
-    resolution: {integrity: sha512-JQ9wN7gBQ3elHFTgy8paNg/Q4jUDwRS/OEAf1jvc6bG88q5OCIcSblXMQrC0rsZNHpGp5jJKQ4dyDRUxFsiGZw==}
+  /@fontsource/dm-serif-display@4.5.10:
+    resolution: {integrity: sha512-YK21qvUvwRx/Z10rzxNM5cLIkNg8R17wWPqA9+sNS8uTLrIX7WfC8OMTMOJLwrNRu9EDVB1gVUso0LayJPRCOw==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
@@ -2749,8 +2749,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-preact@0.215.0(preact@10.13.2):
-    resolution: {integrity: sha512-+opE4lT1NZNbP/Sw5Kx+QoPIxE6FcQf8SYdTBIqNrZ7qgHBOpi74/yNj6CdAuG2mBBURsCz6HAlbGo1ToNifwA==}
+  /lucide-preact@0.219.0(preact@10.13.2):
+    resolution: {integrity: sha512-Mmq/jCi3NzdutSs9jFFqY7RV+e5MJcP36+gNBbREBvSUCyWFMjJWMh7LEbDNEk/q6JuheC0LixfJMfFtmfAPgA==}
     peerDependencies:
       preact: ^10.5.13
     dependencies:

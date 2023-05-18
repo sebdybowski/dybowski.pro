@@ -1,0 +1,29 @@
+---
+import { X } from "lucide-preact";
+---
+
+<figure class="container-hybrid">
+  <p>
+    To navigate through sections use <kbd>Ctrl</kbd> + <kbd>K</kbd>
+  </p>
+  <X class="close" />
+</figure>
+
+<style>
+  figure {
+    position: absolute;
+    border-bottom: var(--border-width) solid var(--muted-border-color);
+  }
+
+  p {
+    padding: 0.5rem 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .close {
+    display: inline-block;
+    margin: 0.75rem 0;
+    float: right;
+  }
+</style>
