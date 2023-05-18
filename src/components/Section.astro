@@ -1,15 +1,18 @@
 ---
+import clsx from "clsx";
+
 interface Props {
   id: string;
   svg: string;
   svgAlt: string;
   title: string;
+  inverse?: boolean;
 }
 
-const { id, svg, svgAlt, title } = Astro.props;
+const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 ---
 
-<section class="grid" id={id}>
+<section class={clsx("grid", inverse && "grid--inverse")} id={id}>
   <article>
     <h2>{title}</h2>
     <slot />
@@ -28,5 +31,9 @@ const { id, svg, svgAlt, title } = Astro.props;
     width: 100%;
     min-width: 100%;
     align-self: center;
+  }
+
+  .grid--inverse > article {
+    order: 1;
   }
 </style>

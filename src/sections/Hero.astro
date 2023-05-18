@@ -11,13 +11,10 @@ import ProfileImg from "../assets/img/seb-lg.webp";
         <h2>Ready to elevate your web game to new heights?</h2>
       </hgroup>
       <p>
-        <Counter client:load />
-      </p>
-      <p>
         Looking for a skilled professional who can handle all aspects of your
         web project? Look no further. With expertise in software development,
         team leadership, and UX design, I have the skills and experience to
-        bring your vision to life!../public
+        bring your vision to life!
       </p>
       <p>
         To navigate through sections use <kbd>Ctrl</kbd> + <kbd>K</kbd>
@@ -34,7 +31,7 @@ import ProfileImg from "../assets/img/seb-lg.webp";
         target="_blank">🔗 See my code!</a
       >
     </div>
-    <img src={ProfileImg} alt="Seb' profile" />
+    <div></div>
   </div>
 </header>
 
@@ -53,6 +50,11 @@ import ProfileImg from "../assets/img/seb-lg.webp";
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80svh;
+    background-image: url("../assets/img/seb-lg.webp");
+    background-size: 62.5%;
+    background-position: bottom right;
+    padding: var(--block-spacing-vertical) 0;
   }
 
   .gradient-mark {

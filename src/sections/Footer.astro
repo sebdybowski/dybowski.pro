@@ -1,5 +1,20 @@
 ---
+import { Github, Linkedin, Twitter } from "lucide-preact";
+
 const currentYear = new Date().getFullYear();
+const links = [
+  { url: "https://github.com/sebdybowski", label: "Github", Icon: Github },
+  {
+    url: "https://pl.linkedin.com/in/sebastian-dybowski",
+    label: "LinkedIn",
+    Icon: Linkedin,
+  },
+  {
+    url: "https://twitter.com/sebdybowskidev",
+    label: "Twitter",
+    Icon: Twitter,
+  },
+];
 ---
 
 <footer class="container-hybrid">
@@ -19,10 +34,15 @@ const currentYear = new Date().getFullYear();
       <h4>Links</h4>
       <hr />
       <ul>
-        <li><a href="https://github.com/sebdybowski">Github</a></li>
-        <li>
-          <a href="https://pl.linkedin.com/in/sebastian-dybowski">LinkedIn</a>
-        </li>
+        {
+          links.map(({ url, label, Icon }) => (
+            <li>
+              <a href={url} target="_blank">
+                <Icon size="1rem" /> - {label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>

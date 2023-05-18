@@ -6,7 +6,7 @@ import Frontend from "../sections/Frontend.astro";
 import Backend from "../sections/Backend.astro";
 import Leadership from "../sections/Leadership.astro";
 import UX from "../sections/UX.astro";
-import Companies from "../sections/Companies.astro";
+import Experience from "../sections/Experience.astro";
 ---
 
 <Layout
@@ -15,7 +15,7 @@ import Companies from "../sections/Companies.astro";
 >
   <main>
     <Hero />
-    <Companies />
+    <Experience />
     <div class="container">
       <Frontend />
       <Backend />
@@ -25,3 +25,9 @@ import Companies from "../sections/Companies.astro";
   </main>
   <Footer />
 </Layout>
+
+<style>
+  body > main {
+    padding: 0;
+  }
+</style>
