@@ -2,6 +2,7 @@
 import "../global.css";
 import { THEME } from "../components/ThemeSwitcher/ThemeSwitcher";
 import Navbar from "../components/Navbar.astro";
+import Dialog from "../components/Dialog.astro";
 
 export interface Props {
   title: string;
@@ -23,6 +24,7 @@ const { title, description } = Astro.props;
   </head>
   <body id="home">
     <Navbar />
+    <Dialog />
     <slot />
   </body>
 </html>

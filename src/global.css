@@ -1,6 +1,6 @@
 @import url('@picocss/pico/css/pico.css');
-@import url(@fontsource/comfortaa);
-@import url(@fontsource/volkhov);
+@import url('@fontsource/dm-serif-display');
+@import url('@fontsource/dm-sans');
 
 :root,
 [data-theme="light"],
@@ -29,6 +29,12 @@
   --muted-border-color: #f2e4ea;
 }
 
+hgroup>*:last-child,
+.headings>*:last-child
+{
+  --color: var(--h2-color);
+}
+
 span:hover,
 strong:hover,
 em:hover,
@@ -52,14 +58,13 @@ h4,
 h5,
 h6
 {
-  font-family: "Volkhov";
-  font-family: "Comfortaa";
+  font-family: "DM Serif Display";
 }
 
-/* body
+body
 {
-  font-family: "Comfortaa";
-} */
+  font-family: "DM Sans";
+}
 
 article
 {
