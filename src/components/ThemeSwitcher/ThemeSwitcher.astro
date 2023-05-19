@@ -1,21 +1,21 @@
 ---
-import { SWITCHER_ID, THEME } from './ThemeSwitcher';
+import { Sun, MoonStar } from "lucide-preact";
+import { SWITCHER_ID } from "./ThemeSwitcher";
 ---
 
 <script>
-  import { initThemeSwitcher } from './ThemeSwitcher';
+  import { initThemeSwitcher } from "./ThemeSwitcher";
 
   initThemeSwitcher();
 </script>
 
 <label for={SWITCHER_ID} title="Theme switcher">
-  <span>Theme:</span><br/>
+  <MoonStar size="1.125rem" alt="dark theme icon" />
   <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
-  <strong class={`theme--indicator ${THEME.LIGHT}`}>{THEME.LIGHT} 🌞</strong>
-  <strong class={`theme--indicator ${THEME.DARK}`}>{THEME.DARK} 🌙</strong>
+  <Sun size="1.125rem" alt="light theme icon" />
 </label>
 
-<style>
+<style scoped>
   html .theme--indicator.dark,
   html .theme--indicator.light {
     display: none;
@@ -27,5 +27,9 @@ import { SWITCHER_ID, THEME } from './ThemeSwitcher';
 
   html[data-theme="light"] .light {
     display: inline;
+  }
+
+  #theme-switcher {
+    margin-right: 0;
   }
 </style>
