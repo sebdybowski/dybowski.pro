@@ -15,6 +15,7 @@
     "@fontsource/dm-serif-display": "^4.5.10",
     "@picocss/pico": "^1.5.10",
     "astro": "^2.5.0",
+    "eslint-plugin-css": "^0.8.0",
     "lucide-preact": "^0.220.0",
     "preact": "^10.14.1"
   },

@@ -1,6 +1,7 @@
 ---
 import { Counter } from "../components/Counter";
 import ProfileImg from "../assets/img/seb-lg.webp";
+import { HeartHandshake, Code2 } from "lucide-preact";
 ---
 
 <header class="container" id="hero">
@@ -21,13 +22,13 @@ import ProfileImg from "../assets/img/seb-lg.webp";
       <a
         href="https://pl.linkedin.com/in/sebastian-dybowski"
         role="button"
-        target="_blank">🔗 Contact me!</a
+        target="_blank"><HeartHandshake /> hire me</a
       >
       <a
         href="https://github.com/sebdybowski"
         role="button"
         class="secondary"
-        target="_blank">🔗 See my code!</a
+        target="_blank"><Code2 /> check my code</a
       >
     </div>
     <div></div>
@@ -42,6 +43,16 @@ import ProfileImg from "../assets/img/seb-lg.webp";
     }
     50% {
       background-position-y: 100%;
+    }
+  }
+
+  @keyframes press {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0.25rem);
     }
   }
 
@@ -74,13 +85,26 @@ import ProfileImg from "../assets/img/seb-lg.webp";
     position: relative;
   }
 
-  svg {
-    fill: var(--primary);
-  }
-
   img {
     border-radius: 50%;
     border: 1px solid;
+  }
+
+  a[role="button"] {
+    box-shadow: 0 0.25rem var(--primary-hover);
+    border: 3px solid var(--primary-hover);
+    animation: ;
+  }
+
+  a[role="button"].secondary {
+    box-shadow: 0 0.25rem var(--secondary-hover);
+    border: 3px solid var(--secondary-hover);
+  }
+
+  a[role="button"]:hover {
+    transform: translateY(0.25rem);
+    transition: box-shadow transform ease-in-out 500ms;
+    box-shadow: inset var(--card-box-shadow);
   }
 </style>
 
