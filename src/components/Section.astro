@@ -1,6 +1,4 @@
 ---
-import clsx from "clsx";
-
 interface Props {
   id: string;
   svg: string;
@@ -12,7 +10,7 @@ interface Props {
 const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 ---
 
-<section class={clsx("grid", inverse && "grid--inverse")} id={id}>
+<section class:list={["grid", { ["grid--inverse"]: inverse }]} id={id}>
   <article>
     <h2>{title}</h2>
     <slot />

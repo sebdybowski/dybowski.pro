@@ -1,9 +1,6 @@
 @import url('@picocss/pico/css/pico.css');
-/* @import url(@fontsource/comfortaa);
-@import url(@fontsource/volkhov); */
-@import url(@fontsource/dm-serif-display);
-@import url(@fontsource/dm-sans);
-/* @import url(@fontsource/cormorant); */
+@import url('@fontsource/dm-serif-display');
+@import url('@fontsource/dm-sans');
 
 :root,
 [data-theme="light"],
@@ -61,10 +58,7 @@ h4,
 h5,
 h6
 {
-  /* font-family: "Volkhov"; */
-  /* font-family: "Comfortaa"; */
   font-family: "DM Serif Display";
-  /* font-family: "Cormorant"; */
 }
 
 body
