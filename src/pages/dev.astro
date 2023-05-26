@@ -7,6 +7,7 @@ import Backend from "../sections/Backend.astro";
 import Leadership from "../sections/Leadership.astro";
 import UX from "../sections/UX.astro";
 import Experience from "../sections/Experience.astro";
+import Stripe from "../components/Stripe.astro";
 ---
 
 <Layout
@@ -15,6 +16,7 @@ import Experience from "../sections/Experience.astro";
 >
   <main>
     <Hero />
+    <Stripe />
     <Experience />
     <div class="container">
       <Frontend />
@@ -23,6 +25,7 @@ import Experience from "../sections/Experience.astro";
       <UX />
     </div>
   </main>
+  <Stripe />
   <Footer />
 </Layout>
 

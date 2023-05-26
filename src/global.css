@@ -18,7 +18,7 @@
 
   /* custom variables */
   --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
-  --primary-gradient-inverse: linear-gradient(20deg, var(--tertiary), var(--primary));
+  --primary-gradient-inverse: linear-gradient(20deg, var(--color), var(--tertiary));
 
 }
 
@@ -37,6 +37,11 @@
   --background-color: #191617;
   --card-background-color: #2E2A2C;
   --muted-border-color: #444042;
+}
+
+input[type="checkbox"][role="switch"]
+{
+  margin: 0 var(--nav-link-spacing-horizontal);
 }
 
 hgroup>*:last-child,

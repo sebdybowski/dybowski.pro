@@ -1,6 +1,9 @@
 ---
 import { Counter } from "../components/Counter";
-import ProfileImg from "../assets/img/seb-lg.webp";
+import SebSm from "../assets/img/seb-sm.webp";
+import SebMd from "../assets/img/seb-md.webp";
+import SebLg from "../assets/img/seb-lg.webp";
+import SebXl from "../assets/img/seb-xl.webp";
 import { HeartHandshake, Code2 } from "lucide-preact";
 ---
 
@@ -31,7 +34,12 @@ import { HeartHandshake, Code2 } from "lucide-preact";
         target="_blank"><Code2 /> check my code</a
       >
     </div>
-    <div></div>
+    <div>
+      <img
+        alt="Seb' portrait"
+        srcset={`${SebSm} 576w, ${SebMd} 768w, ${SebLg} 992w, ${SebXl} 1200w`}
+      />
+    </div>
   </div>
 </header>
 
@@ -61,9 +69,7 @@ import { HeartHandshake, Code2 } from "lucide-preact";
     justify-content: center;
     align-items: center;
     min-height: 80svh;
-    background-image: url("../assets/img/seb-lg.webp");
-    background-size: 62.5%;
-    background-position: bottom right;
+    position: relative;
     padding: var(--block-spacing-vertical) 0;
   }
 
@@ -86,14 +92,32 @@ import { HeartHandshake, Code2 } from "lucide-preact";
   }
 
   img {
-    border-radius: 50%;
-    border: 1px solid;
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    height: 100%;
+    /* background-image: var(--primary-gradient); */
+    background-size: 50%;
+    background-position: bottom right;
+  }
+
+  @media screen and (max-width: 1200px) {
+    img {
+      height: auto;
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    img {
+      position: initial;
+      width: 100%;
+    }
   }
 
   a[role="button"] {
     box-shadow: 0 0.25rem var(--primary-hover);
     border: 3px solid var(--primary-hover);
-    animation: ;
   }
 
   a[role="button"].secondary {
