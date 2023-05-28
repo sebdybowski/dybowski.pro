@@ -18,6 +18,7 @@ import Stripe from "../components/Stripe.astro";
     <Hero />
     <Stripe />
     <Experience />
+    <Stripe />
     <div class="container">
       <Frontend />
       <Backend />
@@ -32,5 +33,17 @@ import Stripe from "../components/Stripe.astro";
 <style>
   body > main {
     padding: 0;
+  }
+
+  body {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--pattern-color),
+      var(--pattern-color) 1rem,
+      var(--background-color) 1rem,
+      var(--background-color) 2rem
+    );
   }
 </style>

@@ -1,10 +1,9 @@
 ---
-import { Counter } from "../components/Counter";
 import SebSm from "../assets/img/seb-sm.webp";
 import SebMd from "../assets/img/seb-md.webp";
 import SebLg from "../assets/img/seb-lg.webp";
 import SebXl from "../assets/img/seb-xl.webp";
-import { HeartHandshake, Code2 } from "lucide-preact";
+import { HeartHandshake, Code2, Mouse } from "lucide-preact";
 ---
 
 <header class="container" id="hero">
@@ -33,10 +32,17 @@ import { HeartHandshake, Code2 } from "lucide-preact";
         class="secondary"
         target="_blank"><Code2 /> check my code</a
       >
+      <br />
+      <br />
+      <p>
+        <Mouse aria-label="Scroll" class="mouse" /> Scroll for next sections.
+      </p>
     </div>
     <div>
       <img
-        alt="Seb' portrait"
+        alt="
+          Seb'
+          portrait"
         srcset={`${SebSm} 576w, ${SebMd} 768w, ${SebLg} 992w, ${SebXl} 1200w`}
       />
     </div>
@@ -64,6 +70,16 @@ import { HeartHandshake, Code2 } from "lucide-preact";
     }
   }
 
+  @keyframes MoveUpDown {
+    0%,
+    100% {
+      bottom: -0.25rem;
+    }
+    50% {
+      bottom: 0.25rem;
+    }
+  }
+
   #hero {
     display: flex;
     justify-content: center;
@@ -71,6 +87,12 @@ import { HeartHandshake, Code2 } from "lucide-preact";
     min-height: 80svh;
     position: relative;
     padding: var(--block-spacing-vertical) 0;
+  }
+
+  .mouse {
+    margin-top: -0.25rem;
+    position: relative;
+    animation: MoveUpDown 1s linear infinite;
   }
 
   .gradient-mark {
@@ -96,9 +118,7 @@ import { HeartHandshake, Code2 } from "lucide-preact";
     bottom: 0;
     right: -5%;
     height: 100%;
-    /* background-image: var(--primary-gradient); */
-    background-size: 50%;
-    background-position: bottom right;
+    mix-blend-mode: luminosity;
   }
 
   @media screen and (max-width: 1200px) {
@@ -113,22 +133,6 @@ import { HeartHandshake, Code2 } from "lucide-preact";
       position: initial;
       width: 100%;
     }
-  }
-
-  a[role="button"] {
-    box-shadow: 0 0.25rem var(--primary-hover);
-    border: 3px solid var(--primary-hover);
-  }
-
-  a[role="button"].secondary {
-    box-shadow: 0 0.25rem var(--secondary-hover);
-    border: 3px solid var(--secondary-hover);
-  }
-
-  a[role="button"]:hover {
-    transform: translateY(0.25rem);
-    transition: box-shadow transform ease-in-out 500ms;
-    box-shadow: inset var(--card-box-shadow);
   }
 </style>
 
