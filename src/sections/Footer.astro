@@ -1,5 +1,5 @@
 ---
-import { Github, Linkedin, Twitter } from "lucide-preact";
+import { Github, Linkedin, Twitter, Mail } from "lucide-preact";
 
 const currentYear = new Date().getFullYear();
 const links = [
@@ -13,6 +13,11 @@ const links = [
     url: "https://twitter.com/sebdybowskidev",
     label: "Twitter",
     Icon: Twitter,
+  },
+  {
+    url: "mailto:dybowski.seb@gmail.com",
+    label: "E-mail",
+    Icon: Mail,
   },
 ];
 ---
@@ -43,7 +48,7 @@ const links = [
           links.map(({ url, label, Icon }) => (
             <li>
               <a href={url} target="_blank">
-                <Icon size="1rem" /> - {label}
+                <Icon size="1rem" class="icon" /> / {label}
               </a>
             </li>
           ))
@@ -61,5 +66,13 @@ const links = [
 
   footer > div {
     padding: var(--block-spacing-vertical) 0;
+  }
+
+  hr {
+    margin-bottom: 2rem;
+  }
+
+  .icon {
+    margin-top: -0.25rem;
   }
 </style>

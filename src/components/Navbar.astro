@@ -87,17 +87,34 @@ const links = [
     color: var(--primary);
   }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 992px) {
     .links {
       display: none;
     }
 
+    .links.visible {
+      position: absolute;
+      margin-top: 3.5rem;
+      padding-bottom: 2rem;
+      width: 100%;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.66);
+      backdrop-filter: blur(0.5em);
+    }
+
+    .links.visible > li {
+      width: 90%;
+      text-align: right;
+    }
+
     li.visible--sticky {
-      display: inline-flex;
+      margin-top: 1rem;
+      display: inline;
     }
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 993px) {
     .menu-btn {
       display: none;
     }

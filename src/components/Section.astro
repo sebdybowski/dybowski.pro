@@ -1,4 +1,6 @@
 ---
+import SectionTitle from "./SectionTitle.astro";
+
 interface Props {
   id: string;
   svg: string;
@@ -12,7 +14,7 @@ const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 
 <section class:list={["grid", { ["grid--inverse"]: inverse }]} id={id}>
   <article>
-    <h2>{title}</h2>
+    <SectionTitle id={id} title={title} />
     <slot />
   </article>
   <img src={svg} alt={svgAlt} />

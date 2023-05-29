@@ -3,12 +3,12 @@ import SebSm from "../assets/img/seb-sm.webp";
 import SebMd from "../assets/img/seb-md.webp";
 import SebLg from "../assets/img/seb-lg.webp";
 import SebXl from "../assets/img/seb-xl.webp";
-import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
+import { HeartHandshake, Code2, Mouse, Hand, Mail } from "lucide-preact";
 ---
 
-<header class="container" id="hero">
+<header class="container-hybrid" id="hero">
   <div class="grid">
-    <div>
+    <div class="info-section">
       <hgroup>
         <h1>Hey there, I'm <strong class="gradient-mark">Seb!</strong></h1>
         <h2>
@@ -25,10 +25,8 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
         href="https://github.com/sebdybowski"
         role="button"
         class="secondary"
-        target="_blank"><Code2 /> check my code</a
+        target="_blank"><Mail /> email me</a
       >
-      <br />
-      <br />
       <p>
         <Mouse aria-label="Scroll" class="mouse" />
         <Hand aria-label="Swipe" class="swipe" />
@@ -36,7 +34,7 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
         <strong class="swipe__label">Swipe</strong> for next sections.
       </p>
     </div>
-    <div>
+    <div class="image-wrapper">
       <img
         alt="
           Seb'
@@ -55,7 +53,7 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
     min-height: 85vh;
     min-height: 85svh;
     position: relative;
-    padding: var(--block-spacing-vertical) 0;
+    overflow: hidden;
   }
 
   .mouse,
@@ -88,6 +86,10 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
     position: relative;
   }
 
+  .info-section {
+    z-index: 1;
+  }
+
   h1 {
     font-size: 3rem;
   }
@@ -95,22 +97,33 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
   img {
     position: absolute;
     bottom: 0;
-    right: -5%;
+    left: 40%;
     height: 100%;
     mix-blend-mode: luminosity;
+    opacity: 0.9;
+  }
+
+  p {
+    margin: 2rem 0;
   }
 
   @media screen and (max-width: 1200px) {
-    img {
-      height: auto;
-      width: 60%;
+    .info-section {
+      width: 120%;
     }
   }
 
-  @media screen and (max-width: 992px) {
+  @media (max-width: 992px) {
     img {
-      position: initial;
-      width: 100%;
+      z-index: 0;
+      opacity: 0.4;
+      height: auto;
+      max-height: 100%;
+      width: 80%;
+    }
+
+    .info-section {
+      width: 80%;
     }
 
     .mouse,
@@ -121,6 +134,28 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
     .swipe,
     .swipe__label {
       display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    #hero {
+      align-items: flex-end;
+    }
+
+    .info-section {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      object-fit: cover;
+      object-position: center bottom;
     }
   }
 </style>

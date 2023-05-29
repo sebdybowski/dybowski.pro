@@ -80,6 +80,17 @@ h6,
   font-family: "DM Serif Display";
 }
 
+hr
+{
+  width: 33%;
+  margin: 0.5rem 0;
+}
+
+.text--center
+{
+  text-align: center;
+}
+
 body
 {
   font-family: "DM Sans";
@@ -123,6 +134,8 @@ a[role="button"]:hover
   .container-hybrid
   {
     padding: 0 calc((100% - 510px) / 2);
+    padding-right: var(--spacing);
+    padding-left: var(--spacing);
   }
 }
 
