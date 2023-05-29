@@ -1,5 +1,5 @@
 ---
-import { HeartHandshake } from "lucide-preact";
+import { HeartHandshake, Text } from "lucide-preact";
 import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
@@ -19,7 +19,9 @@ const links = [
     </li>
   </ul>
   <ul class="menu-btn">
-    <button type="button" aria-label="menu burger" class="outline">🍔</button>
+    <button type="button" aria-label="menu button" class="menu-toggle">
+      <Text />
+    </button>
   </ul>
   <ul class="links">
     {
@@ -76,9 +78,22 @@ const links = [
     display: none;
   }
 
+  .menu-toggle {
+    border: none;
+    background: transparent;
+  }
+
+  .menu-toggle:hover {
+    color: var(--primary);
+  }
+
   @media screen and (max-width: 991px) {
     .links {
       display: none;
+    }
+
+    li.visible--sticky {
+      display: inline-flex;
     }
   }
 

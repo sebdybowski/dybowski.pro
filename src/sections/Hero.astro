@@ -12,15 +12,10 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
       <hgroup>
         <h1>Hey there, I'm <strong class="gradient-mark">Seb!</strong></h1>
         <h2>
-          Looking for a skilled professional who can handle all aspects of your
-          web project? <strong>Look no further.</strong>
+          With expertise in software development, team leadership, and UX
+          design, I have the skills and experience to bring your vision to life!
         </h2>
       </hgroup>
-      <p></p>
-      <p>
-        With expertise in software development, team leadership, and UX design,
-        I have the skills and experience to bring your vision to life!
-      </p>
       <a
         href="https://pl.linkedin.com/in/sebastian-dybowski"
         role="button"
@@ -53,36 +48,6 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
 </header>
 
 <style>
-  @keyframes pulse {
-    0%,
-    100% {
-      background-position-y: 0%;
-    }
-    50% {
-      background-position-y: 100%;
-    }
-  }
-
-  @keyframes press {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(0.25rem);
-    }
-  }
-
-  @keyframes MoveUpDown {
-    0%,
-    100% {
-      bottom: -0.25rem;
-    }
-    50% {
-      bottom: 0.25rem;
-    }
-  }
-
   #hero {
     display: flex;
     justify-content: center;
@@ -121,6 +86,10 @@ import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
     animation: pulse 2s ease-in-out infinite;
     border-radius: 50%;
     position: relative;
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 
   img {

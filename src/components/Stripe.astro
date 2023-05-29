@@ -1,10 +1,47 @@
-<hr />
+---
+interface Props {
+  color: "primary" | "primary-inverse" | "secondary" | "secondary-inverse";
+}
+
+const { color } = Astro.props;
+
+const isPrimary = color === "primary";
+const isPrimaryInverse = color === "primary-inverse";
+const isSecondary = color === "secondary";
+const isSecondaryInverse = color === "secondary-inverse";
+---
+
+<hr
+  class:list={[
+    {
+      primary: isPrimary,
+      ["primary-inverse"]: isPrimaryInverse,
+      secondary: isSecondary,
+      ["secondary-inverse"]: isSecondaryInverse,
+    },
+  ]}
+/>
 
 <style scoped>
   hr {
-    height: 0.25rem;
+    height: calc(0.25rem + 3px);
     margin: 0;
-    background-image: var(--primary-gradient);
     border: none;
+  }
+
+  .primary {
+    background-image: var(--primary-gradient);
+  }
+
+  .primary-inverse {
+    background-image: var(--primary-gradient-inverse);
+  }
+
+  .secondary {
+    background-image: var(--secondary-gradient);
+  }
+
+  .secondary-inverse {
+    background-image: var(--secondary-gradient-inverse);
   }
 </style>

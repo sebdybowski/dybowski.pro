@@ -2,12 +2,13 @@
 @import url('@fontsource/dm-serif-display');
 @import url('@fontsource/dm-sans');
 
+@import url('./animations.css');
+
 :root,
 [data-theme="light"],
 :root:not([data-theme="dark"])
 {
   /* pico.css */
-  /* --primary: hsl(281, 100%, 60%); */
   --primary: #ff7070;
   /* --secondary: #A8A4A5; */
   --tertiary: #893e65;
@@ -18,8 +19,9 @@
 
   /* custom variables */
   --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
-  --primary-gradient-inverse: linear-gradient(20deg, var(--color), var(--tertiary));
-
+  --primary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--primary));
+  --secondary-gradient: linear-gradient(200deg, var(--secondary), var(--tertiary));
+  --secondary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--secondary));
 }
 
 /* light theme only */
