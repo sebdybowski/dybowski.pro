@@ -3,7 +3,7 @@ import SebSm from "../assets/img/seb-sm.webp";
 import SebMd from "../assets/img/seb-md.webp";
 import SebLg from "../assets/img/seb-lg.webp";
 import SebXl from "../assets/img/seb-xl.webp";
-import { HeartHandshake, Code2, Mouse } from "lucide-preact";
+import { HeartHandshake, Code2, Mouse, Hand } from "lucide-preact";
 ---
 
 <header class="container" id="hero">
@@ -35,7 +35,10 @@ import { HeartHandshake, Code2, Mouse } from "lucide-preact";
       <br />
       <br />
       <p>
-        <Mouse aria-label="Scroll" class="mouse" /> Scroll for next sections.
+        <Mouse aria-label="Scroll" class="mouse" />
+        <Hand aria-label="Swipe" class="swipe" />
+        <strong class="scroll__label">Scroll</strong>
+        <strong class="swipe__label">Swipe</strong> for next sections.
       </p>
     </div>
     <div>
@@ -84,15 +87,22 @@ import { HeartHandshake, Code2, Mouse } from "lucide-preact";
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80svh;
+    min-height: 85vh;
+    min-height: 85svh;
     position: relative;
     padding: var(--block-spacing-vertical) 0;
   }
 
-  .mouse {
+  .mouse,
+  .swipe {
     margin-top: -0.25rem;
     position: relative;
     animation: MoveUpDown 1s linear infinite;
+  }
+
+  .swipe,
+  .swipe__label {
+    display: none;
   }
 
   .gradient-mark {
@@ -132,6 +142,16 @@ import { HeartHandshake, Code2, Mouse } from "lucide-preact";
     img {
       position: initial;
       width: 100%;
+    }
+
+    .mouse,
+    .scroll__label {
+      display: none;
+    }
+
+    .swipe,
+    .swipe__label {
+      display: inline-block;
     }
   }
 </style>

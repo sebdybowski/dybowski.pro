@@ -35,7 +35,7 @@ import Stripe from "../components/Stripe.astro";
     padding: 0;
   }
 
-  body {
+  /* body {
     background-color: #e5e5f7;
     opacity: 0.8;
     background: repeating-linear-gradient(
@@ -45,5 +45,62 @@ import Stripe from "../components/Stripe.astro";
       var(--background-color) 1rem,
       var(--background-color) 2rem
     );
+  } */
+
+  body {
+    background: radial-gradient(
+      circle,
+      var(--pattern-color) 10%,
+      transparent 11%
+    );
+    background-size: 50px 50px;
+    background-position: center;
   }
+
+  /* body {
+    background: radial-gradient(
+        circle,
+        var(--pattern-color) 10%,
+        transparent 11%
+      ),
+      radial-gradient(
+        circle at bottom left,
+        var(--pattern-color) 5%,
+        transparent 6%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        var(--pattern-color) 5%,
+        transparent 6%
+      ),
+      radial-gradient(
+        circle at top left,
+        var(--pattern-color) 5%,
+        transparent 6%
+      ),
+      radial-gradient(
+        circle at top right,
+        var(--pattern-color) 5%,
+        transparent 6%
+      );
+    background-size: 3em 3em;
+  } */
+
+  /* body {
+    background: repeating-linear-gradient(
+        0deg,
+        var(--background-color) 0,
+        var(--background-color) 20%,
+        transparent 0,
+        transparent 50%
+      ),
+      repeating-linear-gradient(
+        45deg,
+        var(--pattern-color) 0,
+        var(--pattern-color) 10%,
+        transparent 0,
+        transparent 50%
+      );
+    background-size: 3em 3em;
+  } */
 </style>
