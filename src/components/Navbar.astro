@@ -1,5 +1,5 @@
 ---
-import { HeartHandshake } from "lucide-preact";
+import { HeartHandshake, Text } from "lucide-preact";
 import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
@@ -19,7 +19,9 @@ const links = [
     </li>
   </ul>
   <ul class="menu-btn">
-    <button type="button" aria-label="menu burger" class="outline">🍔</button>
+    <button type="button" aria-label="menu button" class="menu-toggle">
+      <Text />
+    </button>
   </ul>
   <ul class="links">
     {
@@ -30,9 +32,9 @@ const links = [
       ))
     }
     <li class="visible--sticky">
-      <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button"
-        ><HeartHandshake /> hire me</a
-      >
+      <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button">
+        <HeartHandshake /> hire me
+      </a>
     </li>
   </ul>
 </nav>
@@ -48,6 +50,11 @@ const links = [
     top: 0;
     backdrop-filter: blur(0.25rem);
     background-color: rgba(var(--background-color), 0.8);
+  }
+
+  li.visible--sticky {
+    padding: 0 var(--nav-element-spacing-horizontal);
+    margin-bottom: 0.25rem;
   }
 
   .visible--sticky {
@@ -71,13 +78,43 @@ const links = [
     display: none;
   }
 
-  @media screen and (max-width: 991px) {
+  .menu-toggle {
+    border: none;
+    background: transparent;
+  }
+
+  .menu-toggle:hover {
+    color: var(--primary);
+  }
+
+  @media screen and (max-width: 992px) {
     .links {
       display: none;
     }
+
+    .links.visible {
+      position: absolute;
+      margin-top: 3.5rem;
+      padding-bottom: 2rem;
+      width: 100%;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.66);
+      backdrop-filter: blur(0.5em);
+    }
+
+    .links.visible > li {
+      width: 90%;
+      text-align: right;
+    }
+
+    li.visible--sticky {
+      margin-top: 1rem;
+      display: inline;
+    }
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 993px) {
     .menu-btn {
       display: none;
     }

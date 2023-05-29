@@ -11,7 +11,7 @@ const { name, type } = Astro.props;
   <div class="company__icon">
     <slot />
   </div>
-  <div>
+  <div class="company__info">
     <strong class="company__name">{name}</strong>
     <hr />
     <span class="company__type">{type}</span>
@@ -24,20 +24,19 @@ const { name, type } = Astro.props;
     display: flex;
     flex-direction: row;
     margin: 1rem 0;
-    padding: 0.5rem 1rem;
-  }
-
-  .company:hover {
-    background-color: var(--primary);
-    border-radius: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
   }
 
   .company__icon {
     margin-right: 1rem;
   }
 
+  .company__info {
+    flex-grow: 1;
+  }
+
   .company__name {
-    coloer: var(--color);
     font-size: 1.25rem;
   }
 

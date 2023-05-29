@@ -2,24 +2,25 @@
 @import url('@fontsource/dm-serif-display');
 @import url('@fontsource/dm-sans');
 
+@import url('./animations.css');
+
 :root,
 [data-theme="light"],
 :root:not([data-theme="dark"])
 {
   /* pico.css */
-  /* --primary: hsl(281, 100%, 60%); */
   --primary: #ff7070;
-  /* --secondary: #A8A4A5; */
   --tertiary: #893e65;
   --primary-hover: #c45656;
   --switch-checked-background-color: var(--primary);
   --border-radius: 0.5rem;
-  --card-box-shadow: 0 0 1rem rgba(25, 22, 23, 0.25);
+  --card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
 
   /* custom variables */
   --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
-  --primary-gradient-inverse: linear-gradient(20deg, var(--tertiary), var(--primary));
-
+  --primary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--primary));
+  --secondary-gradient: linear-gradient(200deg, var(--secondary), var(--tertiary));
+  --secondary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--secondary));
 }
 
 /* light theme only */
@@ -28,6 +29,7 @@
 {
   --background-color: #fcf7f9;
   --muted-border-color: #f2e4ea;
+  --pattern-color: #f6ecf0;
 }
 
 /* dark theme only */
@@ -37,6 +39,12 @@
   --background-color: #191617;
   --card-background-color: #2E2A2C;
   --muted-border-color: #444042;
+  --pattern-color: #252223;
+}
+
+input[type="checkbox"][role="switch"]
+{
+  margin: 0 var(--nav-link-spacing-horizontal);
 }
 
 hgroup>*:last-child,
@@ -66,9 +74,21 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
+.display
 {
   font-family: "DM Serif Display";
+}
+
+hr
+{
+  width: 33%;
+  margin: 0.5rem 0;
+}
+
+.text--center
+{
+  text-align: center;
 }
 
 body
@@ -79,6 +99,25 @@ body
 article
 {
   padding: var(--block-spacing-horizontal);
+}
+
+a[role="button"]
+{
+  box-shadow: 0 0.25rem var(--primary-hover);
+  border: 3px solid var(--primary-hover);
+}
+
+a[role="button"].secondary
+{
+  box-shadow: 0 0.25rem var(--secondary-hover);
+  border: 3px solid var(--secondary-hover);
+}
+
+a[role="button"]:hover
+{
+  transform: translateY(0.25rem);
+  transition: box-shadow transform ease-in-out 500ms;
+  box-shadow: inset var(--card-box-shadow);
 }
 
 .container-hybrid
@@ -95,6 +134,8 @@ article
   .container-hybrid
   {
     padding: 0 calc((100% - 510px) / 2);
+    padding-right: var(--spacing);
+    padding-left: var(--spacing);
   }
 }
 

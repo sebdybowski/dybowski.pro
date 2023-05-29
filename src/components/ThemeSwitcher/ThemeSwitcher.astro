@@ -14,22 +14,3 @@ import { SWITCHER_ID } from "./ThemeSwitcher";
   <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
   <Sun size="1.125rem" alt="light theme icon" />
 </label>
-
-<style scoped>
-  html .theme--indicator.dark,
-  html .theme--indicator.light {
-    display: none;
-  }
-
-  html[data-theme="dark"] .dark {
-    display: inline;
-  }
-
-  html[data-theme="light"] .light {
-    display: inline;
-  }
-
-  #theme-switcher {
-    margin-right: 0;
-  }
-</style>
