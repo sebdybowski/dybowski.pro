@@ -19,11 +19,16 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
       <a
         href="https://pl.linkedin.com/in/sebastian-dybowski"
         role="button"
-        target="_blank"><HeartHandshake /> hire me</a
+        target="_blank">
+        <HeartHandshake /> hire me
+      </a>
+      <a
+        href="mailto:dybowski.seb@gmail.com"
+        role="button"
+        class="secondary"
       >
-      <a href="mailto:dybowski.seb@gmail.com" role="button" class="secondary"
-      ><Mail /> email me</a
-      >
+        <Mail /> email me
+      </a>
       <p>
         <Mouse aria-label="Scroll" class="mouse" />
         <Hand aria-label="Swipe" class="swipe" />
@@ -157,7 +162,6 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
   }
 
   @media screen and (max-width: 576px) {
-
     .info-section {
       width: 100%;
     }
