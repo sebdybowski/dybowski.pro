@@ -1,9 +1,10 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
+import { Image } from "@astrojs/image/components";
 
 interface Props {
   id: string;
-  svg: string;
+  svg: any; // TO:DO find a proper type
   svgAlt: string;
   title: string;
   inverse?: boolean;
@@ -17,7 +18,7 @@ const { id, svg, svgAlt, title, inverse = false } = Astro.props;
     <SectionTitle id={id} title={title} />
     <slot />
   </article>
-  <img src={svg} alt={svgAlt} />
+  <Image src={svg} alt={svgAlt} />
 </section>
 
 <style>

@@ -3,7 +3,7 @@ import SebSm from "../assets/img/seb-sm.webp";
 import SebMd from "../assets/img/seb-md.webp";
 import SebLg from "../assets/img/seb-lg.webp";
 import SebXl from "../assets/img/seb-xl.webp";
-import { HeartHandshake, Code2, Mouse, Hand, Mail } from "lucide-preact";
+import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
 ---
 
 <header class="container-hybrid" id="hero">
@@ -22,7 +22,7 @@ import { HeartHandshake, Code2, Mouse, Hand, Mail } from "lucide-preact";
         target="_blank"><HeartHandshake /> hire me</a
       >
       <a href="mailto:dybowski.seb@gmail.com" role="button" class="secondary"
-        ><Mail /> email me</a
+      ><Mail /> email me</a
       >
       <p>
         <Mouse aria-label="Scroll" class="mouse" />
@@ -33,10 +33,13 @@ import { HeartHandshake, Code2, Mouse, Hand, Mail } from "lucide-preact";
     </div>
     <div class="image-wrapper">
       <img
-        alt="
-          Seb'
-          portrait"
-        srcset={`${SebSm} 576w, ${SebMd} 768w, ${SebLg} 992w, ${SebXl} 1200w`}
+        alt="Seb's portrait"
+        srcset={`
+          ${SebSm.src} 576w,
+          ${SebMd.src} 768w,
+          ${SebLg.src} 992w,
+          ${SebXl.src} 1200w`
+        }
       />
     </div>
   </div>
