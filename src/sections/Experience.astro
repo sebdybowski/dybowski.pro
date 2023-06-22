@@ -1,5 +1,4 @@
 ---
-import { Binary, Code2, Landmark, PlugZap, Sparkles } from "lucide-preact";
 import Company from "../components/Company.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 
@@ -15,22 +14,22 @@ const size = "4.25rem";
     </div>
     <div class="grid">
       <Company name="J-Labs" type="IT Services On-demand">
-        <Code2 size={size} />
+        <i class="bi bi-braces-asterisk"></i>
       </Company>
       <Company name="Shell Energy" type="Energy Supplier">
-        <PlugZap size={size} />
+        <i class="bi bi-battery-charging"></i>
       </Company>
       <Company name="UBS" type="Investment Bank">
-        <Landmark size={size} />
+        <i class="bi bi-cash-coin"></i>
       </Company>
       <Company name="Lumesse" type="Talent Acquisiton">
-        <Sparkles size={size} />
+        <i class="bi bi-stars"></i>
       </Company>
       <Company name="Intive" type="IT Services On-demand">
-        <Code2 size={size} />
+        <i class="bi bi-braces-asterisk"></i>
       </Company>
       <Company name="Comarch" type="Software Development">
-        <Binary size={size} />
+        <i class="bi bi-file-earmark-binary-fill"></i>
       </Company>
     </div>
   </div>
@@ -55,6 +54,11 @@ const size = "4.25rem";
     grid-template-columns: auto auto auto;
   }
 
+  i.bi {
+    font-size: 4.25rem;
+    line-height: initial;
+  }
+
   @media screen and (max-width: 1200px) {
     .grid {
       grid-template-columns: auto auto auto;
@@ -64,6 +68,10 @@ const size = "4.25rem";
   @media screen and (max-width: 992px) {
     .grid {
       grid-template-columns: auto auto;
+    }
+
+    i.bi {
+      font-size: 2rem;
     }
   }
 
