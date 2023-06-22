@@ -127,7 +127,6 @@ const links = [
   document
     .querySelectorAll(".menu-btn button")[0]
     .addEventListener("click", () => {
-      console.log("click");
 
       document
         .getElementsByClassName("links")[0]
@@ -143,8 +142,6 @@ const links = [
     const HTMLElement = document.getElementsByTagName("html")[0];
     const NavbarHeight = document.getElementById("navbar")?.offsetHeight || 0;
     const HeroHeight = document.getElementById("hero")?.offsetHeight || 0;
-
-    console.log(HTMLElement.scrollTop > NavbarHeight + HeroHeight);
 
     if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) {
       document.getElementById("navbar")?.classList.add("sticky");
