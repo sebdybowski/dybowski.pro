@@ -114,16 +114,35 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
   }
 
   @media (max-width: 992px) {
+    #hero {
+      min-height: auto;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      justify-items: center;
+      align-items: center;
+    }
+
     img {
-      z-index: 0;
-      opacity: 0.4;
-      height: auto;
-      max-height: 100%;
-      width: 80%;
+      position: static;
+      opacity: 1;
+      margin: 1rem auto;
+      width: 70%;
+      border-radius: 50%;
+      background-image: var(--primary-gradient);
+    }
+
+    .image-wrapper {
+      width: 100%;
+      display: flex;
     }
 
     .info-section {
-      width: 80%;
+      width: 100%;
+      text-align: center;
     }
 
     .mouse,
@@ -138,9 +157,6 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
   }
 
   @media screen and (max-width: 576px) {
-    #hero {
-      align-items: flex-end;
-    }
 
     .info-section {
       width: 100%;
@@ -148,14 +164,6 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
 
     h1 {
       font-size: 2.25rem;
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
-      left: 0;
-      object-fit: cover;
-      object-position: center bottom;
     }
   }
 </style>

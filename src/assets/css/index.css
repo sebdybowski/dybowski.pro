@@ -2,6 +2,8 @@
 @import url('@fontsource/dm-serif-display');
 @import url('@fontsource/dm-sans');
 
+@import url('bootstrap-icons/font/bootstrap-icons.css');
+
 @import url('./animations.css');
 
 :root,

@@ -23,6 +23,12 @@ dependencies:
   astro:
     specifier: ^2.6.6
     version: 2.6.6
+  bootstrap-icons:
+    specifier: ^1.10.5
+    version: 1.10.5
+  lucide:
+    specifier: ^0.248.0
+    version: 0.248.0
   lucide-preact:
     specifier: ^0.248.0
     version: 0.248.0(preact@10.15.1)
@@ -1447,6 +1453,10 @@ packages:
       buffer: 6.0.3
       inherits: 2.0.4
       readable-stream: 3.6.0
+    dev: false
+
+  /bootstrap-icons@1.10.5:
+    resolution: {integrity: sha512-oSX26F37V7QV7NCE53PPEL45d7EGXmBgHG3pDpZvcRaKVzWMqIRL9wcqJUyEha1esFtM3NJzvmxFXDxjJYD0jQ==}
     dev: false
 
   /boxen@6.2.1:
@@ -2976,6 +2986,10 @@ packages:
       preact: ^10.5.13
     dependencies:
       preact: 10.15.1
+    dev: false
+
+  /lucide@0.248.0:
+    resolution: {integrity: sha512-gfjVk19StSVLcvRkv83M877Vd98lSJFf9qwPkLMVeLExbH+7PUuSmnZiHIe4BW+Ec3ZKJByV28C8ZUp7owbJxQ==}
     dev: false
 
   /magic-string@0.27.0:
