@@ -1,9 +1,7 @@
 ---
-import SebSm from "../assets/img/seb-sm.webp";
-import SebMd from "../assets/img/seb-md.webp";
-import SebLg from "../assets/img/seb-lg.webp";
 import SebXl from "../assets/img/seb-xl.webp";
-import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
+import { HeartHandshake, Mail } from "lucide-preact";
+import { Picture } from "@astrojs/image/components";
 ---
 
 <header class="container-hybrid" id="hero">
@@ -32,19 +30,15 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
       <p>
         <i class="bi bi-mouse3 mouse"></i>
         <i class="bi bi-hand-index swipe"></i>
-        <strong class="scroll__label">Scroll</strong>
+        <strong class="scroll__label">Scroll</strong> 
         <strong class="swipe__label">Swipe</strong> for next sections.
       </p>
     </div>
     <div class="image-wrapper">
-      <img
+      <Picture
         alt="Seb's portrait"
-        srcset={`
-          ${SebSm.src} 576w,
-          ${SebMd.src} 768w,
-          ${SebLg.src} 992w,
-          ${SebXl.src} 1200w
-        `}
+        widths={[576, 768, 992, 1200]}
+        src={SebXl}
       />
     </div>
   </div>
@@ -132,11 +126,14 @@ import { HeartHandshake, Mouse, Hand, Mail } from "lucide-preact";
     }
 
     img {
+      margin: 1rem auto;
+      display: block;
+      width: 80%;
+      height: auto;
       position: static;
       opacity: 1;
-      margin: 1rem auto;
-      width: 70%;
       border-radius: 50%;
+      mix-blend-mode: unset;
       background-image: var(--primary-gradient);
     }
 
