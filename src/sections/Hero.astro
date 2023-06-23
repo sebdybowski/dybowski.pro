@@ -8,7 +8,7 @@ import { Picture } from "@astrojs/image/components";
   <div class="grid">
     <div class="info-section">
       <hgroup>
-        <h1>Hey there, I'm <strong class="gradient-mark">Seb!</strong></h1>
+        <h1>Hey there, I'm <strong class="text--gradient">Seb!</strong></h1>
         <h2>
           With expertise in software development, team leadership, and UX
           design, I have the skills and experience to bring your vision to life!
@@ -67,22 +67,13 @@ import { Picture } from "@astrojs/image/components";
     display: none;
   }
 
-  .gradient-mark {
+  .text--gradient {
     background-image: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100% 200%;
     background-position-y: 100%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  .gradient {
-    background-image: var(--primary-gradient);
-    background-size: 100% 200%;
-    background-position-y: 100%;
-    animation: pulse 2s ease-in-out infinite;
-    border-radius: 50%;
-    position: relative;
+    animation: pulse 1s ease-in-out infinite;
   }
 
   .info-section {
