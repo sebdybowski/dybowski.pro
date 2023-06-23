@@ -25,6 +25,14 @@
   --secondary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--secondary));
 }
 
+/* 
+  Alt jukebox colors
+
+  Color #1	Color #2	Color #3	Color #4	Color #5
+  #d0c5bf	#a7605a	#2a2a2c	#58f7f0	#25afa6
+  rgb(208,197,191)	rgb(167,96,90)	rgb(42,42,44)	rgb(88,247,240)	rgb(37,175,166)
+*/
+
 /* light theme only */
 [data-theme=light],
 :root:not([data-theme=dark])
