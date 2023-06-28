@@ -1,9 +1,19 @@
 ---
 import Company from "../components/Company.astro";
+import { Icon } from "astro-icon";
 import SectionTitle from "../components/SectionTitle.astro";
 
 const id = "experience";
 const size = "4.25rem";
+
+const companies = [
+  { name: "J-Labs", type: "IT Services On-demand", icon: "solar-code-square-line-duotone"},
+  { name: "Shell Energy", type: "Energy Supplier", icon: "solar-electric-refueling-line-duotone"},
+  { name: "UBS", type: "Investment Bank", icon: "solar-banknote-2-line-duotone"},
+  { name: "Lumesse", type: "Talent Acquisiton", icon: "solar-hand-stars-line-duotone"},
+  { name: "Intive", type: "IT Services On-demand", icon: "solar-code-square-line-duotone"},
+  { name: "Comarch", type: "Software Development", icon: "solar-monitor-smartphone-line-duotone"},
+];
 ---
 
 <section class="container-hybrid companies" id={id}>
@@ -13,24 +23,11 @@ const size = "4.25rem";
       <p>Companies I had a pleasure to cooperate with:</p>
     </div>
     <div class="grid">
-      <Company name="J-Labs" type="IT Services On-demand">
-        <i class="bi bi-braces-asterisk"></i>
-      </Company>
-      <Company name="Shell Energy" type="Energy Supplier">
-        <i class="bi bi-battery-charging"></i>
-      </Company>
-      <Company name="UBS" type="Investment Bank">
-        <i class="bi bi-cash-coin"></i>
-      </Company>
-      <Company name="Lumesse" type="Talent Acquisiton">
-        <i class="bi bi-stars"></i>
-      </Company>
-      <Company name="Intive" type="IT Services On-demand">
-        <i class="bi bi-braces-asterisk"></i>
-      </Company>
-      <Company name="Comarch" type="Software Development">
-        <i class="bi bi-file-earmark-binary-fill"></i>
-      </Company>
+      {companies.map(({icon, ...company}) => (
+        <Company {...company}>
+          <Icon name={icon} width={size} height={size}/>
+        </Company>
+      ))}
     </div>
   </div>
 </section>
@@ -54,8 +51,9 @@ const size = "4.25rem";
     grid-template-columns: auto auto auto;
   }
 
-  i.bi {
-    font-size: 4.25rem;
+  .company__icon > svg {
+    width: 4rem;
+    height: 4rem;
     line-height: initial;
   }
 
@@ -70,7 +68,7 @@ const size = "4.25rem";
       grid-template-columns: auto auto;
     }
 
-    i.bi {
+    .icon {
       font-size: 2rem;
     }
   }

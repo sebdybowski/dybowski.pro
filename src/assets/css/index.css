@@ -1,8 +1,6 @@
 @import url('@picocss/pico/css/pico.css');
 @import url('@fontsource/dm-serif-display');
 
-@import url('bootstrap-icons/font/bootstrap-icons.css');
-
 @import url('./animations.css');
 
 :root,

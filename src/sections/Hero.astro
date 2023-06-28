@@ -2,6 +2,9 @@
 import Seb from "../assets/img/seb-xl.webp";
 import { HeartHandshake, Mail } from "lucide-preact";
 import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+
+const iconSize = "1rem";
 ---
 
 <header class="container-hybrid" id="hero">
@@ -17,19 +20,26 @@ import { Picture } from "@astrojs/image/components";
       <a
         href="https://pl.linkedin.com/in/sebastian-dybowski"
         role="button"
-        target="_blank">
+        target="_blank"
+      >
         <HeartHandshake /> hire me
       </a>
-      <a
-        href="mailto:dybowski.seb@gmail.com"
-        role="button"
-        class="secondary"
-      >
+      <a href="mailto:dybowski.seb@gmail.com" role="button" class="secondary">
         <Mail /> email me
       </a>
       <p>
-        <i class="bi bi-mouse3 mouse"></i>
-        <i class="bi bi-hand-index swipe"></i>
+        <Icon
+          name="bi-mouse3"
+          width={iconSize}
+          height={iconSize}
+          class="scroll"
+        />
+        <Icon
+          name="bi-hand-index-thumb"
+          width={iconSize}
+          height={iconSize}
+          class="swipe"
+        />
         <strong class="scroll__label">Scroll</strong>
         <strong class="swipe__label">Swipe</strong> for next sections.
       </p>
@@ -39,6 +49,7 @@ import { Picture } from "@astrojs/image/components";
         alt="Seb's portrait"
         widths={[576, 768, 992, 1200]}
         src={Seb}
+        format="webp"
       />
     </div>
   </div>
@@ -55,7 +66,7 @@ import { Picture } from "@astrojs/image/components";
     overflow: hidden;
   }
 
-  .mouse,
+  .scroll,
   .swipe {
     margin-top: -0.25rem;
     position: relative;
@@ -138,7 +149,7 @@ import { Picture } from "@astrojs/image/components";
       text-align: center;
     }
 
-    .mouse,
+    .scroll,
     .scroll__label {
       display: none;
     }
