@@ -18,7 +18,7 @@ const { id, svg, svgAlt, title, inverse = false } = Astro.props;
     <SectionTitle id={id} title={title} />
     <slot />
   </article>
-  <Image src={svg} alt={svgAlt} />
+  <Image src={svg} alt={svgAlt} format="svg"/>
 </section>
 
 <style>
@@ -36,8 +36,5 @@ const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 
   .grid--inverse > article {
     order: 1;
-  }
-
-  article {
   }
 </style>
