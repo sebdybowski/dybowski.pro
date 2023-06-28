@@ -1,5 +1,5 @@
 ---
-import { HeartHandshake, Text } from "lucide-preact";
+import { HeartHandshake, Text, X } from "lucide-preact";
 import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
@@ -12,15 +12,16 @@ const links = [
 ];
 ---
 
-<nav class="container-hybrid top-bar" id="navbar">
+<nav class="container-hybrid" id="navbar">
   <ul>
     <li>
       <ThemeSwitcher />
     </li>
   </ul>
-  <ul class="menu-btn">
-    <button type="button" aria-label="menu button" class="menu-toggle">
-      <Text />
+  <ul class="menu__button__wrapper">
+    <button type="button" aria-label="menu button" id="menu__button">
+      <Text class="menu__icon--burger" />
+      <X class="menu__icon--close" />
     </button>
   </ul>
   <ul class="links">
@@ -40,11 +41,19 @@ const links = [
 </nav>
 
 <style>
-  .top-bar {
+  #navbar {
     z-index: 1;
   }
 
-  .sticky {
+  html[data-theme="light"] #navbar {
+    --background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  html[data-theme="dark"] #navbar {
+    --background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .navbar--sticky {
     position: sticky;
     top: 0;
     backdrop-filter: blur(0.25rem);
@@ -61,92 +70,99 @@ const links = [
     display: none;
   }
 
-  .sticky .visible--sticky {
+  .navbar--sticky .visible--sticky {
     display: inline-block;
   }
 
-  .menu-btn button {
-    margin: 0;
-  }
-
-  .links.visible {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .links.hidden {
+  .menu__button__wrapper {
     display: none;
   }
 
-  .menu-toggle {
-    border: none;
-    background: transparent;
-  }
-
-  .menu-toggle:hover {
-    color: var(--primary);
-  }
-
   @media screen and (max-width: 992px) {
-    .links {
+    .navbar--open .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar--open .menu__icon--burger {
       display: none;
     }
 
-    .links.visible {
+    #navbar:not(.navbar--open) .menu__icon--close {
+      display: none;
+    }
+
+    #menu__button {
+      color: var(--h1-color);
+      border: none;
+      background: transparent;
+    }
+
+    .links {
+      display: none;
+      padding: 0 calc((100% - 700px) / 2);
+    }
+
+    .navbar--open .links {
       position: absolute;
       margin-top: 3.5rem;
       padding-bottom: 2rem;
       width: 100%;
       left: 0;
       z-index: 2;
-      background-color: rgba(0, 0, 0, 0.66);
-      backdrop-filter: blur(0.5em);
+      background-color: var(--background-color);
+      backdrop-filter: blur(0.25em);
     }
 
-    .links.visible > li {
-      width: 90%;
+    .navbar--open .links > li {
+      width: 100%;
       text-align: right;
+      padding: var(--nav-element-spacing-vertical) 0;
     }
 
     li.visible--sticky {
       margin-top: 1rem;
       display: inline;
     }
+
+    .menu__button__wrapper {
+      display: inline-flex;
+      position: relative;
+      margin-right: calc(var(--spacing) * -1);
+    }
+
+    .menu__button__wrapper button {
+      margin: 0;
+    }
   }
 
-  @media screen and (min-width: 993px) {
-    .menu-btn {
-      display: none;
+  @media screen and (max-width: 768px) {
+    .navbar--open .links > li {
+      padding: var(--nav-element-spacing-vertical) 1rem;
     }
   }
 </style>
 
 <script lang="ts">
-  let isVisible = false;
+const open = "navbar--open";
+const sticky = "navbar--sticky";
 
-  document
-    .querySelectorAll(".menu-btn button")[0]
-    .addEventListener("click", () => {
+const Navbar = document.getElementById("navbar");
 
-      document
-        .getElementsByClassName("links")[0]
-        .classList.add(isVisible ? "hidden" : "visible");
-      document
-        .getElementsByClassName("links")[0]
-        .classList.remove(isVisible ? "visible" : "hidden");
+document
+  .getElementById("menu__button")
+  .addEventListener("click", () => Navbar.classList.toggle(open));
 
-      isVisible = !isVisible;
-    });
+document.addEventListener("scroll", () => {
+  const HTMLElement = document.getElementsByTagName("html")[0];
+  const navbarHeight = Navbar?.offsetHeight || 0;
+  const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
 
-  document.addEventListener("scroll", () => {
-    const HTMLElement = document.getElementsByTagName("html")[0];
-    const NavbarHeight = document.getElementById("navbar")?.offsetHeight || 0;
-    const HeroHeight = document.getElementById("hero")?.offsetHeight || 0;
+  const hasSticky = Navbar.classList.contains(sticky);
+  const isBeyondTreshold =
+    HTMLElement.scrollTop >= (navbarHeight + heroHeight) * 0.8;
 
-    if (HTMLElement.scrollTop > (NavbarHeight + HeroHeight) * 0.8) {
-      document.getElementById("navbar")?.classList.add("sticky");
-    } else {
-      document.getElementById("navbar")?.classList.remove("sticky");
-    }
-  });
+  if ((isBeyondTreshold && !hasSticky) || (hasSticky && !isBeyondTreshold))
+    Navbar?.classList.toggle(sticky);
+});
 </script>

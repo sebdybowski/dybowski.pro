@@ -4,15 +4,39 @@ import { Icon } from "astro-icon";
 import SectionTitle from "../components/SectionTitle.astro";
 
 const id = "experience";
-const size = "4.25rem";
+const size = "100%";
 
 const companies = [
-  { name: "J-Labs", type: "IT Services On-demand", icon: "solar-code-square-line-duotone"},
-  { name: "Shell Energy", type: "Energy Supplier", icon: "solar-electric-refueling-line-duotone"},
-  { name: "UBS", type: "Investment Bank", icon: "solar-banknote-2-line-duotone"},
-  { name: "Lumesse", type: "Talent Acquisiton", icon: "solar-hand-stars-line-duotone"},
-  { name: "Intive", type: "IT Services On-demand", icon: "solar-code-square-line-duotone"},
-  { name: "Comarch", type: "Software Development", icon: "solar-monitor-smartphone-line-duotone"},
+  {
+    name: "J-Labs",
+    type: "IT Services On-demand",
+    icon: "solar-code-square-line-duotone",
+  },
+  {
+    name: "Shell Energy",
+    type: "Energy Supplier",
+    icon: "solar-electric-refueling-line-duotone",
+  },
+  {
+    name: "UBS",
+    type: "Investment Bank",
+    icon: "solar-banknote-2-line-duotone",
+  },
+  {
+    name: "Lumesse",
+    type: "Talent Acquisiton",
+    icon: "solar-hand-stars-line-duotone",
+  },
+  {
+    name: "Intive",
+    type: "IT Services On-demand",
+    icon: "solar-code-square-line-duotone",
+  },
+  {
+    name: "Comarch",
+    type: "Software Development",
+    icon: "solar-monitor-smartphone-line-duotone",
+  },
 ];
 ---
 
@@ -23,17 +47,27 @@ const companies = [
       <p>Companies I had a pleasure to cooperate with:</p>
     </div>
     <div class="grid">
-      {companies.map(({icon, ...company}) => (
-        <Company {...company}>
-          <Icon name={icon} width={size} height={size}/>
-        </Company>
-      ))}
+      {
+        companies.map(({ icon, ...company }) => (
+          <Company {...company}>
+            <Icon
+              name={icon}
+              width={size}
+              height={size}
+              class="company__icon"
+            />
+          </Company>
+        ))
+      }
     </div>
   </div>
 </section>
 
 <style>
   #experience {
+    --icon-size: 4.25rem;
+    --icon-size-sm: 2.125rem;
+
     margin: 0;
   }
 
@@ -51,10 +85,18 @@ const companies = [
     grid-template-columns: auto auto auto;
   }
 
-  .company__icon > svg {
-    width: 4rem;
-    height: 4rem;
-    line-height: initial;
+  .company__icon {
+    margin-top: 0.5rem;
+  }
+
+  svg.company__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+
+  h1,
+  p {
+    text-align: center;
   }
 
   @media screen and (max-width: 1200px) {
@@ -68,13 +110,13 @@ const companies = [
       grid-template-columns: auto auto;
     }
 
-    .icon {
-      font-size: 2rem;
+    .company__icon {
+      margin-top: 1.5rem;
     }
-  }
 
-  h1,
-  p {
-    text-align: center;
+    svg.company__icon {
+      width: var(--icon-size-sm);
+      height: var(--icon-size-sm);
+    }
   }
 </style>
