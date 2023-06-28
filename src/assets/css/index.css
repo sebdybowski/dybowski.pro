@@ -1,6 +1,5 @@
 @import url('@picocss/pico/css/pico.css');
 @import url('@fontsource/dm-serif-display');
-@import url('@fontsource/dm-sans');
 
 @import url('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -91,11 +90,6 @@ hr
 .text--center
 {
   text-align: center;
-}
-
-body
-{
-  font-family: "DM Sans";
 }
 
 article

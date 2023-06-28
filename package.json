@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/image": "^0.17.1",
     "@astrojs/preact": "^2.2.1",
-    "@fontsource/dm-sans": "^5.0.3",
     "@fontsource/dm-serif-display": "^5.0.3",
     "@picocss/pico": "^1.5.10",
     "astro": "^2.7.0",

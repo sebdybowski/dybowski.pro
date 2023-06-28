@@ -11,9 +11,6 @@ dependencies:
   '@astrojs/preact':
     specifier: ^2.2.1
     version: 2.2.1(preact@10.15.1)
-  '@fontsource/dm-sans':
-    specifier: ^5.0.3
-    version: 5.0.3
   '@fontsource/dm-serif-display':
     specifier: ^5.0.3
     version: 5.0.3
@@ -755,10 +752,6 @@ packages:
     resolution: {integrity: sha512-ElyB54bJIhXQYVKjDSvCkPO1iU1tSAeVQJbllWJq1XQSmmA4dgFk8CbiBGpiOPxleE48vDogxCtmMYku4HSVLA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
-
-  /@fontsource/dm-sans@5.0.3:
-    resolution: {integrity: sha512-M+Gdza6nQM4OjoEpUXrmbvSoilSUCzOXN6BXpkT8E7kJiyoLuYWs2HvsdmgHDP8mnz2FULWg2iVbYUZX4snxkw==}
-    dev: false
 
   /@fontsource/dm-serif-display@5.0.3:
     resolution: {integrity: sha512-/5pdpdiFWXwkrcCOqNrP2yxQ8NKhLUurbqE4gywrAXYCqq/sSikNTFDZ51FHKZrFyyrKCYDlLctRnBHJiZPXww==}
