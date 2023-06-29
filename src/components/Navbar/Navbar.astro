@@ -1,6 +1,6 @@
 ---
 import { HeartHandshake, Text, X } from "lucide-preact";
-import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher.astro";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
   { id: "home", label: "Home" },
@@ -11,6 +11,12 @@ const links = [
   { id: "design", label: "UX" },
 ];
 ---
+
+<script>
+  import initNavbarSticky from "./navbar";
+
+  initNavbarSticky();
+</script>
 
 <nav class="container-hybrid" id="navbar">
   <ul>
@@ -142,27 +148,3 @@ const links = [
     }
   }
 </style>
-
-<script lang="ts">
-const open = "navbar--open";
-const sticky = "navbar--sticky";
-
-const Navbar = document.getElementById("navbar");
-
-document
-  .getElementById("menu__button")
-  .addEventListener("click", () => Navbar.classList.toggle(open));
-
-document.addEventListener("scroll", () => {
-  const HTMLElement = document.getElementsByTagName("html")[0];
-  const navbarHeight = Navbar?.offsetHeight || 0;
-  const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
-
-  const hasSticky = Navbar.classList.contains(sticky);
-  const isBeyondTreshold =
-    HTMLElement.scrollTop >= (navbarHeight + heroHeight) * 0.8;
-
-  if ((isBeyondTreshold && !hasSticky) || (hasSticky && !isBeyondTreshold))
-    Navbar?.classList.toggle(sticky);
-});
-</script>

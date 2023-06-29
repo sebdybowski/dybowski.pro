@@ -1,8 +1,7 @@
 ---
 import "../assets/css/index.css";
-import Navbar from "../components/Navbar.astro";
-import { THEME } from "../components/ThemeSwitcher/ThemeSwitcher";
-// import Navbar from "../components/Navbar.tsx";
+import Navbar from "../components/Navbar/Navbar.astro";
+import { THEME } from "../components/ThemeSwitcher/themeSwitcher";
 
 export interface Props {
   title: string;
@@ -23,7 +22,6 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body id="home">
-    <!-- <Navbar client:load /> -->
     <Navbar />
     <slot />
   </body>
