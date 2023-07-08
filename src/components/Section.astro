@@ -1,6 +1,6 @@
 ---
-import SectionTitle from "./SectionTitle.astro";
-import { Image } from "@astrojs/image/components";
+import { Image } from '@astrojs/image/components';
+import SectionTitle from './SectionTitle.astro';
 
 interface Props {
   id: string;
@@ -13,7 +13,7 @@ interface Props {
 const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 ---
 
-<section class:list={["grid", { ["grid--inverse"]: inverse }]} id={id}>
+<section class:list={['grid', { ['grid--inverse']: inverse }]} id={id}>
   <article>
     <SectionTitle id={id} title={title} />
     <slot />

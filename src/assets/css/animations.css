@@ -1,44 +1,35 @@
-  @keyframes pulse
-  {
+@keyframes pulse {
 
-    0%,
-    100%
-    {
-      background-position-y: 0%;
-    }
-
-    50%
-    {
-      background-position-y: 100%;
-    }
+  0%,
+  100% {
+    background-position-y: 0%;
   }
 
-  @keyframes press
-  {
+  50% {
+    background-position-y: 100%;
+  }
+}
 
-    0%,
-    100%
-    {
-      transform: translateY(0);
-    }
+@keyframes press {
 
-    50%
-    {
-      transform: translateY(0.25rem);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  @keyframes MoveUpDown
-  {
-
-    0%,
-    100%
-    {
-      bottom: -0.25rem;
-    }
-
-    50%
-    {
-      bottom: 0.25rem;
-    }
+  50% {
+    transform: translateY(0.25rem);
   }
+}
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    bottom: -0.25rem;
+  }
+
+  50% {
+    bottom: 0.25rem;
+  }
+}

@@ -5,8 +5,7 @@
 
 :root,
 [data-theme="light"],
-:root:not([data-theme="dark"])
-{
+:root:not([data-theme="dark"]) {
   /* pico.css */
   --primary: #ff7070;
   --tertiary: #893e65;
@@ -24,16 +23,14 @@
 
 /* light theme only */
 [data-theme=light],
-:root:not([data-theme=dark])
-{
+:root:not([data-theme=dark]) {
   --background-color: #fcf7f9;
   --muted-border-color: #f2e4ea;
   --pattern-color: #f6ecf0;
 }
 
 /* dark theme only */
-[data-theme=dark]
-{
+[data-theme=dark] {
   --color: #fcf7f9;
   --background-color: #191617;
   --card-background-color: #2E2A2C;
@@ -41,14 +38,12 @@
   --pattern-color: #252223;
 }
 
-input[type="checkbox"][role="switch"]
-{
+input[type="checkbox"][role="switch"] {
   margin: 0 var(--nav-link-spacing-horizontal);
 }
 
 hgroup>*:last-child,
-.headings>*:last-child
-{
+.headings>*:last-child {
   --color: var(--h2-color);
 }
 
@@ -63,8 +58,7 @@ h2:hover,
 h3:hover,
 h4:hover,
 h5:hover,
-h6:hover
-{
+h6:hover {
   cursor: text;
 }
 
@@ -74,48 +68,40 @@ h3,
 h4,
 h5,
 h6,
-.display
-{
+.display {
   font-family: "DM Serif Display";
 }
 
-hr
-{
+hr {
   width: 33%;
   margin: 0.5rem 0;
 }
 
-.text--center
-{
+.text--center {
   text-align: center;
 }
 
-article
-{
+article {
   padding: var(--block-spacing-horizontal);
 }
 
-a[role="button"]
-{
+a[role="button"] {
   box-shadow: 0 0.25rem var(--primary-hover);
   border: 3px solid var(--primary-hover);
 }
 
-a[role="button"].secondary
-{
+a[role="button"].secondary {
   box-shadow: 0 0.25rem var(--secondary-hover);
   border: 3px solid var(--secondary-hover);
 }
 
-a[role="button"]:hover
-{
+a[role="button"]:hover {
   transform: translateY(0.25rem);
   transition: box-shadow transform ease-in-out 500ms;
   box-shadow: inset var(--card-box-shadow);
 }
 
-.container-hybrid
-{
+.container-hybrid {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -123,36 +109,28 @@ a[role="button"]:hover
   padding-left: var(--spacing);
 }
 
-@media (min-width: 576px)
-{
-  .container-hybrid
-  {
+@media (min-width: 576px) {
+  .container-hybrid {
     padding: 0 calc((100% - 510px) / 2);
     padding-right: var(--spacing);
     padding-left: var(--spacing);
   }
 }
 
-@media (min-width: 768px)
-{
-  .container-hybrid
-  {
+@media (min-width: 768px) {
+  .container-hybrid {
     padding: 0 calc((100% - 700px) / 2);
   }
 }
 
-@media (min-width: 992px)
-{
-  .container-hybrid
-  {
+@media (min-width: 992px) {
+  .container-hybrid {
     padding: 0 calc((100% - 920px) / 2);
   }
 }
 
-@media (min-width: 1200px)
-{
-  .container-hybrid
-  {
+@media (min-width: 1200px) {
+  .container-hybrid {
     padding: 0 calc((100% - 1130px) / 2);
   }
 }
