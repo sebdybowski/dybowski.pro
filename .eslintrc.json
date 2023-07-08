@@ -43,11 +43,19 @@
     ],
     "quotes": [
       "error",
-      "double"
+      "single"
     ],
     "semi": [
       "error",
       "always"
+    ],
+    "no-multiple-empty-lines": "error",
+    "no-trailing-spaces": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
     ]
   }
 }
