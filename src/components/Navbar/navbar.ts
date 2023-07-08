@@ -1,17 +1,17 @@
 const initNavbarSticky = () => {
-  const open = "navbar--open";
-  const sticky = "navbar--sticky";
+  const open = 'navbar--open';
+  const sticky = 'navbar--sticky';
 
-  const Navbar = document.getElementById("navbar");
+  const Navbar = document.getElementById('navbar');
 
   document
-    ?.getElementById("menu__button")
-    ?.addEventListener("click", () => Navbar?.classList.toggle(open));
+    ?.getElementById('menu__button')
+    ?.addEventListener('click', () => Navbar?.classList.toggle(open));
 
-  document.addEventListener("scroll", () => {
-    const HTMLElement = document.getElementsByTagName("html")[0];
+  document.addEventListener('scroll', () => {
+    const HTMLElement = document.getElementsByTagName('html')[0];
     const navbarHeight = Navbar?.offsetHeight || 0;
-    const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
+    const heroHeight = document.getElementById('hero')?.offsetHeight || 0;
 
     const hasSticky = Navbar?.classList.contains(sticky);
     const isBeyondTreshold =
