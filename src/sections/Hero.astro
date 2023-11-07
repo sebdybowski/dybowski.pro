@@ -1,8 +1,8 @@
 ---
-import Seb from '../assets/img/seb.webp';
-import { HeartHandshake, Mail } from 'lucide-preact';
-import { Picture } from '@astrojs/image/components';
 import { Icon } from 'astro-icon';
+import { Image } from 'astro:assets';
+import { HeartHandshake, Mail } from 'lucide-preact';
+import Seb from '../assets/img/seb.webp';
 
 const iconSize = '1rem';
 ---
@@ -45,11 +45,11 @@ const iconSize = '1rem';
       </p>
     </div>
     <div class="image-wrapper">
-      <Picture
+      <Image
         alt="Seb's portrait"
-        widths={[576, 768, 992, 1200]}
+        width={0}
+        height={1024}
         src={Seb}
-        format="webp"
       />
     </div>
   </div>
@@ -100,6 +100,7 @@ const iconSize = '1rem';
     bottom: 0;
     left: 40%;
     height: 100%;
+    width: auto;
     mix-blend-mode: luminosity;
     opacity: 0.9;
   }

@@ -11,24 +11,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.3",
-    "@astrojs/preact": "^2.2.2",
-    "@astrojs/sitemap": "^2.0.2",
-    "@fontsource/dm-serif-display": "^5.0.11",
+    "@astrojs/preact": "^3.0.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "@fontsource/dm-serif-display": "^5.0.17",
     "@picocss/pico": "^1.5.10",
-    "astro": "^2.10.15",
+    "astro": "^3.4.3",
     "astro-icon": "^0.8.1",
-    "lucide-preact": "^0.256.0",
-    "preact": "^10.17.1"
+    "lucide-preact": "^0.292.0",
+    "preact": "^10.18.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.48.0",
-    "eslint-plugin-astro": "^0.27.2",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-astro": "^0.29.1",
     "eslint-plugin-css": "^0.8.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.10.0"
+    "prettier-plugin-astro": "^0.12.1"
   }
 }
