@@ -13,21 +13,21 @@
   "dependencies": {
     "@astrojs/preact": "^3.0.1",
     "@astrojs/sitemap": "^3.0.3",
-    "@fontsource/dm-serif-display": "^5.0.17",
+    "@fontsource/dm-serif-display": "^5.0.18",
     "@picocss/pico": "^1.5.10",
-    "astro": "^3.6.1",
-    "astro-icon": "^0.8.1",
-    "lucide-preact": "^0.292.0",
-    "preact": "^10.19.2"
+    "astro": "^4.0.4",
+    "astro-icon": "^0.8.2",
+    "lucide-preact": "^0.294.0",
+    "preact": "^10.19.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1",
-    "eslint": "^8.54.0",
-    "eslint-plugin-astro": "^0.29.1",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-astro": "^0.30.0",
     "eslint-plugin-css": "^0.8.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2"
   }
 }
