@@ -1,0 +1,27 @@
+---
+import { HeartHandshake } from 'lucide-preact';
+
+const links = [
+  { id: 'home', label: 'Home' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'frontend', label: 'Frontend' },
+  { id: 'backend', label: 'Backend' },
+  { id: 'leadership', label: 'Leadership' },
+  { id: 'design', label: 'UX' },
+];
+---
+
+<ul>
+  {
+    links.map(({ id, label }) => (
+      <li>
+        <a href={`#${id}`}>{label}</a>
+      </li>
+    ))
+  }
+  <li>
+    <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button">
+      <HeartHandshake /> hire me
+    </a>
+  </li>
+</ul>

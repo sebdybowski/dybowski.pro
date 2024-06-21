@@ -1,15 +1,7 @@
 ---
-import { HeartHandshake, Text, X } from 'lucide-preact';
+import { Text, X } from 'lucide-preact';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher.astro';
-
-const links = [
-  { id: 'home', label: 'Home' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'frontend', label: 'Frontend' },
-  { id: 'backend', label: 'Backend' },
-  { id: 'leadership', label: 'Leadership' },
-  { id: 'design', label: 'UX' },
-];
+import Links from './Links.astro';
 ---
 
 <script>
@@ -30,20 +22,7 @@ const links = [
       <X class="menu__icon--close" />
     </button>
   </ul>
-  <ul class="links">
-    {
-      links.map(({ id, label }) => (
-        <li>
-          <a href={`#${id}`}>{label}</a>
-        </li>
-      ))
-    }
-    <li class="visible--sticky">
-      <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button">
-        <HeartHandshake /> hire me
-      </a>
-    </li>
-  </ul>
+  <Links />
 </nav>
 
 <style>
@@ -51,11 +30,11 @@ const links = [
     z-index: 1;
   }
 
-  html[data-theme="light"] #navbar {
+  html[data-theme='light'] #navbar {
     --background-color: rgba(255, 255, 255, 0.8);
   }
 
-  html[data-theme="dark"] #navbar {
+  html[data-theme='dark'] #navbar {
     --background-color: rgba(0, 0, 0, 0.8);
   }
 

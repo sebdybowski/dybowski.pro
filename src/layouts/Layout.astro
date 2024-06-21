@@ -1,5 +1,6 @@
 ---
 import '../assets/css/index.css';
+import Nav from '../components/Nav/Nav';
 import Navbar from '../components/Navbar/Navbar.astro';
 import { THEME } from '../components/ThemeSwitcher/themeSwitcher';
 
@@ -11,7 +12,7 @@ export interface Props {
 const { title, description } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme={THEME.DARK}>
   <head>
     <meta charset="UTF-8" />
@@ -23,6 +24,7 @@ const { title, description } = Astro.props;
   </head>
   <body id="home">
     <Navbar />
+    <Nav client:idle />
     <slot />
   </body>
 </html>
