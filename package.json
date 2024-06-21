@@ -11,14 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^3.0.1",
-    "@astrojs/sitemap": "^3.0.3",
-    "@fontsource/dm-serif-display": "^5.0.18",
+    "@astrojs/preact": "^3.5.0",
+    "@astrojs/sitemap": "^3.1.6",
+    "@fontsource/dm-serif-display": "^5.0.20",
     "@picocss/pico": "^1.5.10",
-    "astro": "^4.0.4",
-    "astro-icon": "^0.8.2",
-    "lucide-preact": "^0.294.0",
-    "preact": "^10.19.3"
+    "astro": "^4.11.0",
+    "astro-icon": "^1.1.0",
+    "lucide-preact": "^0.396.0",
+    "preact": "^10.22.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.14.0",
