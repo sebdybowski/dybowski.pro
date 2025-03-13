@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.gridInverse {
+  flex-direction: row-reverse;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.grid__item {
+  flex: 1;
+}
+
+.image {
+  margin: var(--block-spacing-vertical);
+  align-self: center;
+}
+
+.image > img {
+  width: 100%;
+}

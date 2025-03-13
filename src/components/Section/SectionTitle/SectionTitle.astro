@@ -1,4 +1,6 @@
 ---
+import styles from './SectionTitle.module.css';
+
 interface Props {
   title: string;
   id: string;
@@ -7,9 +9,8 @@ interface Props {
 const { title, id } = Astro.props;
 ---
 
-<h2>
+<h2 class={styles.title}>
   <a href={`#${id}`}>
-    <i>#</i>
     {title}
   </a>
 </h2>
