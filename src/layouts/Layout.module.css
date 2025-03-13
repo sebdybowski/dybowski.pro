@@ -1,0 +1,16 @@
+.body {
+  --dot-radius: 10%;
+  --dot-spacing: 52px;
+
+  background: radial-gradient(
+    circle,
+    var(--pattern-color) var(--dot-radius),
+    transparent var(--dot-radius)
+  );
+  background-size: var(--dot-spacing) var(--dot-spacing);
+  background-position: center;
+}
+
+.main {
+  padding: 0;
+}

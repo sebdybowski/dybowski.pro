@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Backend from '../sections/Backend.astro';
 import Experience from '../sections/Experience.astro';
-import Footer from '../sections/Footer.astro';
 import Frontend from '../sections/Frontend.astro';
 import Hero from '../sections/Hero.astro';
 import Leadership from '../sections/Leadership.astro';
@@ -13,34 +12,12 @@ import UX from '../sections/UX.astro';
   title="Seb Dybowski - Software Engineer & UI/UX Designer"
   description="Seb Dybowski - Software Engineer & UI/UX Designer"
 >
-  <main>
-    <Hero />
-    <Experience />
-    <div class="container">
-      <Frontend />
-      <Backend />
-      <Leadership />
-      <UX />
-    </div>
-  </main>
-  <Footer />
+  <Hero/>
+  <Experience/>
+  <div class="container">
+    <Frontend/>
+    <Backend/>
+    <Leadership/>
+    <UX/>
+  </div>
 </Layout>
-
-<style>
-  body > main {
-    padding: 0;
-  }
-
-  body {
-    --dot-radius: 10%;
-    --dot-spacing: 52px;
-
-    background: radial-gradient(
-      circle,
-      var(--pattern-color) var(--dot-radius),
-      transparent var(--dot-radius)
-    );
-    background-size: var(--dot-spacing) var(--dot-spacing);
-    background-position: center;
-  }
-</style>

@@ -1,28 +1,33 @@
 ---
 import '../assets/css/index.css';
 import Navbar from '../components/Navbar/Navbar.astro';
-import { THEME } from '../components/ThemeSwitcher/themeSwitcher';
+import {THEME} from '../components/ThemeSwitcher/themeSwitcher';
+import styles from './Layout.module.css';
+import Footer from '../sections/Footer.astro';
 
 export interface Props {
   title: string;
   description: string;
 }
 
-const { title, description } = Astro.props;
+const {title, description} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" data-theme={THEME.DARK}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-  </head>
-  <body id="home">
-    <Navbar />
-    <slot />
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="generator" content={Astro.generator}/>
+  <meta name="description" content={description}/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <title>{title}</title>
+</head>
+<body id="home" class={styles.body}>
+<Navbar/>
+<main class={styles.main}>
+  <slot/>
+</main>
+<Footer/>
+</body>
 </html>
