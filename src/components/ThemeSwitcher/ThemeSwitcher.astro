@@ -3,12 +3,6 @@ import { Sun, MoonStar } from 'lucide-preact';
 import { SWITCHER_ID } from './themeSwitcher';
 ---
 
-<script>
-  import { initThemeSwitcher } from './themeSwitcher';
-
-  initThemeSwitcher();
-</script>
-
 <label for={SWITCHER_ID} title="Theme switcher">
   <MoonStar size="1.125rem" alt="dark theme icon" />
   <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
@@ -20,3 +14,9 @@ import { SWITCHER_ID } from './themeSwitcher';
     cursor: pointer;
   }
 </style>
+
+<script>
+  import { initThemeSwitcher } from './themeSwitcher';
+
+  initThemeSwitcher();
+</script>

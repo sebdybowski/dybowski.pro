@@ -9,19 +9,19 @@ importers:
   .:
     dependencies:
       '@astrojs/preact':
-        specifier: ^3.0.1
+        specifier: ^3.5.4
         version: 3.5.4(@babel/core@7.26.10)(preact@10.26.4)
       '@astrojs/sitemap':
-        specifier: ^3.0.3
+        specifier: ^3.2.1
         version: 3.2.1
       '@fontsource/dm-serif-display':
-        specifier: ^5.0.18
+        specifier: ^5.2.5
         version: 5.2.5
       '@picocss/pico':
-        specifier: ^1.5.10
+        specifier: ^1.5.13
         version: 1.5.13
       astro:
-        specifier: ^4.0.4
+        specifier: ^4.16.18
         version: 4.16.18(rollup@4.35.0)(typescript@5.8.2)
       astro-icon:
         specifier: ^0.8.2
@@ -30,17 +30,17 @@ importers:
         specifier: ^0.294.0
         version: 0.294.0(preact@10.26.4)
       preact:
-        specifier: ^10.19.3
+        specifier: ^10.26.4
         version: 10.26.4
     devDependencies:
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.14.0
+        specifier: ^6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.8.2))(eslint@8.57.1)(typescript@5.8.2)
       '@typescript-eslint/parser':
-        specifier: ^6.14.0
+        specifier: ^6.21.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.8.2)
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-plugin-astro:
         specifier: ^0.30.0
@@ -49,13 +49,13 @@ importers:
         specifier: ^0.8.1
         version: 0.8.1(eslint@8.57.1)
       eslint-plugin-jsx-a11y:
-        specifier: ^6.8.0
+        specifier: ^6.10.2
         version: 6.10.2(eslint@8.57.1)
       prettier:
-        specifier: ^3.1.1
+        specifier: ^3.5.3
         version: 3.5.3
       prettier-plugin-astro:
-        specifier: ^0.12.2
+        specifier: ^0.12.3
         version: 0.12.3
 
 packages:
