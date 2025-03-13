@@ -1,0 +1,21 @@
+---
+import styles from './Company.module.css';
+
+export interface Props {
+  name: string;
+  type: string;
+}
+
+const { name, type } = Astro.props;
+---
+
+<div class={styles.company}>
+  <div class={styles.company__icon}>
+    <slot />
+  </div>
+  <div class={styles.company__info}>
+    <strong class={styles.company__name}>{name}</strong>
+    <hr />
+    <span class={styles.company__type}>{type}</span>
+  </div>
+</div>

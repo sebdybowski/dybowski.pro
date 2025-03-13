@@ -1,0 +1,25 @@
+.company {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+
+.company__icon {
+  margin-right: 1rem;
+}
+
+.company__info {
+  flex-grow: 1;
+  margin-top: 0.25rem;
+}
+
+.company__name {
+  font-size: 1.25rem;
+}
+
+.company__type {
+  font-size: 0.75rem;
+}

@@ -1,19 +1,14 @@
 ---
 import { Sun, MoonStar } from 'lucide-preact';
 import { SWITCHER_ID } from './themeSwitcher';
+import styles from './ThemeSwitcher.module.css';
 ---
 
-<label for={SWITCHER_ID} title="Theme switcher">
-  <MoonStar size="1.125rem" alt="dark theme icon" />
+<label for={SWITCHER_ID} title="Theme switcher" class={styles.label}>
+  <MoonStar size="1.125rem" aria-hidden="true"/>
   <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
-  <Sun size="1.125rem" alt="light theme icon" />
+  <Sun size="1.125rem" aria-hidden="true" />
 </label>
-
-<style>
-  label {
-    cursor: pointer;
-  }
-</style>
 
 <script>
   import { initThemeSwitcher } from './themeSwitcher';
