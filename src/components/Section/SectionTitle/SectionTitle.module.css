@@ -1,0 +1,5 @@
+.title::before {
+  content: "# ";
+  font-style: italic;
+  color: var(--primary);
+}

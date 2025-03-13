@@ -1,0 +1,23 @@
+.footer {
+  background: var(--card-background-color);
+  box-shadow: inset var(--card-box-shadow);
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+
+.footer__item {
+  padding: var(--block-spacing-vertical) 0;
+  flex: 1;
+}
+
+.divider {
+  margin-bottom: 2rem;
+}
+
+.icon {
+  margin-top: -0.25rem;
+}

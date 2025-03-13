@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource/dm-serif-display": "^5.2.5",
     "@picocss/pico": "^1.5.13",
-    "astro": "^4.16.18",
+    "astro": "^5.5.2",
     "astro-icon": "^0.8.2",
     "lucide-preact": "^0.294.0",
     "preact": "^10.26.4"
