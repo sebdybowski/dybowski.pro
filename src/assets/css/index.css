@@ -24,18 +24,18 @@
 /* light theme only */
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --background-color: #fcf7f9;
-  --muted-border-color: #f2e4ea;
-  --pattern-color: #f6ecf0;
+  --background-color: #f5faff; /* Pale sky blue */
+  --muted-border-color: #dae5f0; /* Soft frosted gray-blue */
+  --pattern-color: #eef4f8; /* Gentle ice mist */
 }
 
 /* dark theme only */
 [data-theme=dark] {
-  --color: #fcf7f9;
-  --background-color: #191617;
-  --card-background-color: #2E2A2C;
-  --muted-border-color: #444042;
-  --pattern-color: #252223;
+  --color: #c7dce7; /* Silver ice */
+  --background-color: #121518; /* Industrial dark steel */
+  --card-background-color: #20272d; /* Brushed metal blue-gray */
+  --muted-border-color: #3a4249; /* Titanium cool gray */
+  --pattern-color: #1b2228; /* Deep mechanical steel */
 }
 
 input[type="checkbox"][role="switch"] {
