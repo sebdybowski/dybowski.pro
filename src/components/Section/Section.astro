@@ -1,11 +1,13 @@
 ---
-import { Image } from 'astro:assets';
-import SectionTitle from './SectionTitle/SectionTitle.astro';
-import styles from './Section.module.css';
+import type { ImageMetadata } from "astro";
+import type { SvgComponent } from "astro/types";
+import { Image } from "astro:assets";
+import styles from "./Section.module.css";
+import SectionTitle from "./SectionTitle/SectionTitle.astro";
 
 interface Props {
   id: string;
-  svg: never; // TO:DO find a proper type
+  svg: SvgComponent & ImageMetadata;
   svgAlt: string;
   title: string;
   inverse?: boolean;
@@ -14,7 +16,7 @@ interface Props {
 const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 ---
 
-<section class:list={[styles.grid, {[styles.gridInverse]: inverse}]} id={id}>
+<section class:list={["grid", { [styles.gridInverse]: inverse }]} id={id}>
   <article class={styles.grid__item}>
     <SectionTitle id={id} title={title} />
     <slot />
