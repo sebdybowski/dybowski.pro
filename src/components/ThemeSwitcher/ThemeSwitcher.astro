@@ -1,17 +1,17 @@
 ---
-import { Sun, MoonStar } from 'lucide-preact';
-import { SWITCHER_ID } from './themeSwitcher';
-import styles from './ThemeSwitcher.module.css';
+import { SWITCHER_ID } from "./themeSwitcher";
+import styles from "./ThemeSwitcher.module.css";
+import { Icon } from "astro-icon/components";
 ---
 
 <label for={SWITCHER_ID} title="Theme switcher" class={styles.label}>
-  <MoonStar size="1.125rem" aria-hidden="true"/>
+  <Icon name="lucide:moon-star" />
   <input type="checkbox" name="switch" role="switch" id={SWITCHER_ID} />
-  <Sun size="1.125rem" aria-hidden="true" />
+  <Icon name="lucide:sun" />
 </label>
 
 <script>
-  import { initThemeSwitcher } from './themeSwitcher';
+  import { initThemeSwitcher } from "./themeSwitcher";
 
   initThemeSwitcher();
 </script>

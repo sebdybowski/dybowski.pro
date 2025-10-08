@@ -18,7 +18,6 @@
     "@picocss/pico": "~2.1.1",
     "astro": "^5.14.1",
     "astro-icon": "^1.1.5",
-    "lucide-preact": "^0.545.0",
     "preact": "^10.27.2"
   },
   "devDependencies": {
