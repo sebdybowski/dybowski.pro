@@ -81,10 +81,6 @@ hr {
   text-align: center;
 }
 
-article {
-  padding: var(--block-spacing-horizontal);
-}
-
 a[role="button"] {
   box-shadow: 0 0.25rem var(--primary-hover);
   border: 3px solid var(--primary-hover);
