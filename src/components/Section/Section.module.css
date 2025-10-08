@@ -11,7 +11,8 @@
 }
 
 .gridInverse {
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
+  direction: rtl;
 
   @media screen and (max-width: 992px) {
     flex-direction: column-reverse;
@@ -19,6 +20,7 @@
 }
 
 .grid__item {
+  direction: ltr;
   flex: 1;
 }
 
