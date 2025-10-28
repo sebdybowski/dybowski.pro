@@ -1,8 +1,47 @@
 ---
-import Section from '../components/Section/Section.astro';
-import Svg from '../assets/svg/Designer_Monochromatic_2.svg';
+import Svg from "../assets/svg/Designer_Monochromatic_2.svg";
+import Section from "../components/Section/Section.astro";
 
-const sectionTitle = 'design';
+const sectionTitle = "design";
+
+const designProcess = [
+  {
+    step: "01",
+    title: "Research & Discovery",
+    description: "Understanding user needs, business goals, and market context",
+    icon: "🔍",
+    color: "var(--pico-primary)",
+  },
+  {
+    step: "02",
+    title: "Ideation & Strategy",
+    description: "Brainstorming solutions and defining the design approach",
+    icon: "💡",
+    color: "var(--pico-secondary)",
+  },
+  {
+    step: "03",
+    title: "Wireframing & Prototyping",
+    description: "Creating low-fidelity layouts and interactive prototypes",
+    icon: "📐",
+    color: "var(--pico-tertiary)",
+  },
+  {
+    step: "04",
+    title: "Visual Design",
+    description:
+      "Crafting beautiful, cohesive interfaces with attention to detail",
+    icon: "🎨",
+    color: "var(--pico-primary)",
+  },
+  {
+    step: "05",
+    title: "Testing & Iteration",
+    description: "Validating designs with users and refining based on feedback",
+    icon: "🧪",
+    color: "var(--pico-secondary)",
+  },
+];
 ---
 
 <Section
@@ -12,12 +51,186 @@ const sectionTitle = 'design';
   title={sectionTitle}
   inverse
 >
-  <p>
-    I strive to create digital experiences that are a pleasure to use. From user
-    research to wireframes to visual design, I'm hands-on throughout the entire
-    design process. I enjoy problem-solving and finding innovative solutions to
-    make the user experience more intuitive and engaging. Armed with my design
-    toolkit, which includes Sketch and Adobe Creative Suite, I'm ready to turn
-    your vision into a polished and user-friendly reality.
-  </p>
+  <div class="design-content">
+    <p>
+      I strive to create digital experiences that are a pleasure to use. From
+      user research to wireframes to visual design, I'm hands-on throughout the
+      entire design process. I enjoy problem-solving and finding innovative
+      solutions to make the user experience more intuitive and engaging.
+    </p>
+
+    <div class="process-section">
+      <h3>My Design Process</h3>
+      <div class="process-timeline">
+        {
+          designProcess.map((process, index) => (
+            <div class="process-step" style={`--step-color: ${process.color}`}>
+              <div class="step-number">{process.step}</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-icon">{process.icon}</span>
+                  <h4 class="step-title">{process.title}</h4>
+                </div>
+                <p class="step-description">{process.description}</p>
+              </div>
+              {index < designProcess.length - 1 && (
+                <div class="step-connector" />
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .design-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .process-section,
+    .tools-section {
+      margin-top: 1.5rem;
+    }
+
+    .process-section h3,
+    .tools-section h3 {
+      color: var(--pico-primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .process-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      background: var(--step-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-content {
+      flex: 1;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      padding: 1.25rem;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .step-content:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--pico-card-box-shadow);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-icon {
+      font-size: 1.25rem;
+    }
+
+    .step-title {
+      margin: 0;
+      color: var(--pico-color);
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .step-description {
+      margin: 0;
+      color: var(--pico-muted-color);
+      line-height: 1.5;
+    }
+
+    .step-connector {
+      position: absolute;
+      left: 1.5rem;
+      top: 3rem;
+      width: 2px;
+      height: 1.5rem;
+      background: var(--pico-muted-border-color);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .tool-item {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+      text-align: center;
+    }
+
+    .tool-item:hover {
+      transform: translateY(-2px);
+      background: var(--pico-primary-background);
+    }
+
+    .tool-name {
+      font-weight: 600;
+      color: var(--pico-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .tool-category {
+      font-size: 0.8rem;
+      color: var(--pico-muted-color);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .step-connector {
+        display: none;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+  </style>
 </Section>

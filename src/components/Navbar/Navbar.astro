@@ -1,6 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.astro";
+import LinkButton from "../../components/LinkButton/LinkButton.astro";
+import Links from "./Links.astro";
+// import styles from "./Navbar.module.css";
 
 const links = [
   { id: "home", label: "Home" },
@@ -12,7 +15,7 @@ const links = [
 ];
 ---
 
-<nav class="container-hybrid" id="navbar">
+<nav class="container" id="navbar">
   <ul>
     <li>
       <ThemeSwitcher />
@@ -24,20 +27,7 @@ const links = [
       <Icon name="lucide:x" class="menu__icon--close" />
     </button>
   </ul>
-  <ul class="links">
-    {
-      links.map(({ id, label }) => (
-        <li>
-          <a href={`#${id}`}>{label}</a>
-        </li>
-      ))
-    }
-    <li class="visible--sticky">
-      <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button">
-        <Icon name="lucide:heart-handshake" /> hire me
-      </a>
-    </li>
-  </ul>
+  <Links links={links} />
 </nav>
 
 <style>
@@ -58,12 +48,12 @@ const links = [
     top: 0;
     backdrop-filter: blur(0.25rem);
     background-color: rgba(var(--background-color), 0.8);
-    border-bottom: var(--border-width) solid var(--muted-border-color);
+    border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
   }
 
   li.visible--sticky {
     padding: 0 var(--nav-element-spacing-horizontal);
-    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
   }
 
   .visible--sticky {
@@ -110,14 +100,14 @@ const links = [
       width: 100%;
       left: 0;
       z-index: 2;
-      background-color: var(--background-color);
+      background-color: var(--pico-background-color);
       backdrop-filter: blur(0.25em);
     }
 
     .navbar--open .links > li {
       width: 100%;
       text-align: right;
-      padding: var(--nav-element-spacing-vertical) 0;
+      padding: var(--pico-nav-element-spacing-vertical) 0;
     }
 
     li.visible--sticky {

@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import styles from "./LinkButton.module.css";
+
+interface Props {
+  href: string;
+  label: string;
+  icon?: string;
+  secondary?: boolean;
+}
+
+const { href, label, icon, secondary } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    styles.linkButton,
+    { [`secondary ${styles.linkButtonSecondary}`]: secondary },
+  ]}
+  role="button"
+>
+  {icon && <Icon name={icon} />}
+  {label}
+</a>

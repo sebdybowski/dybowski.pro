@@ -2,63 +2,33 @@
 import { Icon } from "astro-icon/components";
 import Company from "../components/Company/Company.astro";
 import SectionTitle from "../components/Section/SectionTitle/SectionTitle.astro";
+import companies from "./companies";
 
 const id = "experience";
 const size = "100%";
-
-const companies = [
-  {
-    name: "J-Labs",
-    type: "IT Services On-demand",
-    icon: "solar-code-square-line-duotone",
-  },
-  {
-    name: "Shell Energy",
-    type: "Energy Supplier",
-    icon: "solar-electric-refueling-line-duotone",
-  },
-  {
-    name: "UBS",
-    type: "Investment Bank",
-    icon: "solar-banknote-2-line-duotone",
-  },
-  {
-    name: "Lumesse",
-    type: "Talent Acquisiton",
-    icon: "solar-hand-stars-line-duotone",
-  },
-  {
-    name: "Intive",
-    type: "IT Services On-demand",
-    icon: "solar-code-square-line-duotone",
-  },
-  {
-    name: "Comarch",
-    type: "Software Development",
-    icon: "solar-monitor-smartphone-line-duotone",
-  },
-];
 ---
 
-<section class="container-hybrid companies" id={id}>
-  <div class="companies__inner">
-    <div class="text--center">
-      <SectionTitle id={id} title={id} />
-      <p>Companies I had a pleasure to cooperate with:</p>
-    </div>
-    <div class="grid">
-      {
-        companies.map(({ icon, ...company }) => (
-          <Company {...company}>
-            <Icon
-              name={icon}
-              width={size}
-              height={size}
-              class="company__icon"
-            />
-          </Company>
-        ))
-      }
+<section id={id}>
+  <div class="container">
+    <div class="companies__inner">
+      <div class="text--center">
+        <SectionTitle id={id} title={id} />
+        <p>Companies I had a pleasure to cooperate with:</p>
+      </div>
+      <div class="grid">
+        {
+          companies.map(({ icon, ...company }) => (
+            <Company {...company}>
+              <Icon
+                name={icon}
+                width={size}
+                height={size}
+                class="company__icon"
+              />
+            </Company>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
@@ -68,15 +38,10 @@ const companies = [
     --icon-size: 4.25rem;
     --icon-size-sm: 2.125rem;
 
-    margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .companies {
-    margin-bottom: 2rem;
-    background: var(--card-background-color);
-    box-shadow: inset var(--card-box-shadow);
+    background: var(--pico-card-background-color);
+    box-shadow: inset var(--pico-card-box-shadow);
   }
 
   .companies__inner {

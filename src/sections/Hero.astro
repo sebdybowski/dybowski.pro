@@ -2,30 +2,32 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import Seb from "../assets/img/seb.webp";
+import LinkButton from "../components/LinkButton/LinkButton.astro";
 
 const iconSize = "1rem";
 ---
 
-<header class="container-hybrid" id="hero">
+<header class="container" id="hero">
   <div class="grid">
     <div class="info-section">
       <hgroup>
-        <h1>Hey there, I'm <strong class="pico-primary">Seb!</strong></h1>
+        <h1>Hey there, I'm <strong class="text--gradient">Seb!</strong></h1>
         <p>
           With expertise in software development, team leadership, and UX
           design, I have the skills and experience to bring your vision to life!
-        </h2>
+        </p>
       </hgroup>
-      <a
+      <LinkButton
         href="https://pl.linkedin.com/in/sebastian-dybowski"
-        role="button"
-        target="_blank"
-      >
-        <Icon name="lucide:heart-handshake" /> hire me
-      </a>
-      <a href="mailto:dybowski.seb@gmail.com" role="button" class="secondary">
-        <Icon name="lucide:mail" /> email me
-      </a>
+        label="hire me"
+        icon="lucide:heart-handshake"
+      />
+      <LinkButton
+        href="mailto:dybowski.seb@gmail.com"
+        label="email me"
+        icon="lucide:mail"
+        secondary
+      />
       <p>
         <Icon
           name="bi-mouse3"

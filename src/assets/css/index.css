@@ -1,36 +1,49 @@
-@import url('@picocss/pico/css/pico.amber.css');
-@import url('@fontsource/dm-serif-display');
+@import url("@picocss/pico/css/pico.orange.css");
+@import url("@fontsource/dm-serif-display");
 
-@import url('./animations.css');
+@import url("./animations.css");
 
 :root,
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   /* pico.css */
-  /* --pico-primary: #ff7070;
-  --pico-tertiary: #893e65;
-  --pico-primary-hover: #c45656; */
   --pico-switch-checked-background-color: var(--primary);
   --pico-border-radius: 0.5rem;
   --pico-card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
 
   /* custom variables */
-  --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
-  --primary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--primary));
-  --secondary-gradient: linear-gradient(200deg, var(--secondary), var(--tertiary));
-  --secondary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--secondary));
+  --primary-gradient: linear-gradient(
+    200deg,
+    var(--pico-primary),
+    var(--pico-primary-background)
+  );
+  --primary-gradient-inverse: linear-gradient(
+    200deg,
+    var(--pico-primary-background),
+    var(--pico-primary)
+  );
+  --secondary-gradient: linear-gradient(
+    200deg,
+    var(--secondary),
+    var(--tertiary)
+  );
+  --secondary-gradient-inverse: linear-gradient(
+    200deg,
+    var(--tertiary),
+    var(--secondary)
+  );
 }
 
 /* light theme only */
-[data-theme=light],
-:root:not([data-theme=dark]) {
-  --background-color: #f5faff; /* Pale sky blue */
-  --muted-border-color: #dae5f0; /* Soft frosted gray-blue */
-  --pattern-color: #eef4f8; /* Gentle ice mist */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-background-color: #f5faff; /* Pale sky blue */
+  --pico-muted-border-color: #dae5f0; /* Soft frosted gray-blue */
+  --pico-pattern-color: #eef4f8; /* Gentle ice mist */
 }
 
 /* dark theme only */
-[data-theme=dark] {
+[data-theme="dark"] {
   --color: #c7dce7; /* Silver ice */
   --background-color: #121518; /* Industrial dark steel */
   --card-background-color: #20272d; /* Brushed metal blue-gray */
@@ -42,8 +55,8 @@ input[type="checkbox"][role="switch"] {
   margin: 0 var(--nav-link-spacing-horizontal);
 }
 
-hgroup>*:last-child,
-.headings>*:last-child {
+hgroup > *:last-child,
+.headings > *:last-child {
   --color: var(--h2-color);
 }
 
@@ -79,22 +92,6 @@ hr {
 
 .text--center {
   text-align: center;
-}
-
-a[role="button"] {
-  box-shadow: 0 0.25rem var(--primary-hover);
-  border: 3px solid var(--primary-hover);
-}
-
-a[role="button"].secondary {
-  box-shadow: 0 0.25rem var(--secondary-hover);
-  border: 3px solid var(--secondary-hover);
-}
-
-a[role="button"]:hover {
-  transform: translateY(0.25rem);
-  transition: box-shadow transform ease-in-out 500ms;
-  box-shadow: inset var(--card-box-shadow);
 }
 
 .container-hybrid {

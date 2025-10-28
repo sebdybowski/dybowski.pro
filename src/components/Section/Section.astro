@@ -16,12 +16,14 @@ interface Props {
 const { id, svg, svgAlt, title, inverse = false } = Astro.props;
 ---
 
-<section class:list={["grid", { [styles.gridInverse]: inverse }]} id={id}>
-  <article class={styles.grid__item}>
-    <SectionTitle id={id} title={title} />
-    <slot />
-  </article>
-  <div class:list={[styles.image, styles.grid__item]}>
-    <Image src={svg} alt={svgAlt} format="svg" />
+<section class="container" id={id}>
+  <div class:list={["grid", { [styles.gridInverse]: inverse }]}>
+    <article class={styles.grid__item}>
+      <SectionTitle id={id} title={title} />
+      <slot />
+    </article>
+    <div class:list={[styles.image, styles.grid__item]}>
+      <Image src={svg} alt={svgAlt} format="svg" />
+    </div>
   </div>
 </section>

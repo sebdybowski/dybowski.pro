@@ -1,8 +1,17 @@
 ---
-import Section from '../components/Section/Section.astro';
-import Svg from '../assets/svg/Web_Developer_Monochromatic_2.svg';
+import Svg from "../assets/svg/Web_Developer_Monochromatic_2.svg";
+import Section from "../components/Section/Section.astro";
 
-const sectionTitle = 'frontend';
+const sectionTitle = "frontend";
+
+const skills = [
+  { name: "React", level: 95, color: "var(--pico-primary)" },
+  { name: "TypeScript", level: 90, color: "var(--pico-secondary)" },
+  { name: "Next.js", level: 85, color: "var(--pico-tertiary)" },
+  { name: "Vue.js", level: 80, color: "var(--pico-primary)" },
+  { name: "Svelte", level: 75, color: "var(--pico-secondary)" },
+  { name: "Astro", level: 85, color: "var(--pico-tertiary)" },
+];
 ---
 
 <Section
@@ -11,14 +20,151 @@ const sectionTitle = 'frontend';
   svgAlt="Web development illustration"
   title={sectionTitle}
 >
-  <p>
-    As a front-end wizard, I create digital experiences that are so smooth,
-    you'll swear your screen is gliding on butter. With my mad skills in HTML,
-    CSS, and JavaScript, I can bring any design to life and make it responsive
-    to all devices. My weapon of choice is React, but I'm also fluent in other
-    front-end frameworks and libraries. From designing sleek and stylish
-    interfaces to building complex web applications, I'm always up for a coding
-    adventure. Let's make your website look so good, it'll make the internet
-    jealous!
-  </p>
+  <div class="frontend-content">
+    <p>
+      As a front-end wizard, I create digital experiences that are so smooth,
+      you'll swear your screen is gliding on butter. With my mad skills in HTML,
+      CSS, and JavaScript, I can bring any design to life and make it responsive
+      to all devices.
+    </p>
+
+    <div class="skills-section">
+      <h3>Core Skills</h3>
+      <div class="skills-grid">
+        {
+          skills.map((skill) => (
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">{skill.name}</span>
+                <span class="skill-percentage">{skill.level}%</span>
+              </div>
+              <div class="skill-bar">
+                <div
+                  class="skill-progress"
+                  style={`width: ${skill.level}%; background: ${skill.color}`}
+                />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .frontend-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .skills-section,
+    .technologies-section {
+      margin-top: 1.5rem;
+    }
+
+    .skills-section h3,
+    .technologies-section h3 {
+      color: var(--pico-primary);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      padding: 1rem;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--pico-card-box-shadow);
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      color: var(--pico-color);
+    }
+
+    .skill-percentage {
+      color: var(--pico-muted-color);
+      font-size: 0.9rem;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: var(--pico-muted-border-color);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s ease-in-out;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.75rem;
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+      text-align: center;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-2px);
+      background: var(--pico-primary-background);
+    }
+
+    .tech-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .tech-name {
+      font-size: 0.8rem;
+      color: var(--pico-color);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+    }
+  </style>
 </Section>

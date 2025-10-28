@@ -1,5 +1,5 @@
 ---
-import styles from './Company.module.css';
+import styles from "./Company.module.css";
 
 export interface Props {
   name: string;
@@ -15,7 +15,6 @@ const { name, type } = Astro.props;
   </div>
   <div class={styles.company__info}>
     <strong class={styles.company__name}>{name}</strong>
-    <hr />
-    <span class={styles.company__type}>{type}</span>
+    <p class={styles.company__type}>{type}</p>
   </div>
 </div>
