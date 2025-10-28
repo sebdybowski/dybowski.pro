@@ -1,14 +1,16 @@
 ---
-import { HeartHandshake, Text, X } from 'lucide-preact';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher.astro';
+import { HeartHandshake, Text, X } from "lucide-preact";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
-  { id: 'home', label: 'Home' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'frontend', label: 'Frontend' },
-  { id: 'backend', label: 'Backend' },
-  { id: 'leadership', label: 'Leadership' },
-  { id: 'design', label: 'UX' },
+  { id: "home", label: "Home" },
+  { id: "experience", label: "Experience" },
+  { id: "speaking", label: "Speaking" },
+  { id: "frontend", label: "Frontend" },
+  { id: "backend", label: "Backend" },
+  { id: "leadership", label: "Leadership" },
+  { id: "design", label: "UX" },
+  { id: "trainings", label: "Trainings", url: "/trainings" },
 ];
 ---
 
@@ -26,9 +28,9 @@ const links = [
   </ul>
   <ul class="links">
     {
-      links.map(({ id, label }) => (
+      links.map(({ id, label, url }) => (
         <li>
-          <a href={`#${id}`}>{label}</a>
+          <a href={url ?? `/#${id}`}>{label}</a>
         </li>
       ))
     }
@@ -144,7 +146,7 @@ const links = [
 </style>
 
 <script>
-  import initNavbarSticky from './navbar';
+  import initNavbarSticky from "./navbar";
 
   initNavbarSticky();
 </script>
