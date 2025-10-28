@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const links = [
+  {
+    title: "Astro",
+    url: "https://astro.dybowski.pro",
+  },
+  {
+    title: "Next.js 14",
+    url: "https://next14.dybowski.pro",
+  },
+  {
+    title: "AWS",
+    url: "https://aws.dybowski.pro",
+  },
+];
+---
+
+<Layout title="Seb Dybowski - Trainings" description="Seb Dybowski - Trainings">
+  <section class="container-hybrid">
+    <h1>Trainings</h1>
+    <ul>
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.url}>{link.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

@@ -1,23 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Backend from '../sections/Backend.astro';
-import Experience from '../sections/Experience.astro';
-import Frontend from '../sections/Frontend.astro';
-import Hero from '../sections/Hero.astro';
-import Leadership from '../sections/Leadership.astro';
-import UX from '../sections/UX.astro';
+import Speaking from "../components/Speaking/Speaking.astro";
+import Layout from "../layouts/Layout.astro";
+import Backend from "../sections/Backend.astro";
+import Experience from "../sections/Experience.astro";
+import Frontend from "../sections/Frontend.astro";
+import Hero from "../sections/Hero.astro";
+import Leadership from "../sections/Leadership.astro";
+import UX from "../sections/UX.astro";
 ---
 
 <Layout
   title="Seb Dybowski - Software Engineer & UI/UX Designer"
   description="Seb Dybowski - Software Engineer & UI/UX Designer"
 >
-  <Hero/>
-  <Experience/>
+  <Hero />
+  <Experience />
+  <Speaking />
   <div class="container">
-    <Frontend/>
-    <Backend/>
-    <Leadership/>
-    <UX/>
+    <Frontend />
+    <Backend />
+    <Leadership />
+    <UX />
   </div>
 </Layout>

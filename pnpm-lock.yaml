@@ -9,53 +9,53 @@ importers:
   .:
     dependencies:
       '@astrojs/preact':
-        specifier: ^3.5.4
+        specifier: ~3.5.4
         version: 3.5.4(@babel/core@7.26.10)(preact@10.26.4)
       '@astrojs/sitemap':
-        specifier: ^3.2.1
+        specifier: ~3.2.1
         version: 3.2.1
       '@fontsource/dm-serif-display':
-        specifier: ^5.2.5
+        specifier: ~5.2.5
         version: 5.2.5
       '@picocss/pico':
-        specifier: ^1.5.13
+        specifier: ~1.5.13
         version: 1.5.13
       astro:
-        specifier: ^5.5.2
+        specifier: ~5.5.2
         version: 5.5.2(rollup@4.35.0)(typescript@5.8.2)
       astro-icon:
-        specifier: ^0.8.2
+        specifier: ~0.8.2
         version: 0.8.2
       lucide-preact:
-        specifier: ^0.294.0
+        specifier: ~0.294.0
         version: 0.294.0(preact@10.26.4)
       preact:
-        specifier: ^10.26.4
+        specifier: ~10.26.4
         version: 10.26.4
     devDependencies:
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.21.0
+        specifier: ~6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.8.2))(eslint@8.57.1)(typescript@5.8.2)
       '@typescript-eslint/parser':
-        specifier: ^6.21.0
+        specifier: ~6.21.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.8.2)
       eslint:
-        specifier: ^8.57.1
+        specifier: ~8.57.1
         version: 8.57.1
       eslint-plugin-astro:
-        specifier: ^0.30.0
+        specifier: ~0.30.0
         version: 0.30.0(eslint@8.57.1)
       eslint-plugin-css:
-        specifier: ^0.8.1
+        specifier: ~0.8.1
         version: 0.8.1(eslint@8.57.1)
       eslint-plugin-jsx-a11y:
-        specifier: ^6.10.2
+        specifier: ~6.10.2
         version: 6.10.2(eslint@8.57.1)
       prettier:
-        specifier: ^3.5.3
+        specifier: ~3.5.3
         version: 3.5.3
       prettier-plugin-astro:
-        specifier: ^0.12.3
+        specifier: ~0.12.3
         version: 0.12.3
 
 packages:
@@ -2428,6 +2428,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   slash@3.0.0:
