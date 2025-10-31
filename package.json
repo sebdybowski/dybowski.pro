@@ -11,7 +11,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^4.1.2",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource/dm-serif-display": "^5.2.8",
     "@iconify-json/lucide": "^1.2.71",
