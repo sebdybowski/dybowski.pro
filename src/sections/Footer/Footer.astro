@@ -1,23 +1,23 @@
 ---
-import { Github, Linkedin, Mail, Twitter } from 'lucide-preact';
-import styles from './Footer.module.css';
+import { Github, Linkedin, Mail, Twitter } from "lucide-preact";
+import styles from "./Footer.module.css";
 
 const currentYear = new Date().getFullYear();
 const links = [
-  {url: 'https://github.com/sebdybowski', label: 'Github', Icon: Github},
+  { url: "https://github.com/sebdybowski", label: "Github", Icon: Github },
   {
-    url: 'https://pl.linkedin.com/in/sebastian-dybowski',
-    label: 'LinkedIn',
+    url: "https://pl.linkedin.com/in/sebdybowski",
+    label: "LinkedIn",
     Icon: Linkedin,
   },
   {
-    url: 'https://twitter.com/sebdybowskidev',
-    label: 'Twitter (X)',
+    url: "https://twitter.com/sebdybowskidev",
+    label: "Twitter (X)",
     Icon: Twitter,
   },
   {
-    url: 'mailto:dybowski.seb@gmail.com',
-    label: 'E-mail',
+    url: "mailto:dybowski.seb@gmail.com",
+    label: "E-mail",
     Icon: Mail,
   },
 ];
@@ -30,12 +30,12 @@ const links = [
     <p>
       Proudly created with
       <a href="https://astro.build/" target="_blank">Astro</a> and <a
-      href="https://picocss.com/"
-      target="_blank">Pico.css</a
-    >.
+        href="https://picocss.com/"
+        target="_blank">Pico.css</a
+      >.
     </p>
     <p>
-      Advocating for <i>Free and Open Source Software</i>.<br/>
+      Advocating for <i>Free and Open Source Software</i>.<br />
       Check out this website's
       <a href="https://github.com/sebdybowski/dybowski.pro"> source code</a>.
     </p>
@@ -45,11 +45,10 @@ const links = [
     <hr class={styles.divider} />
     <ul>
       {
-        links.map(({url, label, Icon}) => (
+        links.map(({ url, label, Icon }) => (
           <li>
             <a href={url} target="_blank">
-              <Icon size="1rem" class={styles.icon} />
-              / {label}
+              <Icon size="1rem" class={styles.icon} />/ {label}
             </a>
           </li>
         ))
