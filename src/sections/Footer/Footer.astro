@@ -1,58 +1,60 @@
 ---
-import { Github, Linkedin, Mail, Twitter } from "lucide-preact";
+import { Icon } from "astro-icon/components";
 import styles from "./Footer.module.css";
+import { connect, contact } from "./links";
 
 const currentYear = new Date().getFullYear();
-const links = [
-  { url: "https://github.com/sebdybowski", label: "Github", Icon: Github },
-  {
-    url: "https://pl.linkedin.com/in/sebdybowski",
-    label: "LinkedIn",
-    Icon: Linkedin,
-  },
-  {
-    url: "https://twitter.com/sebdybowskidev",
-    label: "Twitter (X)",
-    Icon: Twitter,
-  },
-  {
-    url: "mailto:dybowski.seb@gmail.com",
-    label: "E-mail",
-    Icon: Mail,
-  },
-];
 ---
 
-<footer class:list={["container-hybrid", styles.footer]}>
-  <div class={styles.footer__item}>
-    <h3>{currentYear} / Seb Dybowski</h3>
-    <hr class={styles.divider} />
-    <p>
-      Proudly created with
-      <a href="https://astro.build/" target="_blank">Astro</a> and <a
-        href="https://picocss.com/"
-        target="_blank">Pico.css</a
-      >.
-    </p>
-    <p>
-      Advocating for <i>Free and Open Source Software</i>.<br />
-      Check out this website's
-      <a href="https://github.com/sebdybowski/dybowski.pro"> source code</a>.
-    </p>
-  </div>
-  <div class={styles.footer__item}>
-    <h3>Connect</h3>
-    <hr class={styles.divider} />
-    <ul>
-      {
-        links.map(({ url, label, Icon }) => (
-          <li>
-            <a href={url} target="_blank">
-              <Icon size="1rem" class={styles.icon} />/ {label}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+<footer class={styles.footer}>
+  <div class="container-hybrid grid">
+    <div class={styles.footer__item}>
+      <h3>{currentYear} / Seb Dybowski</h3>
+      <hr class={styles.divider} />
+      <p>
+        Proudly created with
+        <a href="https://astro.build/" target="_blank">Astro</a> and <a
+          href="https://picocss.com/"
+          target="_blank">Pico.css</a
+        >.
+      </p>
+      <p>
+        Advocating for <i>Free and Open Source Software</i>.<br />
+        Check out this website's
+        <a href="https://github.com/sebdybowski/dybowski.pro"> source code</a>.
+      </p>
+    </div>
+    <div class={styles.footer__item}>
+      <h3>Contact</h3>
+      <hr class={styles.divider} />
+      <ul>
+        {
+          contact.map(({ label, value, icon, url }) => (
+            <li>
+              <Icon name={icon} />
+              {label}:{" "}
+              <a href={url} target="_blank">
+                {value}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class={styles.footer__item}>
+      <h3>Connect</h3>
+      <hr class={styles.divider} />
+      <ul>
+        {
+          connect.map(({ url, label, icon }) => (
+            <li>
+              <a href={url} target="_blank">
+                <Icon name={icon} /> / {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </footer>

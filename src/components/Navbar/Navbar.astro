@@ -1,5 +1,6 @@
 ---
-import { HeartHandshake, Text, X } from "lucide-preact";
+import { Icon } from "astro-icon/components";
+
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.astro";
 
 const links = [
@@ -22,8 +23,8 @@ const links = [
   </ul>
   <ul class="menu__button__wrapper">
     <button type="button" aria-label="menu button" id="menu__button">
-      <Text class="menu__icon--burger" />
-      <X class="menu__icon--close" />
+      <Icon name="lucide:text" class="menu__icon--burger" />
+      <Icon name="lucide:x" class="menu__icon--close" />
     </button>
   </ul>
   <ul class="links">
@@ -36,7 +37,7 @@ const links = [
     }
     <li class="visible--sticky">
       <a href="https://pl.linkedin.com/in/sebastian-dybowski" role="button">
-        <HeartHandshake /> hire me
+        <Icon name="lucide:heart-handshake" /> hire me
       </a>
     </li>
   </ul>
