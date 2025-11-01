@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
     "@fontsource/dm-serif-display": "^5.2.8",
     "@iconify-json/lucide": "^1.2.71",
     "@picocss/pico": "~1.5.13",
