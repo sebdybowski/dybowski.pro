@@ -1,7 +1,8 @@
-@import url('@picocss/pico/css/pico.css');
-@import url('@fontsource/dm-serif-display');
+@import url("@picocss/pico/css/pico.css");
+@import url("@fontsource/dm-serif-display");
+@import url("@fontsource-variable/plus-jakarta-sans");
 
-@import url('./animations.css');
+@import url("./animations.css");
 
 :root,
 [data-theme="light"],
@@ -13,24 +14,38 @@
   --switch-checked-background-color: var(--primary);
   --border-radius: 0.5rem;
   --card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  --font-family: "Plus Jakarta Sans Variable", sans-serif;
+  --font-weight: 200;
 
   /* custom variables */
   --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
-  --primary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--primary));
-  --secondary-gradient: linear-gradient(200deg, var(--secondary), var(--tertiary));
-  --secondary-gradient-inverse: linear-gradient(200deg, var(--tertiary), var(--secondary));
+  --primary-gradient-inverse: linear-gradient(
+    200deg,
+    var(--tertiary),
+    var(--primary)
+  );
+  --secondary-gradient: linear-gradient(
+    200deg,
+    var(--secondary),
+    var(--tertiary)
+  );
+  --secondary-gradient-inverse: linear-gradient(
+    200deg,
+    var(--tertiary),
+    var(--secondary)
+  );
 }
 
 /* light theme only */
-[data-theme=light],
-:root:not([data-theme=dark]) {
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
   --background-color: #f5faff; /* Pale sky blue */
   --muted-border-color: #dae5f0; /* Soft frosted gray-blue */
   --pattern-color: #eef4f8; /* Gentle ice mist */
 }
 
 /* dark theme only */
-[data-theme=dark] {
+[data-theme="dark"] {
   --color: #c7dce7; /* Silver ice */
   --background-color: #121518; /* Industrial dark steel */
   --card-background-color: #20272d; /* Brushed metal blue-gray */
@@ -42,8 +57,8 @@ input[type="checkbox"][role="switch"] {
   margin: 0 var(--nav-link-spacing-horizontal);
 }
 
-hgroup>*:last-child,
-.headings>*:last-child {
+hgroup > *:last-child,
+.headings > *:last-child {
   --color: var(--h2-color);
 }
 
