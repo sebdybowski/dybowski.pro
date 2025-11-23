@@ -8,7 +8,7 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   /* pico.css */
-  --pico-primary: #ff7070;
+  /* --pico-primary: #ff7070; */
   --pico-tertiary: #893e65;
   --pico-primary-hover: #c45656;
   --pico-switch-checked-background-color: var(--pico-primary);
@@ -18,7 +18,7 @@
   --pico-font-weight: 200;
 
   /* custom variables */
-  --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
+  --primary-gradient: linear-gradient(200deg, var(--pico-primary), var(--pico-tertiary));
   --primary-gradient-inverse: linear-gradient(
     200deg,
     var(--pico-tertiary),
