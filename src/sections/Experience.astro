@@ -40,25 +40,27 @@ const companies = [
 ];
 ---
 
-<section class="container-hybrid companies" id={id}>
-  <div class="companies__inner">
-    <div class="text--center">
-      <SectionTitle id={id} title={id} />
-      <p>Companies I had a pleasure to cooperate with:</p>
-    </div>
-    <div class="grid">
-      {
-        companies.map(({ icon, ...company }) => (
-          <Company {...company}>
-            <Icon
-              name={icon}
-              width={size}
-              height={size}
-              class="company__icon"
-            />
-          </Company>
-        ))
-      }
+<section class="companies" id={id}>
+  <div class="container">
+    <div class="companies__inner">
+      <div class="text--center">
+        <SectionTitle id={id} title={id} />
+        <p>Companies I had a pleasure to cooperate with:</p>
+      </div>
+      <div class="grid">
+        {
+          companies.map(({ icon, ...company }) => (
+            <Company {...company}>
+              <Icon
+                name={icon}
+                width={size}
+                height={size}
+                class="company__icon"
+              />
+            </Company>
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
