@@ -96,26 +96,6 @@ hr {
   text-align: center;
 }
 
-article {
-  padding: var(--block-spacing-horizontal);
-}
-
-a[role="button"] {
-  box-shadow: 0 0.25rem var(--primary-hover);
-  border: 3px solid var(--primary-hover);
-}
-
-a[role="button"].secondary {
-  box-shadow: 0 0.25rem var(--secondary-hover);
-  border: 3px solid var(--secondary-hover);
-}
-
-a[role="button"]:hover {
-  transform: translateY(0.25rem);
-  transition: box-shadow transform ease-in-out 500ms;
-  box-shadow: inset var(--card-box-shadow);
-}
-
 .container-hybrid {
   width: 100%;
   margin-right: auto;

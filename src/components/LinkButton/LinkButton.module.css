@@ -1,0 +1,15 @@
+.linkButton {
+  box-shadow: 0 0.25rem var(--pico-primary-hover);
+  border: 3px solid var(--pico-primary-hover);
+
+  &:hover {
+    transform: translateY(0.25rem);
+    transition: box-shadow transform ease-in-out 500ms;
+    box-shadow: inset var(--pico-card-box-shadow);
+  }
+}
+
+.linkButtonSecondary {
+  box-shadow: 0 0.25rem var(--pico-secondary-hover);
+  border: 3px solid var(--pico-secondary-hover);
+}

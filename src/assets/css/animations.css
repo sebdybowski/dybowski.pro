@@ -1,5 +1,4 @@
 @keyframes pulse {
-
   0%,
   100% {
     background-position-y: 0%;
@@ -11,7 +10,6 @@
 }
 
 @keyframes press {
-
   0%,
   100% {
     transform: translateY(0);
@@ -23,7 +21,6 @@
 }
 
 @keyframes MoveUpDown {
-
   0%,
   100% {
     bottom: -0.25rem;
@@ -32,4 +29,201 @@
   50% {
     bottom: 0.25rem;
   }
+}
+
+/* Enhanced animations for new sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(var(--pico-primary-rgb), 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(var(--pico-primary-rgb), 0.6);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Staggered animations */
+.animate-stagger > * {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-stagger > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animate-stagger > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.animate-stagger > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.animate-stagger > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.animate-stagger > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.animate-stagger > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.animate-stagger > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.animate-stagger > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(var(--pico-primary-rgb), 0.4);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Progress bar animation */
+.progress-animate {
+  animation: progressFill 2s ease-out forwards;
+}
+
+/* Intersection Observer animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
