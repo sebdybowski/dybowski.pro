@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import Seb from "../assets/img/seb.webp";
+import LinkButton from "../components/LinkButton/LinkButton.astro";
 
 const iconSize = "1rem";
 ---
@@ -16,16 +17,8 @@ const iconSize = "1rem";
           design, I have the skills and experience to bring your vision to life!
         </h2>
       </hgroup>
-      <a
-        href="https://pl.linkedin.com/in/sebdybowski"
-        role="button"
-        target="_blank"
-      >
-        <Icon name="lucide:heart-handshake" /> hire me
-      </a>
-      <a href="mailto:dybowski.seb@gmail.com" role="button" class="secondary">
-        <Icon name="lucide:mail" /> email me
-      </a>
+      <LinkButton href="https://pl.linkedin.com/in/sebdybowski" label="hire me" icon="lucide:heart-handshake" />
+      <LinkButton href="mailto:dybowski.seb@gmail.com" label="email me" icon="lucide:mail" secondary />
       <p>
         <Icon
           name="bi-mouse3"
