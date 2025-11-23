@@ -5,7 +5,7 @@ const connect = [
         icon: "lucide:github",
     },
     {
-        url: "https://pl.linkedin.com/in/sebastian-dybowski",
+        url: "https://pl.linkedin.com/in/sebdybowski",
         label: "LinkedIn",
         icon: "lucide:linkedin",
     },
@@ -32,4 +32,3 @@ const contact = [
 ];
 
 export { connect, contact };
-

@@ -1,4 +1,5 @@
 ---
+import Speaking from "../components/Speaking/Speaking.astro";
 import Layout from "../layouts/Layout.astro";
 import Backend from "../sections/Backend.astro";
 import Experience from "../sections/Experience.astro";
@@ -14,8 +15,11 @@ import UX from "../sections/UX.astro";
 >
   <Hero />
   <Experience />
-  <Frontend />
-  <Backend />
-  <Leadership />
-  <UX />
+  <Speaking />
+  <div class="container">
+    <Frontend />
+    <Backend />
+    <Leadership />
+    <UX />
+  </div>
 </Layout>

@@ -1,5 +1,6 @@
-@import url("@picocss/pico/css/pico.orange.css");
+@import url("@picocss/pico/css/pico.css");
 @import url("@fontsource/dm-serif-display");
+@import url("@fontsource-variable/plus-jakarta-sans");
 
 @import url("./animations.css");
 
@@ -7,20 +8,21 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   /* pico.css */
-  --pico-switch-checked-background-color: var(--primary);
-  --pico-border-radius: 0.5rem;
-  --pico-card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  --primary: #ff7070;
+  --tertiary: #893e65;
+  --primary-hover: #c45656;
+  --switch-checked-background-color: var(--primary);
+  --border-radius: 0.5rem;
+  --card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  --font-family: "Plus Jakarta Sans Variable", sans-serif;
+  --font-weight: 200;
 
   /* custom variables */
-  --primary-gradient: linear-gradient(
-    200deg,
-    var(--pico-primary),
-    var(--pico-primary-background)
-  );
+  --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
   --primary-gradient-inverse: linear-gradient(
     200deg,
-    var(--pico-primary-background),
-    var(--pico-primary)
+    var(--tertiary),
+    var(--primary)
   );
   --secondary-gradient: linear-gradient(
     200deg,
@@ -37,9 +39,9 @@
 /* light theme only */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  --pico-background-color: #f5faff; /* Pale sky blue */
-  --pico-muted-border-color: #dae5f0; /* Soft frosted gray-blue */
-  --pico-pattern-color: #eef4f8; /* Gentle ice mist */
+  --background-color: #f5faff; /* Pale sky blue */
+  --muted-border-color: #dae5f0; /* Soft frosted gray-blue */
+  --pattern-color: #eef4f8; /* Gentle ice mist */
 }
 
 /* dark theme only */
