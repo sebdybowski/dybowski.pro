@@ -1,4 +1,4 @@
-@import url("@picocss/pico/css/pico.css");
+@import url("@picocss/pico/css/pico.pumpkin.css");
 @import url("@fontsource/dm-serif-display");
 @import url("@fontsource-variable/plus-jakarta-sans");
 
@@ -8,31 +8,31 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   /* pico.css */
-  --primary: #ff7070;
-  --tertiary: #893e65;
-  --primary-hover: #c45656;
-  --switch-checked-background-color: var(--primary);
-  --border-radius: 0.5rem;
-  --card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
-  --font-family: "Plus Jakarta Sans Variable", sans-serif;
-  --font-weight: 200;
+  /* --pico-primary: #ff7070; */
+  --pico-tertiary: #893e65;
+  --pico-primary-hover: #c45656;
+  --pico-switch-checked-background-color: var(--pico-primary);
+  --pico-border-radius: 0.5rem;
+  --pico-card-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+  --pico-font-family: "Plus Jakarta Sans Variable", sans-serif;
+  --pico-font-weight: 200;
 
   /* custom variables */
-  --primary-gradient: linear-gradient(200deg, var(--primary), var(--tertiary));
+  --primary-gradient: linear-gradient(200deg, var(--pico-primary), var(--pico-tertiary));
   --primary-gradient-inverse: linear-gradient(
     200deg,
-    var(--tertiary),
-    var(--primary)
+    var(--pico-tertiary),
+    var(--pico-primary)
   );
   --secondary-gradient: linear-gradient(
     200deg,
-    var(--secondary),
-    var(--tertiary)
+    var(--pico-secondary),
+    var(--pico-tertiary)
   );
   --secondary-gradient-inverse: linear-gradient(
     200deg,
-    var(--tertiary),
-    var(--secondary)
+    var(--pico-tertiary),
+    var(--pico-secondary)
   );
 }
 
@@ -114,38 +114,4 @@ a[role="button"]:hover {
   transform: translateY(0.25rem);
   transition: box-shadow transform ease-in-out 500ms;
   box-shadow: inset var(--card-box-shadow);
-}
-
-.container-hybrid {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--spacing);
-  padding-left: var(--spacing);
-}
-
-@media (min-width: 576px) {
-  .container-hybrid {
-    padding: 0 calc((100% - 510px) / 2);
-    padding-right: var(--spacing);
-    padding-left: var(--spacing);
-  }
-}
-
-@media (min-width: 768px) {
-  .container-hybrid {
-    padding: 0 calc((100% - 700px) / 2);
-  }
-}
-
-@media (min-width: 992px) {
-  .container-hybrid {
-    padding: 0 calc((100% - 920px) / 2);
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-hybrid {
-    padding: 0 calc((100% - 1130px) / 2);
-  }
 }
