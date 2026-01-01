@@ -18,8 +18,8 @@ importers:
         specifier: ^5.2.8
         version: 5.2.8
       '@iconify-json/lucide':
-        specifier: ^1.2.74
-        version: 1.2.74
+        specifier: ^1.2.82
+        version: 1.2.82
       '@picocss/pico':
         specifier: ~1.5.13
         version: 1.5.13
@@ -320,8 +320,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/lucide@1.2.74':
-    resolution: {integrity: sha512-vDoGHcDZdWgUbt9J3TCJlxFzX/Mw0vUIAoZdkfI2mINOi1/cgVZHivgZ8QtiGlepskTL3PcG8t93Ky/vtQgXGA==}
+  '@iconify-json/lucide@1.2.82':
+    resolution: {integrity: sha512-fHZWegspOZonl5GNTvOkHsjnTMdSslFh3EzpzUtRyLxO8bOonqk2OTU3hCl0k4VXzViMjqpRK3X1sotnuBXkFA==}
 
   '@iconify/tools@4.1.4':
     resolution: {integrity: sha512-s6BcNUcCxQ3S6cvhlsoWzOuBt8qKXdVyXB9rT57uSJ/ARHD7dVM43+5ERBWn3tmkMWXeJ/s9DPVc3dUasayzeA==}
@@ -2329,6 +2329,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -2626,7 +2627,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@iconify-json/lucide@1.2.74':
+  '@iconify-json/lucide@1.2.82':
     dependencies:
       '@iconify/types': 2.0.0
 
