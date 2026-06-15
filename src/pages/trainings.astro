@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import styles from "./trainings.module.css";
 
 const links = [
   {
@@ -15,11 +16,95 @@ const links = [
     url: "https://aws.dybowski.pro",
   },
 ];
+
+const trainings = [
+  {
+    title: "Adapt or Deprecate: A Frontend Survival Guide for the AI Era",
+    pitch:
+      'Remember the dot-com boom? Or the shift from jQuery to frameworks? History is repeating itself, but faster. This isn\'t a talk about "AI taking our jobs"—it\'s about how to make sure you\'re the one holding the wheel. We\'ll break down the shift from being a "coder" to becoming a "Product Engineer."',
+    topics: [
+      "The Mindset Shift: Why solving business problems matters more than writing perfect syntax in 2026.",
+      "Architectural AI: How to integrate LLMs into your frontend without creating a maintenance nightmare.",
+      "The Power-User Workflow: Practical ways to use AI as a force multiplier for your daily dev cycle.",
+    ],
+  },
+  {
+    title: 'The Breakup Playbook: Outgrowing the "Modern" Tech We Used to Love',
+    pitch:
+      'We\'ve all been there: you started a project with the "hottest" tech, and three years later, it\'s the biggest bottleneck in your repo. From the decline of Create React App to the over-engineering of Micro Frontends and the performance debt of heavy CSS-in-JS, it\'s time for some tough love. Let\'s talk about when—and how—to say goodbye.',
+    topics: [
+      'The "Sunset" Checklist: How to identify when a tool is no longer serving your team.',
+      "Migration Without Tears: Strategies for moving away from Redux or legacy build tools without stopping feature delivery.",
+      "Lessons Learned: A post-mortem on field-tested tech that didn't quite pass the long-term test.",
+    ],
+  },
+  {
+    title: "One Repo to Rule Them All? Navigating the Monorepo Jungle",
+    pitch:
+      "Monorepos are no longer just for the Google-sized giants of the world, but they can still feel like a tangled mess if you don't have a map. If you're tired of \"dependency hell\" and want a streamlined workflow, this session is for you. We'll demystify monorepo management and see how the big players compare.",
+    topics: [
+      "Lerna vs. Nx: A head-to-head comparison of features, caching, and developer experience.",
+      'Best Practices: How to share code between apps without creating a "spaghetti" dependency graph.',
+      'The Pitfalls: Common mistakes that turn a monorepo into a "monolith-repo" and how to avoid them.',
+    ],
+  },
+  {
+    title: "Debug Your Life: A Dev's journey from burnout to balance",
+    pitch:
+      'In an industry moving at 100mph, "hustle culture" isn\'t a feature—it\'s a critical system bug. Drawing from my own journey through burnout and backed by insights from modern psychology.',
+    topics: [
+      "The Early Warning System: Recognizing the subtle signs of burnout before you hit the wall.",
+      "Field-Tested Recovery: Practical, daily habits to regain your balance and focus.",
+      "Setting Boundaries: How to manage expectations with stakeholders while still being a high-performer.",
+    ],
+  },
+  {
+    title: "The Holy Trinity of Types: Syncing Your Stack with Zod, TS, and OpenAPI",
+    pitch:
+      'Tired of your frontend breaking because the backend changed a single field name? Let\'s end the "it worked on my machine" era. By combining Zod, TypeScript, and OpenAPI, we can create a single source of truth that keeps your entire stack in sync automatically. No more runtime surprises, just pure type-safe bliss.',
+    topics: [
+      "Zod as the Enforcer: Using schema validation to bridge the gap between static types and real-world data.",
+      "Contract-First Development: Leveraging OpenAPI to generate types that both ends of the stack can trust.",
+      "Automation: Setting up a pipeline where a backend change triggers an immediate (and safe) frontend update.",
+    ],
+  },
+  {
+    title: "Framework Fatigue 2026: Choosing the Right Foundation for Your Next Big Thing",
+    pitch:
+      'Next.js, Remix, Astro, Qwik, SvelteKit, and now TanStack Start... the paradox of choice is real. In 2026, "Performance" isn\'t just a buzzword; it\'s a requirement. This session provides a clear-headed decision framework to help you choose a stack based on your specific needs—whether that\'s SEO, raw speed, or developer experience.',
+    topics: [
+      "The 2026 Landscape: A breakdown of Meta-Frameworks vs. Performance-First (Resumability/Islands) options.",
+      "The Decision Matrix: How to weight factors like AI-tool compatibility, SEO, and team velocity.",
+      "Migration Paths: When is it actually worth switching your foundation, and when should you stay put?",
+    ],
+  },
+];
 ---
 
 <Layout title="Seb Dybowski - Trainings" description="Seb Dybowski - Trainings">
   <section class="container">
-    <h1>Trainings</h1>
+    <h1>Trainings available to book</h1>
+
+    <div class={styles.list}>
+      {
+        trainings.map((training) => (
+          <details class={styles.accordion}>
+            <summary class={styles.summary}>{training.title}</summary>
+            <div class={styles.content}>
+              <p>{training.pitch}</p>
+              <h3>What you'll learn</h3>
+              <ul>
+                {training.topics.map((topic) => (
+                  <li>{topic}</li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+
+    <h2>Online courses</h2>
     <ul>
       {
         links.map((link) => (
@@ -39,5 +124,6 @@ const links = [
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen
-    style="margin: 0 auto;"></iframe>
+    style="margin: 0 auto;">
+  </iframe>
 </Layout>
