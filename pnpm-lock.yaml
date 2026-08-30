@@ -21,8 +21,8 @@ importers:
         specifier: ^1.2.74
         version: 1.2.74
       '@picocss/pico':
-        specifier: ~1.5.13
-        version: 1.5.13
+        specifier: ~2.1.1
+        version: 2.1.1
       astro:
         specifier: ^5.15.9
         version: 5.16.0(@types/node@24.9.2)(rollup@4.52.5)(typescript@5.8.2)
@@ -476,8 +476,8 @@ packages:
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
 
-  '@picocss/pico@1.5.13':
-    resolution: {integrity: sha512-BPTeE4JC95+7/vsG9r+6hDR1qUkV4YZ1blI/TI6peOmM94XubjmUDE3jUi4f6DBV6WmCL76ueTct/NerJ33E8A==}
+  '@picocss/pico@2.1.1':
+    resolution: {integrity: sha512-kIDugA7Ps4U+2BHxiNHmvgPIQDWPDU4IeU6TNRdvXQM1uZX+FibqDQT2xUOnnO2yq/LUHcwnGlu1hvf4KfXnMg==}
 
   '@pkgr/core@0.2.9':
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
@@ -2767,7 +2767,7 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@picocss/pico@1.5.13': {}
+  '@picocss/pico@2.1.1': {}
 
   '@pkgr/core@0.2.9': {}
 
