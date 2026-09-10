@@ -1,3 +1,5 @@
+import { LINKEDIN_URL } from "../../constants/links";
+
 const connect = [
     {
         url: "https://github.com/sebdybowski",
@@ -5,7 +7,7 @@ const connect = [
         icon: "lucide:github",
     },
     {
-        url: "https://pl.linkedin.com/in/sebdybowski",
+        url: LINKEDIN_URL,
         label: "LinkedIn",
         icon: "lucide:linkedin",
     },

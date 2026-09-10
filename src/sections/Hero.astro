@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import Seb from "../assets/img/seb.webp";
+import { LINKEDIN_URL } from "../constants/links";
 
 const iconSize = "1rem";
 ---
@@ -17,7 +18,7 @@ const iconSize = "1rem";
         </h2>
       </hgroup>
       <a
-        href="https://pl.linkedin.com/in/sebdybowski"
+        href={LINKEDIN_URL}
         role="button"
         target="_blank"
       >
