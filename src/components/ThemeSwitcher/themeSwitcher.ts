@@ -11,17 +11,17 @@ const initThemeSwitcher = (): void => {
   const html = document.getElementsByTagName("html")[0];
 
   if (button) {
-    button.onclick = (): void => {
-      const theme = html.getAttribute(DATA_ATTRIBUTE);
+    const currentTheme = html.getAttribute(DATA_ATTRIBUTE) ?? THEME.LIGHT;
 
-      if (theme === THEME.LIGHT) html.setAttribute(DATA_ATTRIBUTE, THEME.DARK);
-      if (theme === THEME.DARK) html.setAttribute(DATA_ATTRIBUTE, THEME.LIGHT);
-    };
+    if (button instanceof HTMLInputElement) button.checked = currentTheme === THEME.LIGHT;
+    button.setAttribute("class", currentTheme);
 
     button.addEventListener("click", (): void => {
       const theme = html.getAttribute(DATA_ATTRIBUTE);
+      const nextTheme = theme === THEME.DARK ? THEME.LIGHT : THEME.DARK;
 
-      if (theme) button.setAttribute("class", theme);
+      html.setAttribute(DATA_ATTRIBUTE, nextTheme);
+      button.setAttribute("class", nextTheme);
     });
   }
 };

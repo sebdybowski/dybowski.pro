@@ -1,7 +1,7 @@
 ---
 import "../assets/css/index.css";
 import Navbar from "../components/Navbar/Navbar.astro";
-import {THEME} from "../components/ThemeSwitcher/themeSwitcher";
+import {THEME, DATA_ATTRIBUTE} from "../components/ThemeSwitcher/themeSwitcher";
 import styles from "./Layout.module.css";
 import Footer from "../sections/Footer/Footer.astro";
 
@@ -14,7 +14,7 @@ const {title, description} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme={THEME.DARK}>
+<html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
@@ -22,7 +22,15 @@ const {title, description} = Astro.props;
     <meta name="description" content={description}/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <title>{title}</title>
+    <script is:inline define:vars={{DATA_ATTRIBUTE, DARK: THEME.DARK, LIGHT: THEME.LIGHT}}>
+      // set the theme before first paint to avoid a light/dark flash
+      document.documentElement.setAttribute(
+        DATA_ATTRIBUTE,
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT
+      );
+    </script>
   </head>
+
   <body id="home" class={styles.body}>
     <Navbar/>
     <main class={styles.main}>

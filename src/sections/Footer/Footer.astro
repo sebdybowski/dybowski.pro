@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
         {
           contact.map(({ label, value, icon, url }) => (
             <li>
-              <Icon name={icon} />
+              <Icon name={icon} class={`${styles.icon} ${styles.contactIcon}`} />
               {label}:{" "}
               <a href={url} target="_blank">
                 {value}
@@ -49,7 +49,7 @@ const currentYear = new Date().getFullYear();
           connect.map(({ url, label, icon }) => (
             <li>
               <a href={url} target="_blank">
-                <Icon name={icon} /> / {label}
+                <Icon name={icon} class={styles.icon} /> / {label}
               </a>
             </li>
           ))
