@@ -13,7 +13,9 @@ const initThemeSwitcher = (): void => {
   if (button) {
     const currentTheme = html.getAttribute(DATA_ATTRIBUTE) ?? THEME.LIGHT;
 
-    if (button instanceof HTMLInputElement) button.checked = currentTheme === THEME.LIGHT;
+    if (button instanceof HTMLInputElement) {
+      button.checked = currentTheme === THEME.LIGHT;
+    }
     button.setAttribute("class", currentTheme);
 
     button.addEventListener("click", (): void => {

@@ -1,9 +1,11 @@
 ---
 import "../assets/css/index.css";
+import {SEO} from "astro-seo";
 import Navbar from "../components/Navbar/Navbar.astro";
 import {THEME, DATA_ATTRIBUTE} from "../components/ThemeSwitcher/themeSwitcher";
 import styles from "./Layout.module.css";
 import Footer from "../sections/Footer/Footer.astro";
+import {getSeoConfig, jsonLd} from "../constants/seo";
 
 export interface Props {
   title: string;
@@ -11,18 +13,28 @@ export interface Props {
 }
 
 const {title, description} = Astro.props;
+const seo = await getSeoConfig({
+  title,
+  description,
+  url: Astro.url,
+  site: Astro.site,
+});
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <meta name="description" content={description}/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <title>{title}</title>
-    <script is:inline define:vars={{DATA_ATTRIBUTE, DARK: THEME.DARK, LIGHT: THEME.LIGHT}}>
+    <SEO {...seo} />
+    {jsonLd && <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />}
+    <script
+      is:inline
+      define:vars={{DATA_ATTRIBUTE, DARK: THEME.DARK, LIGHT: THEME.LIGHT}}
+    >
       // set the theme before first paint to avoid a light/dark flash
       document.documentElement.setAttribute(
         DATA_ATTRIBUTE,
