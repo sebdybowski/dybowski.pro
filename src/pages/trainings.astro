@@ -1,18 +1,31 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 
-const links = [
+const archivalTrainings = [
   {
-    title: "Astro",
-    url: "https://astro.dybowski.pro",
+    title: "Kosmicznie szybkie strony z Astro.js",
+    description:
+      "React, Angular i Vue to nie jedyne drogi we frontendzie. W tej sesji zobaczysz, jak Astro pomaga budowac interaktywne strony z minimalna iloscia JavaScriptu, zachowujac swietny performance, usability i developer experience.",
+    courseUrl: "https://astro.dybowski.pro",
+    videoUrl:
+      "https://www.youtube.com/embed/ILHGfk1H7Bs?si=Tt0PMfKzgPmDuW1v",
   },
   {
-    title: "Next.js 14",
-    url: "https://next14.dybowski.pro",
+    title: "Next.js 14 Superpowers: Crash Course",
+    description:
+      "Poznaj najwazniejsze nowosci Next.js 14: Server i Async Components, nowe mozliwosci routingu oraz MDX. Sesja pokazuje tez SSR od strony wydajnosci i sprawdza, gdzie framework daje realna przewage.",
+    courseUrl: "https://next14.dybowski.pro",
+    videoUrl:
+      "https://www.youtube.com/embed/fyhhLG249ls?si=jD8JXjH86tTWQ-09",
   },
   {
-    title: "AWS",
-    url: "https://aws.dybowski.pro",
+    title: "Backend w chmurze bez potu i lez z AWS Amplify",
+    description:
+      "W ciagu godziny zbudujesz frontend, serwisy CRUD, rejestracje i logowanie uzytkownika, a nastepnie skonfigurujesz hosting i opublikujesz calosc w chmurze AWS.",
+    courseUrl: "https://aws.dybowski.pro",
+    videoUrl:
+      "https://www.youtube.com/embed/nc2U__Oama0?si=CqRs8VrYhA5veBev",
   },
 ];
 
@@ -100,6 +113,15 @@ const trainings = [
                   <li>{topic}</li>
                 ))}
               </ul>
+              <a
+                href={`mailto:dybowski.seb@gmail.com?subject=${encodeURIComponent(
+                  `Book Seb Dybowski / ${training.title}`
+                )}`}
+                role="button"
+                class="book-now"
+              >
+                <Icon name="lucide:mail" /> Book now
+              </a>
             </div>
           </details>
         ))
@@ -118,28 +140,124 @@ const trainings = [
       </a>
     </div>
 
-    <h2>Online courses</h2>
-    <ul>
+    <h2>Archival trainings</h2>
+    <p class="archive-intro">
+      Explore practical sessions from the archive, available to revisit online.
+    </p>
+    <div class="archive-list">
       {
-        links.map((link) => (
-          <li>
-            <a href={link.url}>{link.title}</a>
-          </li>
+        archivalTrainings.map((training, index) => (
+          <article class="archive-item">
+            <figure class="archive-video">
+              <iframe
+                src={training.videoUrl}
+                title={`${training.title} recording`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </figure>
+            <div class="archive-content">
+              <p class="archive-kicker">Archive / 0{index + 1}</p>
+              <h3>{training.title}</h3>
+              <p>{training.description}</p>
+              <a href={training.courseUrl} target="_blank" rel="noreferrer">
+                Explore the course <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
         ))
       }
-    </ul>
-  </section>
-  <section class="container">
-    <h1>Recordings</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ILHGfk1H7Bs?si=Tt0PMfKzgPmDuW1v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fyhhLG249ls?si=jD8JXjH86tTWQ-09" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nc2U__Oama0?si=CqRs8VrYhA5veBev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </section>
 </Layout>
 
 <style>
+  .book-now {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    margin-top: 1rem;
+  }
+
   .coffee-cta {
     margin-top: var(--block-spacing-vertical);
     padding-bottom: var(--block-spacing-vertical);
+  }
+
+  .archive-intro {
+    max-width: 42rem;
+    margin-bottom: 2rem;
+  }
+
+  .archive-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .archive-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--muted-border-color);
+    border-left: 0.3rem solid var(--primary);
+    background: var(--card-background-color, transparent);
+    box-shadow: var(--card-box-shadow);
+  }
+
+  .archive-video {
+    margin: 0;
+  }
+
+  .archive-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--border-radius);
+  }
+
+  .archive-video figcaption {
+    margin-top: 0.65rem;
+    color: var(--muted-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .archive-content {
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .archive-content h3 {
+    margin-bottom: 1rem;
+  }
+
+  .archive-content p:not(.archive-kicker) {
+    margin-bottom: 1.25rem;
+  }
+
+  .archive-kicker {
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .archive-content a {
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .archive-list {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
